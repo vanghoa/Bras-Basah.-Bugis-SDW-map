@@ -1,0 +1,1557 @@
+{
+  "allEvents": [
+    {
+      "name": "People of Design Showcase Series",
+      "showcases": "Main",
+      "type": [],
+      "location": [],
+      "date": ["26/9-6/10"],
+      "time": "",
+      "short": "",
+      "long": "PeopleofDesignShowcaseSeries",
+      "org": {
+        "name": "Hans Tan Studio",
+        "prof": "Hans is a designer maker, curator, and educator based in Singapore, whose work explores creativity through \"deformative inquiry,\" making use of utility as a pretext for provoking discourse. His work, infused with narratives and collective memory, examines design and its industry.",
+        "web": "https://www.hanstan.net",
+        "ig": "hanstan_studio"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": {}
+    },
+    {
+      "name": "READ: BOOK",
+      "showcases": "Read",
+      "type": ["exh", "ins"],
+      "location": ["nlb"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 7pm",
+      "short": "READ presents Atelier HOKO's interrogation of the physical book through an immersive exhibition at the National Library.",
+      "long": "READBOOK",
+      "sponsor": "NLB",
+      "org": {
+        "name": "Atelier HOKO",
+        "prof": "Atelier HOKO (2002) is an independent research lab that focuses on the study of the growing disengagement between people, things and space. The atelier hopes to cultivate in people, an open-ness and ability to un-know, bringing about a heightened curiosity towards all phenomena by taking a fresh look at reality. Founded by Alvin Ho and Clara Koh.",
+        "web": "https://atelierhoko.com/",
+        "ig": "atelierhoko",
+        "fb": "https://www.facebook.com/atelierhoko "
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true, "ins": true }
+    },
+    {
+      "name": "EAT: Transformative Seeds",
+      "showcases": "Eat",
+      "type": ["exh"],
+      "location": ["ndc"],
+      "date": ["26/9-10/11"],
+      "time": "9am – 9pm",
+      "short": "EAT explores food design by investigating seeds through culinary transformations and material innovations.",
+      "long": "EATTransformativeSeeds",
+      "org": {
+        "name": "Atelier Fang (Dipl.-Des.Fang HU, International team Yue LIU, Xijing XU, Yongxin LAI and Shijia HUANG)",
+        "prof": "Atelier Fang, based in Hangzhou, explores food-centered design through initiatives in design education, product development and production innovation. Operating the ‘ChiTofu’ Experimental Design Program, they specialize in deconstructing handcraft processes and narrating new food scenes. They believe food innovation brings diverse societal values.",
+        "web": "https://www.chitofu.com"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "11/10/2024",
+        "inc": {},
+        "exc": {},
+        "last": "11/10/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 10 Nov",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "A++ Recipe Workshop",
+      "showcases": "Eat",
+      "type": ["wks"],
+      "location": ["tipo"],
+      "date": ["23/7,25/7"],
+      "time": "2.30 – 5.30pm",
+      "short": "",
+      "long": "ARecipeWorkshop",
+      "sponsor": "Tipo Pasta Bar",
+      "processedDate": {
+        "from": null,
+        "to": null,
+        "inc": { "07/23/2024": true, "07/25/2024": true },
+        "exc": {},
+        "last": "07/25/2024"
+      },
+      "othertype": [],
+      "formattedDate": "23 Jul and 25 Jul.",
+      "processedType": { "wks": true }
+    },
+    {
+      "name": "Special Menu with Tipo",
+      "showcases": "Eat",
+      "type": ["pre"],
+      "location": ["tipo"],
+      "date": ["26/9-3/10"],
+      "time": "",
+      "short": "",
+      "long": "SpecialMenuwithTipo",
+      "sponsor": "Tipo Pasta Bar",
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/03/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/03/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 03 Oct",
+      "processedType": { "pre": true }
+    },
+    {
+      "name": "SHOP",
+      "showcases": "Shop",
+      "type": ["exh"],
+      "location": ["bgs+", "bgsst"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 10pm",
+      "short": "SHOP explores the intricate dynamics of how shops, shopping, and shoppers are intertwined with design.",
+      "long": "SHOP",
+      "rm": "Free Admission",
+      "sponsor": "SHOP is presented in partnership with Bugis+ and Bugis Street.",
+      "org": {
+        "name": "gideon-jamie",
+        "prof": "gideon-jamie is a design studio involved in publishing and running a space for books. Founded in 2017 by Gideon Kong and Jamie Yeo, the studio develops critical responses through commissioned projects and independent work, in the form of writings, designs, and ad-hoc exhibitions and workshops.",
+        "web": "http://gideon-jamie.com/",
+        "ig": "gideon_jamie_"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "HEAL: Repair+",
+      "showcases": "Heal",
+      "type": ["exh"],
+      "location": ["blckbx"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 10pm",
+      "short": "HEAL explores mending emotional memories through restorative design in a curation of transformed broken objects.",
+      "long": "HEALRepair",
+      "rm": "Free Admission",
+      "org": {
+        "name": "Yishun Health",
+        "prof": "This project was generously funded by the Alexandra Health Fund which supports community collaboration to enhance health and improve quality of life for patients in Yishun Health. Khoo Teck Puat Hospital is part of the Yishun Health network of medical institutions and health facilities in the north of Singapore, under the National Healthcare Group.",
+        "web": "http://yishuncommunityhospital.com.sg/",
+        "ig": "khooteckpuathospital",
+        "fb": "Yishun Community Hospital"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "SLEEP: DIVING IN",
+      "showcases": "Sleep",
+      "type": ["oth"],
+      "location": ["naumi"],
+      "date": ["26/9-6/10", "-27/9"],
+      "time": "Check in 3pm, Check out 11am",
+      "short": "SLEEP: DIVING IN explores the elements of ideal sleep hygiene rituals that could overcome primary insomnia.",
+      "long": "SLEEPDIVINGIN",
+      "rm": "Room stays will be ~$300 per night, TBC",
+      "sponsor": "This event is supported by venue sponsor Naumi Hotel.",
+      "org": {
+        "name": "Forest and Whale",
+        "prof": "Gustavo Maggio and Wendy Chua lead Forest and Whale, where design is a mediator between fields and agent of change. They design products, services and experiences that redefine the way people live, age-in-place and gather as communities. Selected for the EU STARTS residency, their work explores unseen climate precarity through the VR lens.",
+        "web": "http://www.forestandwhale.com/",
+        "ig": "forestandwhale"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": { "09/27/2024": true },
+        "last": "10/06/2024"
+      },
+      "othertype": ["Immersive Experience and Room Installation"],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "oth": true }
+    },
+    {
+      "name": "SLEEP: LESS",
+      "showcases": "Sleep",
+      "type": ["oth"],
+      "location": ["naumi"],
+      "date": ["26/9-6/10"],
+      "time": "11am – 2pm, 3pm – 7pm \n*30 mins slots to be booked",
+      "short": "SLEEP: LESS is a VR experience exploring five sleep stories of individuals with different relationships to sleep.",
+      "long": "SLEEPLESS",
+      "rm": "Free with Registration",
+      "sponsor": "This event is supported by LASALLE College of the Arts, University of the Arts Singapore and co-developed in collaboration with the second year students of BA (Hons) Design for Social Future.\n        This event is supported by venue sponsor Naumi Hotel.",
+      "org": { "name": "Forest and Whale" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": ["VR Installation"],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "oth": true }
+    },
+    {
+      "name": "COMMUTE: My Riding Tribe",
+      "showcases": "Commute",
+      "type": ["exh"],
+      "location": ["bclnMRT"],
+      "date": ["26/9-6/10"],
+      "time": "",
+      "short": "COMMUTE unveils your MRT personality at Bencoolen Station with \"My Riding Tribe\" through a design research adventure.",
+      "long": "COMMUTEMyRidingTribe",
+      "sponsor": "This event is organised and supported by the DesignSingapore Council (DSG), created by brief., and sponsored by the Land Transport Authority (LTA) and SBS Transit. For more information, visit DSG's website, LTA's website, and SBS Transit's website.",
+      "org": {
+        "name": "'brief.'",
+        "prof": "'brief.’ is a Research and Design studio that bridges deep user insights with real-life application. Their outcome-agnostic approach makes innovation exploration accessible to those often priced out. Their ethos \"Today's Research, Tomorrow's Design,\" grounds their design solutions in thorough research to create impactful outcomes for the future.",
+        "web": "https://www.keepitbrief.co/",
+        "ig": "keepitbriefco",
+        "in": "https://www.linkedin.com/company/keepitbrief"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "PLANT",
+      "showcases": "Plant",
+      "type": ["exh"],
+      "location": ["nlb"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 9pm",
+      "short": "PLANT reimagines household planters that twist traditional concepts of use and appreciation.",
+      "long": "PLANT",
+      "rm": "Free Admission",
+      "org": { "name": "Hans Tan Studio" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "DISPLAY",
+      "showcases": "Display",
+      "type": [],
+      "location": [],
+      "date": [],
+      "time": "",
+      "short": "DISPLAY presents experimental creations by Studio Juju that explore the idea\nof DISPLAY, both as an object and a system.",
+      "long": "DISPLAY",
+      "processedDate": { "from": null, "to": null, "inc": {}, "exc": {} },
+      "othertype": [],
+      "formattedDate": "",
+      "processedType": {}
+    },
+    {
+      "name": "MAKE: Me(n)tal",
+      "showcases": "Make",
+      "type": ["exh"],
+      "location": ["NAFA"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 9pm (TBC)",
+      "short": "MAKE discovers metal's potential as creatives transform scraps into treasures that celebrate its innate qualities.",
+      "long": "MAKEMental",
+      "rm": "Free Admission",
+      "sponsor": "This event is proudly supported by NAFA, and Studiowongs.",
+      "org": {
+        "name": "J.A.B.O.C (Just A Band of Creatives)",
+        "prof": "A local band of artists, designers, makers and creative misfits with a small dream to share and celebrate art and design on the big stage.",
+        "ig": "justabandofcreatives"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "DESIGN",
+      "showcases": "Design",
+      "type": ["exh"],
+      "location": ["ndc"],
+      "date": ["26/9-10/11"],
+      "time": "9am – 9pm",
+      "short": "DESIGN showcases innovative works by everyday people, empowered by the transformative power of design.",
+      "long": "DESIGN",
+      "rm": "Free Admission",
+      "sponsor": "DesignSingapore Council",
+      "org": { "name": "Hans Tan Studio" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "11/10/2024",
+        "inc": {},
+        "exc": {},
+        "last": "11/10/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 10 Nov",
+      "processedType": { "exh": true }
+    }
+  ],
+  "allEvents1": [
+    {
+      "name": "EAT: Transformative Seeds",
+      "showcases": "Eat",
+      "type": ["exh"],
+      "location": ["ndc"],
+      "date": ["26/9-10/11"],
+      "time": "9am – 9pm",
+      "short": "EAT explores food design by investigating seeds through culinary transformations and material innovations.",
+      "long": "EATTransformativeSeeds",
+      "org": {
+        "name": "Atelier Fang (Dipl.-Des.Fang HU, International team Yue LIU, Xijing XU, Yongxin LAI and Shijia HUANG)",
+        "prof": "Atelier Fang, based in Hangzhou, explores food-centered design through initiatives in design education, product development and production innovation. Operating the ‘ChiTofu’ Experimental Design Program, they specialize in deconstructing handcraft processes and narrating new food scenes. They believe food innovation brings diverse societal values.",
+        "web": "https://www.chitofu.com"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "11/10/2024",
+        "inc": {},
+        "exc": {},
+        "last": "11/10/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 10 Nov",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "DESIGN",
+      "showcases": "Design",
+      "type": ["exh"],
+      "location": ["ndc"],
+      "date": ["26/9-10/11"],
+      "time": "9am – 9pm",
+      "short": "DESIGN showcases innovative works by everyday people, empowered by the transformative power of design.",
+      "long": "DESIGN",
+      "rm": "Free Admission",
+      "sponsor": "DesignSingapore Council",
+      "org": { "name": "Hans Tan Studio" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "11/10/2024",
+        "inc": {},
+        "exc": {},
+        "last": "11/10/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 10 Nov",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "People of Design Showcase Series",
+      "showcases": "Main",
+      "type": [],
+      "location": [],
+      "date": ["26/9-6/10"],
+      "time": "",
+      "short": "",
+      "long": "PeopleofDesignShowcaseSeries",
+      "org": {
+        "name": "Hans Tan Studio",
+        "prof": "Hans is a designer maker, curator, and educator based in Singapore, whose work explores creativity through \"deformative inquiry,\" making use of utility as a pretext for provoking discourse. His work, infused with narratives and collective memory, examines design and its industry.",
+        "web": "https://www.hanstan.net",
+        "ig": "hanstan_studio"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": {}
+    },
+    {
+      "name": "READ: BOOK",
+      "showcases": "Read",
+      "type": ["exh", "ins"],
+      "location": ["nlb"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 7pm",
+      "short": "READ presents Atelier HOKO's interrogation of the physical book through an immersive exhibition at the National Library.",
+      "long": "READBOOK",
+      "sponsor": "NLB",
+      "org": {
+        "name": "Atelier HOKO",
+        "prof": "Atelier HOKO (2002) is an independent research lab that focuses on the study of the growing disengagement between people, things and space. The atelier hopes to cultivate in people, an open-ness and ability to un-know, bringing about a heightened curiosity towards all phenomena by taking a fresh look at reality. Founded by Alvin Ho and Clara Koh.",
+        "web": "https://atelierhoko.com/",
+        "ig": "atelierhoko",
+        "fb": "https://www.facebook.com/atelierhoko "
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true, "ins": true }
+    },
+    {
+      "name": "SHOP",
+      "showcases": "Shop",
+      "type": ["exh"],
+      "location": ["bgs+", "bgsst"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 10pm",
+      "short": "SHOP explores the intricate dynamics of how shops, shopping, and shoppers are intertwined with design.",
+      "long": "SHOP",
+      "rm": "Free Admission",
+      "sponsor": "SHOP is presented in partnership with Bugis+ and Bugis Street.",
+      "org": {
+        "name": "gideon-jamie",
+        "prof": "gideon-jamie is a design studio involved in publishing and running a space for books. Founded in 2017 by Gideon Kong and Jamie Yeo, the studio develops critical responses through commissioned projects and independent work, in the form of writings, designs, and ad-hoc exhibitions and workshops.",
+        "web": "http://gideon-jamie.com/",
+        "ig": "gideon_jamie_"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "HEAL: Repair+",
+      "showcases": "Heal",
+      "type": ["exh"],
+      "location": ["blckbx"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 10pm",
+      "short": "HEAL explores mending emotional memories through restorative design in a curation of transformed broken objects.",
+      "long": "HEALRepair",
+      "rm": "Free Admission",
+      "org": {
+        "name": "Yishun Health",
+        "prof": "This project was generously funded by the Alexandra Health Fund which supports community collaboration to enhance health and improve quality of life for patients in Yishun Health. Khoo Teck Puat Hospital is part of the Yishun Health network of medical institutions and health facilities in the north of Singapore, under the National Healthcare Group.",
+        "web": "http://yishuncommunityhospital.com.sg/",
+        "ig": "khooteckpuathospital",
+        "fb": "Yishun Community Hospital"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "SLEEP: DIVING IN",
+      "showcases": "Sleep",
+      "type": ["oth"],
+      "location": ["naumi"],
+      "date": ["26/9-6/10", "-27/9"],
+      "time": "Check in 3pm, Check out 11am",
+      "short": "SLEEP: DIVING IN explores the elements of ideal sleep hygiene rituals that could overcome primary insomnia.",
+      "long": "SLEEPDIVINGIN",
+      "rm": "Room stays will be ~$300 per night, TBC",
+      "sponsor": "This event is supported by venue sponsor Naumi Hotel.",
+      "org": {
+        "name": "Forest and Whale",
+        "prof": "Gustavo Maggio and Wendy Chua lead Forest and Whale, where design is a mediator between fields and agent of change. They design products, services and experiences that redefine the way people live, age-in-place and gather as communities. Selected for the EU STARTS residency, their work explores unseen climate precarity through the VR lens.",
+        "web": "http://www.forestandwhale.com/",
+        "ig": "forestandwhale"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": { "09/27/2024": true },
+        "last": "10/06/2024"
+      },
+      "othertype": ["Immersive Experience and Room Installation"],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "oth": true }
+    },
+    {
+      "name": "SLEEP: LESS",
+      "showcases": "Sleep",
+      "type": ["oth"],
+      "location": ["naumi"],
+      "date": ["26/9-6/10"],
+      "time": "11am – 2pm, 3pm – 7pm \n*30 mins slots to be booked",
+      "short": "SLEEP: LESS is a VR experience exploring five sleep stories of individuals with different relationships to sleep.",
+      "long": "SLEEPLESS",
+      "rm": "Free with Registration",
+      "sponsor": "This event is supported by LASALLE College of the Arts, University of the Arts Singapore and co-developed in collaboration with the second year students of BA (Hons) Design for Social Future.\n        This event is supported by venue sponsor Naumi Hotel.",
+      "org": { "name": "Forest and Whale" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": ["VR Installation"],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "oth": true }
+    },
+    {
+      "name": "COMMUTE: My Riding Tribe",
+      "showcases": "Commute",
+      "type": ["exh"],
+      "location": ["bclnMRT"],
+      "date": ["26/9-6/10"],
+      "time": "",
+      "short": "COMMUTE unveils your MRT personality at Bencoolen Station with \"My Riding Tribe\" through a design research adventure.",
+      "long": "COMMUTEMyRidingTribe",
+      "sponsor": "This event is organised and supported by the DesignSingapore Council (DSG), created by brief., and sponsored by the Land Transport Authority (LTA) and SBS Transit. For more information, visit DSG's website, LTA's website, and SBS Transit's website.",
+      "org": {
+        "name": "'brief.'",
+        "prof": "'brief.’ is a Research and Design studio that bridges deep user insights with real-life application. Their outcome-agnostic approach makes innovation exploration accessible to those often priced out. Their ethos \"Today's Research, Tomorrow's Design,\" grounds their design solutions in thorough research to create impactful outcomes for the future.",
+        "web": "https://www.keepitbrief.co/",
+        "ig": "keepitbriefco",
+        "in": "https://www.linkedin.com/company/keepitbrief"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "PLANT",
+      "showcases": "Plant",
+      "type": ["exh"],
+      "location": ["nlb"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 9pm",
+      "short": "PLANT reimagines household planters that twist traditional concepts of use and appreciation.",
+      "long": "PLANT",
+      "rm": "Free Admission",
+      "org": { "name": "Hans Tan Studio" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "MAKE: Me(n)tal",
+      "showcases": "Make",
+      "type": ["exh"],
+      "location": ["NAFA"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 9pm (TBC)",
+      "short": "MAKE discovers metal's potential as creatives transform scraps into treasures that celebrate its innate qualities.",
+      "long": "MAKEMental",
+      "rm": "Free Admission",
+      "sponsor": "This event is proudly supported by NAFA, and Studiowongs.",
+      "org": {
+        "name": "J.A.B.O.C (Just A Band of Creatives)",
+        "prof": "A local band of artists, designers, makers and creative misfits with a small dream to share and celebrate art and design on the big stage.",
+        "ig": "justabandofcreatives"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "Special Menu with Tipo",
+      "showcases": "Eat",
+      "type": ["pre"],
+      "location": ["tipo"],
+      "date": ["26/9-3/10"],
+      "time": "",
+      "short": "",
+      "long": "SpecialMenuwithTipo",
+      "sponsor": "Tipo Pasta Bar",
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/03/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/03/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 03 Oct",
+      "processedType": { "pre": true }
+    },
+    {
+      "name": "A++ Recipe Workshop",
+      "showcases": "Eat",
+      "type": ["wks"],
+      "location": ["tipo"],
+      "date": ["23/7,25/7"],
+      "time": "2.30 – 5.30pm",
+      "short": "",
+      "long": "ARecipeWorkshop",
+      "sponsor": "Tipo Pasta Bar",
+      "processedDate": {
+        "from": null,
+        "to": null,
+        "inc": { "07/23/2024": true, "07/25/2024": true },
+        "exc": {},
+        "last": "07/25/2024"
+      },
+      "othertype": [],
+      "formattedDate": "23 Jul and 25 Jul.",
+      "processedType": { "wks": true }
+    },
+    {
+      "name": "DISPLAY",
+      "showcases": "Display",
+      "type": [],
+      "location": [],
+      "date": [],
+      "time": "",
+      "short": "DISPLAY presents experimental creations by Studio Juju that explore the idea\nof DISPLAY, both as an object and a system.",
+      "long": "DISPLAY",
+      "processedDate": { "from": null, "to": null, "inc": {}, "exc": {} },
+      "othertype": [],
+      "formattedDate": "",
+      "processedType": {}
+    }
+  ],
+  "allEvents2": [
+    {
+      "name": "DISPLAY",
+      "showcases": "Display",
+      "type": [],
+      "location": [],
+      "date": [],
+      "time": "",
+      "short": "DISPLAY presents experimental creations by Studio Juju that explore the idea\nof DISPLAY, both as an object and a system.",
+      "long": "DISPLAY",
+      "processedDate": { "from": null, "to": null, "inc": {}, "exc": {} },
+      "othertype": [],
+      "formattedDate": "",
+      "processedType": {}
+    },
+    {
+      "name": "A++ Recipe Workshop",
+      "showcases": "Eat",
+      "type": ["wks"],
+      "location": ["tipo"],
+      "date": ["23/7,25/7"],
+      "time": "2.30 – 5.30pm",
+      "short": "",
+      "long": "ARecipeWorkshop",
+      "sponsor": "Tipo Pasta Bar",
+      "processedDate": {
+        "from": null,
+        "to": null,
+        "inc": { "07/23/2024": true, "07/25/2024": true },
+        "exc": {},
+        "last": "07/25/2024"
+      },
+      "othertype": [],
+      "formattedDate": "23 Jul and 25 Jul.",
+      "processedType": { "wks": true }
+    },
+    {
+      "name": "Special Menu with Tipo",
+      "showcases": "Eat",
+      "type": ["pre"],
+      "location": ["tipo"],
+      "date": ["26/9-3/10"],
+      "time": "",
+      "short": "",
+      "long": "SpecialMenuwithTipo",
+      "sponsor": "Tipo Pasta Bar",
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/03/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/03/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 03 Oct",
+      "processedType": { "pre": true }
+    },
+    {
+      "name": "MAKE: Me(n)tal",
+      "showcases": "Make",
+      "type": ["exh"],
+      "location": ["NAFA"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 9pm (TBC)",
+      "short": "MAKE discovers metal's potential as creatives transform scraps into treasures that celebrate its innate qualities.",
+      "long": "MAKEMental",
+      "rm": "Free Admission",
+      "sponsor": "This event is proudly supported by NAFA, and Studiowongs.",
+      "org": {
+        "name": "J.A.B.O.C (Just A Band of Creatives)",
+        "prof": "A local band of artists, designers, makers and creative misfits with a small dream to share and celebrate art and design on the big stage.",
+        "ig": "justabandofcreatives"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "PLANT",
+      "showcases": "Plant",
+      "type": ["exh"],
+      "location": ["nlb"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 9pm",
+      "short": "PLANT reimagines household planters that twist traditional concepts of use and appreciation.",
+      "long": "PLANT",
+      "rm": "Free Admission",
+      "org": { "name": "Hans Tan Studio" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "COMMUTE: My Riding Tribe",
+      "showcases": "Commute",
+      "type": ["exh"],
+      "location": ["bclnMRT"],
+      "date": ["26/9-6/10"],
+      "time": "",
+      "short": "COMMUTE unveils your MRT personality at Bencoolen Station with \"My Riding Tribe\" through a design research adventure.",
+      "long": "COMMUTEMyRidingTribe",
+      "sponsor": "This event is organised and supported by the DesignSingapore Council (DSG), created by brief., and sponsored by the Land Transport Authority (LTA) and SBS Transit. For more information, visit DSG's website, LTA's website, and SBS Transit's website.",
+      "org": {
+        "name": "'brief.'",
+        "prof": "'brief.’ is a Research and Design studio that bridges deep user insights with real-life application. Their outcome-agnostic approach makes innovation exploration accessible to those often priced out. Their ethos \"Today's Research, Tomorrow's Design,\" grounds their design solutions in thorough research to create impactful outcomes for the future.",
+        "web": "https://www.keepitbrief.co/",
+        "ig": "keepitbriefco",
+        "in": "https://www.linkedin.com/company/keepitbrief"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "SLEEP: LESS",
+      "showcases": "Sleep",
+      "type": ["oth"],
+      "location": ["naumi"],
+      "date": ["26/9-6/10"],
+      "time": "11am – 2pm, 3pm – 7pm \n*30 mins slots to be booked",
+      "short": "SLEEP: LESS is a VR experience exploring five sleep stories of individuals with different relationships to sleep.",
+      "long": "SLEEPLESS",
+      "rm": "Free with Registration",
+      "sponsor": "This event is supported by LASALLE College of the Arts, University of the Arts Singapore and co-developed in collaboration with the second year students of BA (Hons) Design for Social Future.\n        This event is supported by venue sponsor Naumi Hotel.",
+      "org": { "name": "Forest and Whale" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": ["VR Installation"],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "oth": true }
+    },
+    {
+      "name": "SLEEP: DIVING IN",
+      "showcases": "Sleep",
+      "type": ["oth"],
+      "location": ["naumi"],
+      "date": ["26/9-6/10", "-27/9"],
+      "time": "Check in 3pm, Check out 11am",
+      "short": "SLEEP: DIVING IN explores the elements of ideal sleep hygiene rituals that could overcome primary insomnia.",
+      "long": "SLEEPDIVINGIN",
+      "rm": "Room stays will be ~$300 per night, TBC",
+      "sponsor": "This event is supported by venue sponsor Naumi Hotel.",
+      "org": {
+        "name": "Forest and Whale",
+        "prof": "Gustavo Maggio and Wendy Chua lead Forest and Whale, where design is a mediator between fields and agent of change. They design products, services and experiences that redefine the way people live, age-in-place and gather as communities. Selected for the EU STARTS residency, their work explores unseen climate precarity through the VR lens.",
+        "web": "http://www.forestandwhale.com/",
+        "ig": "forestandwhale"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": { "09/27/2024": true },
+        "last": "10/06/2024"
+      },
+      "othertype": ["Immersive Experience and Room Installation"],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "oth": true }
+    },
+    {
+      "name": "HEAL: Repair+",
+      "showcases": "Heal",
+      "type": ["exh"],
+      "location": ["blckbx"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 10pm",
+      "short": "HEAL explores mending emotional memories through restorative design in a curation of transformed broken objects.",
+      "long": "HEALRepair",
+      "rm": "Free Admission",
+      "org": {
+        "name": "Yishun Health",
+        "prof": "This project was generously funded by the Alexandra Health Fund which supports community collaboration to enhance health and improve quality of life for patients in Yishun Health. Khoo Teck Puat Hospital is part of the Yishun Health network of medical institutions and health facilities in the north of Singapore, under the National Healthcare Group.",
+        "web": "http://yishuncommunityhospital.com.sg/",
+        "ig": "khooteckpuathospital",
+        "fb": "Yishun Community Hospital"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "SHOP",
+      "showcases": "Shop",
+      "type": ["exh"],
+      "location": ["bgs+", "bgsst"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 10pm",
+      "short": "SHOP explores the intricate dynamics of how shops, shopping, and shoppers are intertwined with design.",
+      "long": "SHOP",
+      "rm": "Free Admission",
+      "sponsor": "SHOP is presented in partnership with Bugis+ and Bugis Street.",
+      "org": {
+        "name": "gideon-jamie",
+        "prof": "gideon-jamie is a design studio involved in publishing and running a space for books. Founded in 2017 by Gideon Kong and Jamie Yeo, the studio develops critical responses through commissioned projects and independent work, in the form of writings, designs, and ad-hoc exhibitions and workshops.",
+        "web": "http://gideon-jamie.com/",
+        "ig": "gideon_jamie_"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "READ: BOOK",
+      "showcases": "Read",
+      "type": ["exh", "ins"],
+      "location": ["nlb"],
+      "date": ["26/9-6/10"],
+      "time": "10am – 7pm",
+      "short": "READ presents Atelier HOKO's interrogation of the physical book through an immersive exhibition at the National Library.",
+      "long": "READBOOK",
+      "sponsor": "NLB",
+      "org": {
+        "name": "Atelier HOKO",
+        "prof": "Atelier HOKO (2002) is an independent research lab that focuses on the study of the growing disengagement between people, things and space. The atelier hopes to cultivate in people, an open-ness and ability to un-know, bringing about a heightened curiosity towards all phenomena by taking a fresh look at reality. Founded by Alvin Ho and Clara Koh.",
+        "web": "https://atelierhoko.com/",
+        "ig": "atelierhoko",
+        "fb": "https://www.facebook.com/atelierhoko "
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": { "exh": true, "ins": true }
+    },
+    {
+      "name": "People of Design Showcase Series",
+      "showcases": "Main",
+      "type": [],
+      "location": [],
+      "date": ["26/9-6/10"],
+      "time": "",
+      "short": "",
+      "long": "PeopleofDesignShowcaseSeries",
+      "org": {
+        "name": "Hans Tan Studio",
+        "prof": "Hans is a designer maker, curator, and educator based in Singapore, whose work explores creativity through \"deformative inquiry,\" making use of utility as a pretext for provoking discourse. His work, infused with narratives and collective memory, examines design and its industry.",
+        "web": "https://www.hanstan.net",
+        "ig": "hanstan_studio"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 06 Oct",
+      "processedType": {}
+    },
+    {
+      "name": "DESIGN",
+      "showcases": "Design",
+      "type": ["exh"],
+      "location": ["ndc"],
+      "date": ["26/9-10/11"],
+      "time": "9am – 9pm",
+      "short": "DESIGN showcases innovative works by everyday people, empowered by the transformative power of design.",
+      "long": "DESIGN",
+      "rm": "Free Admission",
+      "sponsor": "DesignSingapore Council",
+      "org": { "name": "Hans Tan Studio" },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "11/10/2024",
+        "inc": {},
+        "exc": {},
+        "last": "11/10/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 10 Nov",
+      "processedType": { "exh": true }
+    },
+    {
+      "name": "EAT: Transformative Seeds",
+      "showcases": "Eat",
+      "type": ["exh"],
+      "location": ["ndc"],
+      "date": ["26/9-10/11"],
+      "time": "9am – 9pm",
+      "short": "EAT explores food design by investigating seeds through culinary transformations and material innovations.",
+      "long": "EATTransformativeSeeds",
+      "org": {
+        "name": "Atelier Fang (Dipl.-Des.Fang HU, International team Yue LIU, Xijing XU, Yongxin LAI and Shijia HUANG)",
+        "prof": "Atelier Fang, based in Hangzhou, explores food-centered design through initiatives in design education, product development and production innovation. Operating the ‘ChiTofu’ Experimental Design Program, they specialize in deconstructing handcraft processes and narrating new food scenes. They believe food innovation brings diverse societal values.",
+        "web": "https://www.chitofu.com"
+      },
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "11/10/2024",
+        "inc": {},
+        "exc": {},
+        "last": "11/10/2024"
+      },
+      "othertype": [],
+      "formattedDate": "26 Sep - 10 Nov",
+      "processedType": { "exh": true }
+    }
+  ],
+  "allPlaces": {
+    "nlb": {
+      "lnglat": [103.85430872353592, 1.297591742916379],
+      "color": "orange",
+      "name": "National Library"
+    },
+    "ndc": {
+      "lnglat": [103.85336466543913, 1.2986713930955747],
+      "color": "pink",
+      "name": "National Design Centre"
+    },
+    "tipo": {
+      "lnglat": [103.85276681390103, 1.3000276310211587],
+      "color": "violet",
+      "name": "Tipo Pasta Bar"
+    },
+    "bgs+": {
+      "lnglat": [103.85422199984892, 1.299687603373886],
+      "color": "white",
+      "name": "Bugis+"
+    },
+    "bgsst": {
+      "lnglat": [103.8552006333849, 1.3001993630434534],
+      "color": "black",
+      "name": "Bugis Street"
+    },
+    "blckbx": {
+      "lnglat": [103.85078237284628, 1.2984248770599607],
+      "color": "yellow",
+      "name": "42 Waterloo"
+    },
+    "naumi": {
+      "lnglat": [103.85515240231982, 1.2959744942521976],
+      "color": "green",
+      "name": "Naumi Hotel"
+    },
+    "bclnMRT": {
+      "lnglat": [103.84965695752079, 1.2982979911002313],
+      "color": "blue",
+      "name": "Bencoolen MRT Station"
+    },
+    "NAFA": {
+      "lnglat": [103.85047983464034, 1.2986870306983775],
+      "color": "red",
+      "name": "NAFA Fashion Gallery, NAFA Campus 2"
+    }
+  },
+  "allShowcases": {
+    "Main": {
+      "name": "Main",
+      "number": 0,
+      "events": [
+        {
+          "name": "People of Design Showcase Series",
+          "showcases": "Main",
+          "type": [],
+          "location": [],
+          "date": ["26/9-6/10"],
+          "time": "",
+          "short": "",
+          "long": "PeopleofDesignShowcaseSeries",
+          "org": {
+            "name": "Hans Tan Studio",
+            "prof": "Hans is a designer maker, curator, and educator based in Singapore, whose work explores creativity through \"deformative inquiry,\" making use of utility as a pretext for provoking discourse. His work, infused with narratives and collective memory, examines design and its industry.",
+            "web": "https://www.hanstan.net",
+            "ig": "hanstan_studio"
+          },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": {}
+        }
+      ]
+    },
+    "Read": {
+      "name": "Read",
+      "number": 0,
+      "events": [
+        {
+          "name": "READ: BOOK",
+          "showcases": "Read",
+          "type": ["exh", "ins"],
+          "location": ["nlb"],
+          "date": ["26/9-6/10"],
+          "time": "10am – 7pm",
+          "short": "READ presents Atelier HOKO's interrogation of the physical book through an immersive exhibition at the National Library.",
+          "long": "READBOOK",
+          "sponsor": "NLB",
+          "org": {
+            "name": "Atelier HOKO",
+            "prof": "Atelier HOKO (2002) is an independent research lab that focuses on the study of the growing disengagement between people, things and space. The atelier hopes to cultivate in people, an open-ness and ability to un-know, bringing about a heightened curiosity towards all phenomena by taking a fresh look at reality. Founded by Alvin Ho and Clara Koh.",
+            "web": "https://atelierhoko.com/",
+            "ig": "atelierhoko",
+            "fb": "https://www.facebook.com/atelierhoko "
+          },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true, "ins": true }
+        }
+      ]
+    },
+    "Eat": {
+      "name": "Eat",
+      "number": 2,
+      "events": [
+        {
+          "name": "EAT: Transformative Seeds",
+          "showcases": "Eat",
+          "type": ["exh"],
+          "location": ["ndc"],
+          "date": ["26/9-10/11"],
+          "time": "9am – 9pm",
+          "short": "EAT explores food design by investigating seeds through culinary transformations and material innovations.",
+          "long": "EATTransformativeSeeds",
+          "org": {
+            "name": "Atelier Fang (Dipl.-Des.Fang HU, International team Yue LIU, Xijing XU, Yongxin LAI and Shijia HUANG)",
+            "prof": "Atelier Fang, based in Hangzhou, explores food-centered design through initiatives in design education, product development and production innovation. Operating the ‘ChiTofu’ Experimental Design Program, they specialize in deconstructing handcraft processes and narrating new food scenes. They believe food innovation brings diverse societal values.",
+            "web": "https://www.chitofu.com"
+          },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "11/10/2024",
+            "inc": {},
+            "exc": {},
+            "last": "11/10/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 10 Nov",
+          "processedType": { "exh": true }
+        },
+        {
+          "name": "A++ Recipe Workshop",
+          "showcases": "Eat",
+          "type": ["wks"],
+          "location": ["tipo"],
+          "date": ["23/7,25/7"],
+          "time": "2.30 – 5.30pm",
+          "short": "",
+          "long": "ARecipeWorkshop",
+          "sponsor": "Tipo Pasta Bar",
+          "processedDate": {
+            "from": null,
+            "to": null,
+            "inc": { "07/23/2024": true, "07/25/2024": true },
+            "exc": {},
+            "last": "07/25/2024"
+          },
+          "othertype": [],
+          "formattedDate": "23 Jul and 25 Jul.",
+          "processedType": { "wks": true }
+        },
+        {
+          "name": "Special Menu with Tipo",
+          "showcases": "Eat",
+          "type": ["pre"],
+          "location": ["tipo"],
+          "date": ["26/9-3/10"],
+          "time": "",
+          "short": "",
+          "long": "SpecialMenuwithTipo",
+          "sponsor": "Tipo Pasta Bar",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/03/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/03/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 03 Oct",
+          "processedType": { "pre": true }
+        }
+      ]
+    },
+    "Shop": {
+      "name": "Shop",
+      "number": 0,
+      "events": [
+        {
+          "name": "SHOP",
+          "showcases": "Shop",
+          "type": ["exh"],
+          "location": ["bgs+", "bgsst"],
+          "date": ["26/9-6/10"],
+          "time": "10am – 10pm",
+          "short": "SHOP explores the intricate dynamics of how shops, shopping, and shoppers are intertwined with design.",
+          "long": "SHOP",
+          "rm": "Free Admission",
+          "sponsor": "SHOP is presented in partnership with Bugis+ and Bugis Street.",
+          "org": {
+            "name": "gideon-jamie",
+            "prof": "gideon-jamie is a design studio involved in publishing and running a space for books. Founded in 2017 by Gideon Kong and Jamie Yeo, the studio develops critical responses through commissioned projects and independent work, in the form of writings, designs, and ad-hoc exhibitions and workshops.",
+            "web": "http://gideon-jamie.com/",
+            "ig": "gideon_jamie_"
+          },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "Heal": {
+      "name": "Heal",
+      "number": 0,
+      "events": [
+        {
+          "name": "HEAL: Repair+",
+          "showcases": "Heal",
+          "type": ["exh"],
+          "location": ["blckbx"],
+          "date": ["26/9-6/10"],
+          "time": "10am – 10pm",
+          "short": "HEAL explores mending emotional memories through restorative design in a curation of transformed broken objects.",
+          "long": "HEALRepair",
+          "rm": "Free Admission",
+          "org": {
+            "name": "Yishun Health",
+            "prof": "This project was generously funded by the Alexandra Health Fund which supports community collaboration to enhance health and improve quality of life for patients in Yishun Health. Khoo Teck Puat Hospital is part of the Yishun Health network of medical institutions and health facilities in the north of Singapore, under the National Healthcare Group.",
+            "web": "http://yishuncommunityhospital.com.sg/",
+            "ig": "khooteckpuathospital",
+            "fb": "Yishun Community Hospital"
+          },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "Sleep": {
+      "name": "Sleep",
+      "number": 1,
+      "events": [
+        {
+          "name": "SLEEP: DIVING IN",
+          "showcases": "Sleep",
+          "type": ["oth"],
+          "location": ["naumi"],
+          "date": ["26/9-6/10", "-27/9"],
+          "time": "Check in 3pm, Check out 11am",
+          "short": "SLEEP: DIVING IN explores the elements of ideal sleep hygiene rituals that could overcome primary insomnia.",
+          "long": "SLEEPDIVINGIN",
+          "rm": "Room stays will be ~$300 per night, TBC",
+          "sponsor": "This event is supported by venue sponsor Naumi Hotel.",
+          "org": {
+            "name": "Forest and Whale",
+            "prof": "Gustavo Maggio and Wendy Chua lead Forest and Whale, where design is a mediator between fields and agent of change. They design products, services and experiences that redefine the way people live, age-in-place and gather as communities. Selected for the EU STARTS residency, their work explores unseen climate precarity through the VR lens.",
+            "web": "http://www.forestandwhale.com/",
+            "ig": "forestandwhale"
+          },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": { "09/27/2024": true },
+            "last": "10/06/2024"
+          },
+          "othertype": ["Immersive Experience and Room Installation"],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "oth": true }
+        },
+        {
+          "name": "SLEEP: LESS",
+          "showcases": "Sleep",
+          "type": ["oth"],
+          "location": ["naumi"],
+          "date": ["26/9-6/10"],
+          "time": "11am – 2pm, 3pm – 7pm \n*30 mins slots to be booked",
+          "short": "SLEEP: LESS is a VR experience exploring five sleep stories of individuals with different relationships to sleep.",
+          "long": "SLEEPLESS",
+          "rm": "Free with Registration",
+          "sponsor": "This event is supported by LASALLE College of the Arts, University of the Arts Singapore and co-developed in collaboration with the second year students of BA (Hons) Design for Social Future.\n        This event is supported by venue sponsor Naumi Hotel.",
+          "org": { "name": "Forest and Whale" },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": ["VR Installation"],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "oth": true }
+        }
+      ]
+    },
+    "Commute": {
+      "name": "Commute",
+      "number": 0,
+      "events": [
+        {
+          "name": "COMMUTE: My Riding Tribe",
+          "showcases": "Commute",
+          "type": ["exh"],
+          "location": ["bclnMRT"],
+          "date": ["26/9-6/10"],
+          "time": "",
+          "short": "COMMUTE unveils your MRT personality at Bencoolen Station with \"My Riding Tribe\" through a design research adventure.",
+          "long": "COMMUTEMyRidingTribe",
+          "sponsor": "This event is organised and supported by the DesignSingapore Council (DSG), created by brief., and sponsored by the Land Transport Authority (LTA) and SBS Transit. For more information, visit DSG's website, LTA's website, and SBS Transit's website.",
+          "org": {
+            "name": "'brief.'",
+            "prof": "'brief.’ is a Research and Design studio that bridges deep user insights with real-life application. Their outcome-agnostic approach makes innovation exploration accessible to those often priced out. Their ethos \"Today's Research, Tomorrow's Design,\" grounds their design solutions in thorough research to create impactful outcomes for the future.",
+            "web": "https://www.keepitbrief.co/",
+            "ig": "keepitbriefco",
+            "in": "https://www.linkedin.com/company/keepitbrief"
+          },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "Plant": {
+      "name": "Plant",
+      "number": 0,
+      "events": [
+        {
+          "name": "PLANT",
+          "showcases": "Plant",
+          "type": ["exh"],
+          "location": ["nlb"],
+          "date": ["26/9-6/10"],
+          "time": "10am – 9pm",
+          "short": "PLANT reimagines household planters that twist traditional concepts of use and appreciation.",
+          "long": "PLANT",
+          "rm": "Free Admission",
+          "org": { "name": "Hans Tan Studio" },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "Display": {
+      "name": "Display",
+      "number": 0,
+      "events": [
+        {
+          "name": "DISPLAY",
+          "showcases": "Display",
+          "type": [],
+          "location": [],
+          "date": [],
+          "time": "",
+          "short": "DISPLAY presents experimental creations by Studio Juju that explore the idea\nof DISPLAY, both as an object and a system.",
+          "long": "DISPLAY",
+          "processedDate": { "from": null, "to": null, "inc": {}, "exc": {} },
+          "othertype": [],
+          "formattedDate": "",
+          "processedType": {}
+        }
+      ]
+    },
+    "Make": {
+      "name": "Make",
+      "number": 0,
+      "events": [
+        {
+          "name": "MAKE: Me(n)tal",
+          "showcases": "Make",
+          "type": ["exh"],
+          "location": ["NAFA"],
+          "date": ["26/9-6/10"],
+          "time": "10am – 9pm (TBC)",
+          "short": "MAKE discovers metal's potential as creatives transform scraps into treasures that celebrate its innate qualities.",
+          "long": "MAKEMental",
+          "rm": "Free Admission",
+          "sponsor": "This event is proudly supported by NAFA, and Studiowongs.",
+          "org": {
+            "name": "J.A.B.O.C (Just A Band of Creatives)",
+            "prof": "A local band of artists, designers, makers and creative misfits with a small dream to share and celebrate art and design on the big stage.",
+            "ig": "justabandofcreatives"
+          },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "Design": {
+      "name": "Design",
+      "number": 0,
+      "events": [
+        {
+          "name": "DESIGN",
+          "showcases": "Design",
+          "type": ["exh"],
+          "location": ["ndc"],
+          "date": ["26/9-10/11"],
+          "time": "9am – 9pm",
+          "short": "DESIGN showcases innovative works by everyday people, empowered by the transformative power of design.",
+          "long": "DESIGN",
+          "rm": "Free Admission",
+          "sponsor": "DesignSingapore Council",
+          "org": { "name": "Hans Tan Studio" },
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "11/10/2024",
+            "inc": {},
+            "exc": {},
+            "last": "11/10/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 10 Nov",
+          "processedType": { "exh": true }
+        }
+      ]
+    }
+  },
+  "allTypes": {
+    "exh": { "name": "exhibition" },
+    "ins": { "name": "installation" },
+    "wks": { "name": "workshop" },
+    "pre": { "name": "presentation" },
+    "oth": { "name": "other" }
+  },
+  "allOrganizers": {
+    "Hans Tan Studio": {
+      "prof": "Hans is a designer maker, curator, and educator based in Singapore, whose work explores creativity through \"deformative inquiry,\" making use of utility as a pretext for provoking discourse. His work, infused with narratives and collective memory, examines design and its industry.",
+      "fb": null,
+      "ig": "https://www.instagram.com/hanstan_studio",
+      "web": "https://www.hanstan.net",
+      "in": null
+    },
+    "Atelier HOKO": {
+      "prof": "Atelier HOKO (2002) is an independent research lab that focuses on the study of the growing disengagement between people, things and space. The atelier hopes to cultivate in people, an open-ness and ability to un-know, bringing about a heightened curiosity towards all phenomena by taking a fresh look at reality. Founded by Alvin Ho and Clara Koh.",
+      "fb": "https://www.facebook.com/atelierhoko ",
+      "ig": "https://www.instagram.com/atelierhoko",
+      "web": "https://atelierhoko.com/",
+      "in": null
+    },
+    "Atelier Fang (Dipl.-Des.Fang HU, International team Yue LIU, Xijing XU, Yongxin LAI and Shijia HUANG)": {
+      "prof": "Atelier Fang, based in Hangzhou, explores food-centered design through initiatives in design education, product development and production innovation. Operating the ‘ChiTofu’ Experimental Design Program, they specialize in deconstructing handcraft processes and narrating new food scenes. They believe food innovation brings diverse societal values.",
+      "fb": null,
+      "ig": null,
+      "web": "https://www.chitofu.com",
+      "in": null
+    },
+    "gideon-jamie": {
+      "prof": "gideon-jamie is a design studio involved in publishing and running a space for books. Founded in 2017 by Gideon Kong and Jamie Yeo, the studio develops critical responses through commissioned projects and independent work, in the form of writings, designs, and ad-hoc exhibitions and workshops.",
+      "fb": null,
+      "ig": "https://www.instagram.com/gideon_jamie_",
+      "web": "http://gideon-jamie.com/",
+      "in": null
+    },
+    "Yishun Health": {
+      "prof": "This project was generously funded by the Alexandra Health Fund which supports community collaboration to enhance health and improve quality of life for patients in Yishun Health. Khoo Teck Puat Hospital is part of the Yishun Health network of medical institutions and health facilities in the north of Singapore, under the National Healthcare Group.",
+      "fb": "Yishun Community Hospital",
+      "ig": "https://www.instagram.com/khooteckpuathospital",
+      "web": "http://yishuncommunityhospital.com.sg/",
+      "in": null
+    },
+    "Forest and Whale": {
+      "prof": "Gustavo Maggio and Wendy Chua lead Forest and Whale, where design is a mediator between fields and agent of change. They design products, services and experiences that redefine the way people live, age-in-place and gather as communities. Selected for the EU STARTS residency, their work explores unseen climate precarity through the VR lens.",
+      "fb": null,
+      "ig": "https://www.instagram.com/forestandwhale",
+      "web": "http://www.forestandwhale.com/",
+      "in": null
+    },
+    "'brief.'": {
+      "prof": "'brief.’ is a Research and Design studio that bridges deep user insights with real-life application. Their outcome-agnostic approach makes innovation exploration accessible to those often priced out. Their ethos \"Today's Research, Tomorrow's Design,\" grounds their design solutions in thorough research to create impactful outcomes for the future.",
+      "fb": null,
+      "ig": "https://www.instagram.com/keepitbriefco",
+      "web": "https://www.keepitbrief.co/",
+      "in": "https://www.linkedin.com/company/keepitbrief"
+    },
+    "J.A.B.O.C (Just A Band of Creatives)": {
+      "prof": "A local band of artists, designers, makers and creative misfits with a small dream to share and celebrate art and design on the big stage.",
+      "fb": null,
+      "ig": "https://www.instagram.com/justabandofcreatives",
+      "web": null,
+      "in": null
+    }
+  },
+  "middleLngLat": [103.8528816003819, 1.2986180140623576]
+}

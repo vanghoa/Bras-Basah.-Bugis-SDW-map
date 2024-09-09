@@ -1,0 +1,659 @@
+{
+  "allPins": {
+    "read": {
+      "location": "nlb",
+      "processedType": { "exh": true, "ins": true },
+      "type": ["exh", "ins"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "lnglat": [103.8541608823857, 1.2977679331382963],
+      "showcases": "Read",
+      "events": [
+        {
+          "name": "READ: BOOK",
+          "showcases": "Read",
+          "type": ["exh", "ins"],
+          "location": "nlb",
+          "date": ["26/9-6/10"],
+          "time": "10am – 7pm",
+          "short": "READ presents Atelier HOKO's interrogation of the physical book through an immersive exhibition at the National Library.",
+          "long": "READBOOK",
+          "pin": "read",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true, "ins": true }
+        }
+      ]
+    },
+    "eat1": {
+      "location": "ndc",
+      "processedType": { "exh": true },
+      "type": ["exh"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "11/10/2024",
+        "inc": {},
+        "exc": {},
+        "last": "11/10/2024"
+      },
+      "lnglat": [103.85344322378191, 1.298455225135922],
+      "showcases": "Eat",
+      "events": [
+        {
+          "name": "EAT: Transformative Seeds",
+          "showcases": "Eat",
+          "type": ["exh"],
+          "location": "ndc",
+          "date": ["26/9-10/11"],
+          "time": "9am – 9pm",
+          "short": "EAT explores food design by investigating seeds through culinary transformations and material innovations.",
+          "long": "EATTransformativeSeeds",
+          "pin": "eat1",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "11/10/2024",
+            "inc": {},
+            "exc": {},
+            "last": "11/10/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 10 Nov",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "eat2": {
+      "location": "tipo",
+      "processedType": { "wks": true, "pre": true },
+      "type": ["wks", "pre"],
+      "processedDate": {
+        "from": null,
+        "to": null,
+        "inc": { "07/23/2024": true, "07/25/2024": true },
+        "exc": {},
+        "last": "07/25/2024"
+      },
+      "lnglat": [103.85276681390103, 1.3000276310211587],
+      "showcases": "Eat",
+      "events": [
+        {
+          "name": "A++ Recipe Workshop",
+          "showcases": "Eat",
+          "type": ["wks"],
+          "location": "tipo",
+          "date": ["23/7,25/7"],
+          "time": "2.30 – 5.30pm",
+          "short": "",
+          "long": "ARecipeWorkshop",
+          "pin": "eat2",
+          "processedDate": {
+            "from": null,
+            "to": null,
+            "inc": { "07/23/2024": true, "07/25/2024": true },
+            "exc": {},
+            "last": "07/25/2024"
+          },
+          "othertype": [],
+          "formattedDate": "23 Jul and 25 Jul.",
+          "processedType": { "wks": true }
+        },
+        {
+          "name": "Special Menu with Tipo",
+          "showcases": "Eat",
+          "type": ["pre"],
+          "location": "tipo",
+          "date": ["26/9-3/10"],
+          "time": "",
+          "short": "",
+          "long": "SpecialMenuwithTipo",
+          "pin": "eat2",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/03/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/03/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 03 Oct",
+          "processedType": { "pre": true }
+        }
+      ]
+    },
+    "shop1": {
+      "location": "bgs+",
+      "processedType": { "exh": true },
+      "type": ["exh"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "lnglat": [103.85422199984892, 1.299687603373886],
+      "showcases": "Shop",
+      "events": [
+        {
+          "name": "SHOP",
+          "showcases": "Shop",
+          "type": ["exh"],
+          "location": "bgs+",
+          "date": ["26/9-6/10"],
+          "time": "10am – 10pm",
+          "short": "SHOP explores the intricate dynamics of how shops, shopping, and shoppers are intertwined with design.",
+          "long": "SHOP",
+          "pin": "shop1",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        },
+        {
+          "name": "SHOP",
+          "showcases": "Shop",
+          "type": ["exh"],
+          "location": "bgs+",
+          "date": ["26/9-6/10"],
+          "time": "10am – 10pm",
+          "short": "SHOP explores the intricate dynamics of how shops, shopping, and shoppers are intertwined with design.",
+          "long": "SHOP",
+          "pin": "shop1",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "shop2": {
+      "location": "bgsst",
+      "processedType": { "exh": true },
+      "type": ["exh"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "lnglat": [103.85487145478659, 1.3004835841755127],
+      "showcases": "Shop",
+      "events": [
+        {
+          "name": "SHOP",
+          "showcases": "Shop",
+          "type": ["exh"],
+          "location": "bgsst",
+          "date": ["26/9-6/10"],
+          "time": "10am – 10pm",
+          "short": "SHOP explores the intricate dynamics of how shops, shopping, and shoppers are intertwined with design.",
+          "long": "SHOP",
+          "pin": "shop2",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "heal": {
+      "location": "blckbx",
+      "processedType": { "exh": true },
+      "type": ["exh"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "lnglat": [103.85078237284628, 1.2984248770599607],
+      "showcases": "Heal",
+      "events": [
+        {
+          "name": "HEAL: Repair+",
+          "showcases": "Heal",
+          "type": ["exh"],
+          "location": "blckbx",
+          "date": ["26/9-6/10"],
+          "time": "10am – 10pm",
+          "short": "HEAL explores mending emotional memories through restorative design in a curation of transformed broken objects.",
+          "long": "HEALRepair",
+          "pin": "heal",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "sleep": {
+      "location": "naumi",
+      "processedType": { "oth": true },
+      "type": ["oth"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": { "09/27/2024": true },
+        "last": "10/06/2024"
+      },
+      "lnglat": [103.85515240231982, 1.2959744942521976],
+      "showcases": "Sleep",
+      "events": [
+        {
+          "name": "SLEEP: DIVING IN",
+          "showcases": "Sleep",
+          "type": ["oth"],
+          "location": "naumi",
+          "date": ["26/9-6/10", "-27/9"],
+          "time": "Check in 3pm, Check out 11am",
+          "short": "SLEEP: DIVING IN explores the elements of ideal sleep hygiene rituals that could overcome primary insomnia.",
+          "long": "SLEEPDIVINGIN",
+          "pin": "sleep",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": { "09/27/2024": true },
+            "last": "10/06/2024"
+          },
+          "othertype": ["Immersive Experience and Room Installation"],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "oth": true }
+        },
+        {
+          "name": "SLEEP: LESS",
+          "showcases": "Sleep",
+          "type": ["oth"],
+          "location": "naumi",
+          "date": ["26/9-6/10"],
+          "time": "11am – 2pm, 3pm – 7pm \n  *30 mins slots to be booked",
+          "short": "SLEEP: LESS is a VR experience exploring five sleep stories of individuals with different relationships to sleep.",
+          "long": "SLEEPLESS",
+          "pin": "sleep",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": ["VR Installation"],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "oth": true }
+        }
+      ]
+    },
+    "commute": {
+      "location": "bclnMRT",
+      "processedType": { "exh": true },
+      "type": ["exh"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "lnglat": [103.85076011070184, 1.2990994011748112],
+      "showcases": "Commute",
+      "events": [
+        {
+          "name": "COMMUTE: My Riding Tribe",
+          "showcases": "Commute",
+          "type": ["exh"],
+          "location": "bclnMRT",
+          "date": ["26/9-6/10"],
+          "time": "",
+          "short": "COMMUTE unveils your MRT personality at Bencoolen Station with \"My Riding Tribe\" through a design research adventure.",
+          "long": "COMMUTEMyRidingTribe",
+          "pin": "commute",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "plant": {
+      "location": "nlb",
+      "processedType": { "exh": true },
+      "type": ["exh"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "lnglat": [103.85423005890296, 1.2973756136135983],
+      "showcases": "Plant",
+      "events": [
+        {
+          "name": "PLANT",
+          "showcases": "Plant",
+          "type": ["exh"],
+          "location": "nlb",
+          "date": ["26/9-6/10"],
+          "time": "10am – 9pm",
+          "short": "PLANT reimagines household planters that twist traditional concepts of use and appreciation.",
+          "long": "PLANT",
+          "pin": "plant",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "display": {
+      "location": "nlb",
+      "processedType": {},
+      "type": [],
+      "processedDate": { "from": null, "to": null, "inc": {}, "exc": {} },
+      "lnglat": [103.85453522931911, 1.2976316819972424],
+      "showcases": "Display",
+      "events": [
+        {
+          "name": "DISPLAY",
+          "showcases": "Display",
+          "type": [],
+          "location": "nlb",
+          "date": [],
+          "time": "",
+          "short": "DISPLAY presents experimental creations by Studio Juju that explore the idea\n  of DISPLAY, both as an object and a system.",
+          "long": "DISPLAY",
+          "pin": "display",
+          "processedDate": { "from": null, "to": null, "inc": {}, "exc": {} },
+          "othertype": [],
+          "formattedDate": "",
+          "processedType": {}
+        }
+      ]
+    },
+    "make": {
+      "location": "NAFA",
+      "processedType": { "exh": true },
+      "type": ["exh"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "10/06/2024",
+        "inc": {},
+        "exc": {},
+        "last": "10/06/2024"
+      },
+      "lnglat": [103.85047983464034, 1.2986870306983775],
+      "showcases": "Make",
+      "events": [
+        {
+          "name": "MAKE: Me(n)tal",
+          "showcases": "Make",
+          "type": ["exh"],
+          "location": "NAFA",
+          "date": ["26/9-6/10"],
+          "time": "10am – 9pm (TBC)",
+          "short": "MAKE discovers metal's potential as creatives transform scraps into treasures that celebrate its innate qualities.",
+          "long": "MAKEMental",
+          "pin": "make",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "10/06/2024",
+            "inc": {},
+            "exc": {},
+            "last": "10/06/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 06 Oct",
+          "processedType": { "exh": true }
+        }
+      ]
+    },
+    "design": {
+      "location": "ndc",
+      "processedType": { "exh": true },
+      "type": ["exh"],
+      "processedDate": {
+        "from": "09/26/2024",
+        "to": "11/10/2024",
+        "inc": {},
+        "exc": {},
+        "last": "11/10/2024"
+      },
+      "lnglat": [103.85328610709635, 1.2988875610552273],
+      "showcases": "Design",
+      "events": [
+        {
+          "name": "DESIGN",
+          "showcases": "Design",
+          "type": ["exh"],
+          "location": "ndc",
+          "date": ["26/9-10/11"],
+          "time": "9am – 9pm",
+          "short": "DESIGN showcases innovative works by everyday people, empowered by the transformative power of design.",
+          "long": "DESIGN",
+          "pin": "design",
+          "processedDate": {
+            "from": "09/26/2024",
+            "to": "11/10/2024",
+            "inc": {},
+            "exc": {},
+            "last": "11/10/2024"
+          },
+          "othertype": [],
+          "formattedDate": "26 Sep - 10 Nov",
+          "processedType": { "exh": true }
+        }
+      ]
+    }
+  },
+  "allPinKeys": [
+    "read",
+    "eat1",
+    "eat2",
+    "shop1",
+    "shop2",
+    "heal",
+    "sleep",
+    "commute",
+    "plant",
+    "display",
+    "make",
+    "design"
+  ],
+  "allPlaces": {
+    "nlb": {
+      "lnglat": [103.85430872353592, 1.297591742916379],
+      "color": "orange",
+      "name": "National Library",
+      "allPins": {
+        "read": [103.8541608823857, 1.2977679331382963],
+        "plant": [103.85423005890296, 1.2973756136135983],
+        "display": [103.85453522931911, 1.2976316819972424]
+      }
+    },
+    "ndc": {
+      "lnglat": [103.85336466543913, 1.2986713930955747],
+      "color": "pink",
+      "name": "National Design Centre",
+      "rotation": -220,
+      "allPins": {
+        "eat1": [103.85344322378191, 1.298455225135922],
+        "design": [103.85328610709635, 1.2988875610552273]
+      }
+    },
+    "tipo": {
+      "lnglat": [103.85276681390103, 1.3000276310211587],
+      "color": "violet",
+      "name": "Tipo Pasta Bar",
+      "allPins": { "eat2": [103.85276681390103, 1.3000276310211587] }
+    },
+    "bgs+": {
+      "lnglat": [103.85422199984892, 1.299687603373886],
+      "color": "white",
+      "name": "Bugis+",
+      "allPins": { "shop1": [103.85422199984892, 1.299687603373886] }
+    },
+    "bgsst": {
+      "lnglat": [103.85487145478659, 1.3004835841755127],
+      "color": "black",
+      "name": "Bugis Street",
+      "allPins": { "shop2": [103.85487145478659, 1.3004835841755127] }
+    },
+    "blckbx": {
+      "lnglat": [103.85078237284628, 1.2984248770599607],
+      "color": "yellow",
+      "name": "42 Waterloo",
+      "allPins": { "heal": [103.85078237284628, 1.2984248770599607] }
+    },
+    "naumi": {
+      "lnglat": [103.85515240231982, 1.2959744942521976],
+      "color": "green",
+      "name": "Naumi Hotel",
+      "allPins": { "sleep": [103.85515240231982, 1.2959744942521976] }
+    },
+    "bclnMRT": {
+      "lnglat": [103.85076011070184, 1.2990994011748112],
+      "color": "blue",
+      "name": "Bencoolen MRT Station",
+      "allPins": { "commute": [103.85076011070184, 1.2990994011748112] }
+    },
+    "NAFA": {
+      "lnglat": [103.85047983464034, 1.2986870306983775],
+      "color": "red",
+      "name": "NAFA Fashion Gallery, NAFA Campus 2",
+      "allPins": { "make": [103.85047983464034, 1.2986870306983775] }
+    }
+  },
+  "allShowcases": {
+    "Read": {
+      "pins": ["read"],
+      "processedLocation": { "nlb": true },
+      "processedType": { "exh": true, "ins": true },
+      "pinIndex": 1
+    },
+    "Eat": {
+      "pins": ["eat1", "eat2"],
+      "processedLocation": { "ndc": true, "tipo": true },
+      "processedType": { "wks": true, "pre": true, "exh": true },
+      "pinIndex": 2
+    },
+    "Shop": {
+      "pins": ["shop1", "shop2"],
+      "processedLocation": { "bgs+": true, "bgsst": true },
+      "processedType": { "exh": true },
+      "pinIndex": 3
+    },
+    "Heal": {
+      "pins": ["heal"],
+      "processedLocation": { "blckbx": true },
+      "processedType": { "exh": true },
+      "pinIndex": 4
+    },
+    "Sleep": {
+      "pins": ["sleep"],
+      "processedLocation": { "naumi": true },
+      "processedType": { "oth": true },
+      "pinIndex": 5
+    },
+    "Commute": {
+      "pins": ["commute"],
+      "processedLocation": { "bclnMRT": true },
+      "processedType": { "exh": true },
+      "pinIndex": 6
+    },
+    "Plant": {
+      "pins": ["plant"],
+      "processedLocation": { "nlb": true },
+      "processedType": { "exh": true },
+      "pinIndex": 7
+    },
+    "Display": {
+      "pins": ["display"],
+      "processedLocation": { "nlb": true },
+      "processedType": {},
+      "pinIndex": 8
+    },
+    "Make": {
+      "pins": ["make"],
+      "processedLocation": { "NAFA": true },
+      "processedType": { "exh": true },
+      "pinIndex": 9
+    },
+    "Design": {
+      "pins": ["design"],
+      "processedLocation": { "ndc": true },
+      "processedType": { "exh": true },
+      "pinIndex": 10
+    }
+  },
+  "allShowcaseKeys": [
+    "Read",
+    "Eat",
+    "Shop",
+    "Heal",
+    "Sleep",
+    "Commute",
+    "Plant",
+    "Display",
+    "Make",
+    "Design"
+  ],
+  "allTypes": {
+    "exh": { "name": "exhibition" },
+    "ins": { "name": "installation" },
+    "wks": { "name": "workshop" },
+    "pre": { "name": "presentation" },
+    "oth": { "name": "other" }
+  },
+  "middleLngLat": [103.85296759755776, 1.298738639751984]
+}

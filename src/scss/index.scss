@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+@use "mixins" as *;
+@use "common";
+@use "utilities";
+
+.marker {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  border: 0.3rem solid black;
+  cursor: pointer;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 1s !important;
+  &.highlight {
+    background-color: yellow;
+  }
+}
+
+.map-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100svh;
+  .map-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+button.geolocate {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  pointer-events: none;
+  overflow: hidden;
+  .navigation {
+    pointer-events: auto;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    h1 {
+      flex-grow: 1;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &.open + .filterandsortclass {
+      transform: translateX(0);
+    }
+    &.openSearch + .filterandsortclass .search {
+      transform: translateY(0);
+    }
+    &.openSearch + .filterandsortclass .searchwrapper .background {
+      background-color: rgba(0, 0, 0, 0.246);
+      pointer-events: auto;
+    }
+  }
+  aside {
+    z-index: 2;
+    pointer-events: none;
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    > * {
+      position: absolute;
+      right: 0;
+      top: 0;
+      pointer-events: auto;
+    }
+    .react-draggable {
+      width: fit-content;
+      z-index: 1;
+      background-color: black;
+      border-radius: 2rem;
+      width: 2rem;
+      height: 2rem;
+      left: 50%;
+      top: 50%;
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
+    .rightpanel {
+      width: calc(50% - var(--widthoffset));
+      height: 100%;
+      .searchwrapper {
+        z-index: 100;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        .searchstatus {
+          z-index: 1;
+          pointer-events: auto;
+          position: absolute;
+          height: 2rem;
+        }
+        .search {
+          z-index: 2;
+          pointer-events: auto;
+          min-height: 80%;
+          max-height: 100%;
+          position: absolute;
+          transform: translateY(-100%);
+          transition: transform 0.5s;
+          background-color: rgb(255, 255, 255);
+        }
+        .background {
+          left: 0;
+          top: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          background-color: transparent;
+          transition: background-color 0.5s;
+        }
+      }
+      .content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: rgb(255, 255, 255);
+        .showcaselist {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          .pinlist {
+            h3 {
+              position: sticky;
+              top: 0px;
+              font-size: 2rem;
+              background-color: white;
+            }
+            .eventlistwrapper {
+              transition: grid-template-rows 0.5s;
+              display: grid;
+              grid-template-rows: 0fr;
+              > div {
+                overflow: hidden;
+              }
+              .eventlist {
+                transition: background-color 1s;
+                &.highlight {
+                  background-color: yellow;
+                }
+                .indivevent {
+                  padding-left: 3rem;
+                }
+              }
+            }
+          }
+        }
+        &.havefilter {
+          padding-top: 2rem;
+        }
+        &.havefilter,
+        .pinlist.open {
+          .eventlistwrapper {
+            grid-template-rows: 1fr !important;
+          }
+        }
+      }
+    }
+  }
+  .locationcard {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20svh;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    pointer-events: auto;
+    transform: translateY(100%);
+    transition: transform 0.5s;
+    &.open {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100svh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+  }
+  .toHome {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
