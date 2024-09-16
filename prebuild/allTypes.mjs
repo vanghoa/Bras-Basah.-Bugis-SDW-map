@@ -1,8 +1,9 @@
 const allTypes = {
   exh: "exhibition",
-  ins: "installation",
   wks: "workshop",
-  pre: "presentation",
+  tour: "tour",
+  exp: "experience",
+  pre: "talk/presentation",
   oth: "other",
 };
 

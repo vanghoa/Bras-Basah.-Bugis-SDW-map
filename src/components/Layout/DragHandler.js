@@ -1,25 +1,26 @@
 import { useEffect, useRef } from "react";
-import Draggable from "react-draggable";
+import Draggable, { DraggableCore } from "react-draggable";
 // import { setRightPadding } from "../../utils/utils";
 
 export default function DragHandler() {
   const nodeRef = useRef(null);
   useEffect(() => {
-    window.widthoffset = 0;
+    window.widthoffset = window.innerWidth / 2;
   }, []);
   const handleDrag = (e, data) => {
-    document.documentElement.style.setProperty(`--widthoffset`, data.x + "px");
+    const percentage = Math.round((data.x / window.innerWidth) * 100);
+    document.documentElement.style.setProperty(`--widthoffset`, percentage + "%");
     window.widthoffset = data.x;
   };
   return (
-    <Draggable
+    <DraggableCore
       axis="x"
       bounds="parent"
       onDrag={handleDrag}
       positionOffset={{ x: "-50%", y: "-50%" }}
       nodeRef={nodeRef}
     >
-      <div ref={nodeRef}></div>
-    </Draggable>
+      <div ref={nodeRef} className="draggable"></div>
+    </DraggableCore>
   );
 }

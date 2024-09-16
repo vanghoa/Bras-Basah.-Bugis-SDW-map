@@ -26,7 +26,7 @@ export function formatDate(inputDate) {
   // Return the formatted date as dd/mm
   return `${formattedMonth}/${formattedDay}/2024`;
 }
-export function getLaterDate(dateStr1, dateStr2) {
+export function getLaterDate_(dateStr1, dateStr2) {
   if (!dateStr1) {
     return dateStr2;
   }
@@ -38,6 +38,21 @@ export function getLaterDate(dateStr1, dateStr2) {
 
   return date1 >= date2 ? dateStr1 : dateStr2;
 }
+
+export function getLaterDate(...dates) {
+  if (dates.length === 0) {
+    return null;
+  }
+  const out = new Date(
+    dates.reduce((latest, current) => {
+      const currentDate = new Date(current);
+      const latestDate = new Date(latest);
+      return currentDate >= latestDate ? current : latest;
+    })
+  ).setHours(0, 0, 0, 0);
+  return out;
+}
+
 export function displayDate(dateString) {
   // Create a Date object from the input date string
   const date = new Date(dateString);

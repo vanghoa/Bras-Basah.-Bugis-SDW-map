@@ -2,6 +2,7 @@ import { useEffect } from "react";
 export default function WrapperLocation({ children }) {
   console.log("rerender WrapperLocation");
   useEffect(() => {
+    window.today = new Date().setHours(0, 0, 0, 0);
     window.onresize = () => {
       const w = window.innerWidth;
       const r = window.responsive;

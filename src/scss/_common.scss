@@ -1,9 +1,30 @@
 @use "mixins" as *;
 
 :root {
-  --widthoffset: 0px;
+  --widthoffset: 50%;
+  --reszbarw: 1rem;
   @include respond-to(sm) {
-    --widthoffset: -50% !important;
+    --widthoffset: 100% !important;
+    --reszbarw: 0px;
+  }
+  --barh: 0.8rem;
+  --border: 2px solid black;
+  --borderpin: 4px solid black;
+  --borderbtn: 3px solid black;
+  --sstt: 3rem;
+  --px: 1rem;
+  --ppx: 1.5rem;
+  --ggap: #{$ggap};
+  --ggap2: #{$ggap2};
+}
+
+html,
+body {
+  overflow: visible;
+  font-family: "sans";
+  font-size: 16px;
+  @include respond-to(sm) {
+    font-size: 14px;
   }
 }
 
@@ -11,7 +32,8 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
+  color: inherit;
   box-sizing: border-box;
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
@@ -19,9 +41,93 @@
 
 button,
 a {
+  cursor: pointer;
+  text-decoration: unset;
   border: none;
+  background-color: transparent;
+  font-size: inherit;
   svg {
-    width: 100px;
-    height: 100px;
+    aspect-ratio: 1;
+    height: 100%;
   }
+}
+
+.leftbtn {
+  position: relative;
+  &::after,
+  &::before {
+    content: " ";
+    display: block;
+    background-color: black;
+    position: absolute;
+  }
+  &::before {
+    border-radius: 10rem;
+    width: 3rem;
+    height: 3rem;
+    top: 0.4rem;
+    left: 0.4rem;
+  }
+  &::after {
+    width: 3rem;
+    height: var(--barh);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-1rem) rotate(45deg);
+  }
+}
+
+.rightbtn {
+  --gap: 0.5rem;
+  --t: calc(var(--gap) + var(--barh));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+  aspect-ratio: 1;
+  height: 4rem;
+  width: 4rem;
+  &::after,
+  &::before {
+    content: " ";
+    display: block;
+    background-color: black;
+    width: 3rem;
+    height: var(--barh);
+    will-change: transform;
+    transition: transform 0.5s;
+  }
+  &.open {
+    &::after {
+      transform: translateY(calc(var(--t) / -2)) rotate(135deg);
+    }
+    &::before {
+      transform: translateY(calc(var(--t) / 2)) rotate(45deg);
+    }
+  }
+}
+
+.fdisp {
+  font-family: disp;
+  line-height: 0.75em;
+  padding-top: 0.1em;
+  bottom: -0.1em;
+  position: relative;
+}
+
+.togglebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  min-height: calc(var(--sstt) - 0.3rem);
+  padding: 0.4rem 1rem;
+  border: var(--borderbtn);
+  width: fit-content;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+  word-break: keep-all;
+  white-space: nowrap;
 }

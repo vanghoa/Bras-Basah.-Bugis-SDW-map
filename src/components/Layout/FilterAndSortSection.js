@@ -1,18 +1,21 @@
 import { Filter, Event } from "./FilterAndSortComponents";
 import Markers from "./Markers";
-import { useState, useRef, Fragment, useMemo } from "react";
-import { filterCheck } from "../../utils/utils";
+import { useState, useRef, Fragment, useMemo, useCallback, useEffect } from "react";
+import { filterCheck, scrollToEl } from "../../utils/utils";
 
-export default function FilterAndSortSection({ markerRef, currentPosRef, drag, data }) {
-  const { allPlaces, allTypes, allShowcaseKeys } = data;
+export default function FilterAndSortSection({ markerRef, currentPosRef, drag, data, children }) {
+  const { allPlaces, allTypes, allShowcaseKeys, allTimes } = data;
   const [filter, setFilter] = useState(null);
+  const [asideClass, setAsideClass] = useState("");
+  const showcaseRef = useRef(null);
+  const searchsttRef = useRef(null);
   console.log("filter: ", filter);
-  const filterHandler = (v) => {
+  const filterHandler = useCallback((v) => {
     setFilter(v);
     window.closeSearch();
-  };
-  //
-  const directionHandler = async ([lng, lat]) => {
+    scrollToEl(showcaseRef.current);
+  }, []);
+  const directionHandler = useCallback(async ([lng, lat]) => {
     const map = window.mapRef;
     if (!map || !currentPosRef.current) {
       return;
@@ -55,26 +58,56 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
         },
       });
     }
-  };
+  }, []);
+  useEffect(() => {
+    console.log("reload filterandsortsection");
+    window.filterHandler = filterHandler;
+    window.searchsttRef = searchsttRef;
+    window.setAsideClass = setAsideClass;
+    window.directionHandler = directionHandler;
+  }, []);
+  //
   return (
-    <aside className={`filterandsortclass`}>
-      {drag}
+    <aside className={`filterandsortclass ${filter == null ? "" : "havefilter"} ${asideClass}`}>
       <Markers markerRef={markerRef} filter={filter} data={data} />
       <div className="rightpanel">
-        <SearchScreen>
-          {
-            <div className="searchstatus" onClick={() => filterHandler(null)}>
-              {filter}
-            </div>
-          }
-          <div className="search">
-            <Filter fn={filterHandler} obj={allPlaces} current={filter} />
-            <Filter fn={filterHandler} obj={allTypes} current={filter} />
-          </div>
+        {drag}
+        <div className="searchwrapper">
+          <ul className="searchlist">
+            <Filter fn={filterHandler} obj={allPlaces} current={filter}>
+              LOCATION
+            </Filter>
+            <Filter fn={filterHandler} obj={allTimes} current={filter}>
+              DATE
+            </Filter>
+            <Filter fn={filterHandler} obj={allTypes} current={filter}>
+              TYPE OF EVENT
+            </Filter>
+          </ul>
           <button className="background" onClick={() => window.closeSearch()}></button>
-        </SearchScreen>
-        <div className={`content  ${filter == null ? "" : "havefilter"}`}>
-          <ul className={`showcaselist`}>
+        </div>
+        <div
+          className={`content`}
+          ref={(el) => {
+            window.contentRef = el;
+          }}
+        >
+          {children}
+          <ul className={`showcaselist`} ref={showcaseRef}>
+            <div className="searchstatus" ref={searchsttRef} onClick={() => window.openSearch()}>
+              <span>Showing events:</span>
+              <div className="status togglebtn">
+                <span>{(allPlaces[filter] || allTypes[filter] || allTimes[filter])?.name}</span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    filterHandler(null);
+                  }}
+                >
+                  &times;
+                </button>
+              </div>
+            </div>
             {allShowcaseKeys.map((showcase, i) => {
               return (
                 <ShowcaseItem
@@ -94,32 +127,43 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
   );
 }
 
-function SearchScreen({ children }) {
-  return <div className="searchwrapper">{children}</div>;
-}
-
 function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data }) {
   const { allShowcases } = data;
   const [open, setOpen] = useState(false);
-  window.openAccordion
-    ? (window.openAccordion[showcase] = setOpen)
-    : (window.openAccordion = { [showcase]: setOpen });
-  const { pins, processedType, processedLocation, pinIndex } = allShowcases[showcase];
+  useEffect(() => {
+    window.openAccordion
+      ? (window.openAccordion[showcase] = setOpen)
+      : (window.openAccordion = { [showcase]: setOpen });
+  }, []);
+  const { pins, processedType, processedLocation, pinIndex, lastDate } = allShowcases[showcase];
   return (
     <li
-      className={`pinlist ${filterCheck(filter, processedType, undefined, processedLocation)} ${
-        open ? "open" : ""
-      }`}
+      className={`pinlist ${filterCheck(filter, processedType, undefined, processedLocation, [
+        lastDate,
+        null,
+      ])} ${open ? "open" : ""}`}
     >
       <h3
+        className="showcasename"
         onClick={() => {
           setOpen(!open);
         }}
       >
-        <span>{pinIndex}</span> {showcase}
+        <div
+          className="actualheight"
+          ref={(el) => {
+            pins.forEach((pin) => {
+              if (!markerRef.current[pin]) {
+                return;
+              }
+              markerRef.current[pin].h3 = el;
+            });
+          }}
+        ></div>
+        <span className="index">{pinIndex}</span> <span>{showcase}</span>
       </h3>
       <div className="eventlistwrapper">
-        <div>
+        <div className="gridtogglewrapper">
           {pins.map((pin, i) => {
             return (
               <EventList
@@ -135,16 +179,20 @@ function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data }) {
           })}
         </div>
       </div>
+      <div className="linebelow"></div>
     </li>
   );
 }
 
 function EventList({ markerRef, filter, pin, directionHandler, data }) {
   const { allTypes, allPins, allPlaces } = data;
-  const { events, lnglat, processedType, location, showcases } = allPins[pin];
+  const { events, lnglat, processedType, location, showcases, lastDate } = allPins[pin];
   return (
     <ul
-      className={`eventlist ${filterCheck(filter, processedType, location)}`}
+      className={`eventlist ${filterCheck(filter, processedType, location, null, [
+        lastDate,
+        null,
+      ])}`}
       ref={(el) => {
         if (!markerRef.current[pin]) {
           return;
@@ -152,28 +200,14 @@ function EventList({ markerRef, filter, pin, directionHandler, data }) {
         markerRef.current[pin].anchor = el;
       }}
     >
-      {events.map(({ name, formattedDate, type, location, processedType, long }, i) => {
+      {events.map((event, i) => {
         return (
           <Event
-            key={name + i}
-            name={name}
-            date={formattedDate}
-            lnglat={lnglat}
-            pin={pin}
+            key={i}
+            event={event}
             markerRef={markerRef}
             directionHandler={() => lnglat && directionHandler(lnglat)}
-            formattedType={type.map((type_, i) => {
-              return (
-                <Fragment key={type_ + i}>
-                  {allTypes[type_].name}
-                  {i + 1 == type.length ? `.` : i + 1 == type.length - 1 ? ` and ` : " , "}
-                </Fragment>
-              );
-            })}
-            formattedPlace={allPlaces[location].name}
-            className={filterCheck(filter, processedType, location)}
-            showcases={showcases}
-            long={long}
+            filter={filter}
           ></Event>
         );
       })}

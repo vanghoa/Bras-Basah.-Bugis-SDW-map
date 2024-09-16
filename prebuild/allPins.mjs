@@ -1,5 +1,6 @@
-import { allEvents } from "./allEvents.mjs";
+import { allEvents, longQuery } from "./allEvents.mjs";
 import { allPlaces } from "./allPlaces.mjs";
+import { getLaterDate } from "./functions.mjs";
 
 const pinNames = [
   "read",
@@ -27,26 +28,39 @@ const allPins = pinNames.reduce((acc, pinName, i) => {
 
   const location = events[0].location;
   const showcases = events[0].showcases;
-  const processedDate = events[0].processedDate;
+  const lastDate = getLaterDate(
+    ...events.reduce((acc, { lastDate, friday }) => {
+      return [...acc, lastDate, ...(friday ? [friday.lastDate] : [])];
+    }, [])
+  );
+
   const lnglat = (allPlaces[location].allPins[pinName] = ["concac", "concac"]);
-  const processedType = events.reduce((acc, { processedType, showcases }) => {
-    return { ...acc, ...processedType };
+  const processedType = events.reduce((acc, { processedType, friday }) => {
+    return { ...acc, ...processedType, ...(friday ? friday.processedType : {}) };
   }, {});
   const type = Object.keys(processedType);
   if (allShowcases[showcases]) {
-    allShowcases[showcases].pins.push(pinName);
-    allShowcases[showcases].processedLocation[location] = true;
-    allShowcases[showcases].processedType = {
+    const showcase = allShowcases[showcases];
+    showcase.pins.push(pinName);
+    showcase.processedLocation[location] = true;
+    showcase.processedType = {
       ...processedType,
-      ...allShowcases[showcases].processedType,
+      ...showcase.processedType,
     };
+    showcase.lastDate = getLaterDate(showcase.lastDate, lastDate);
   } else {
     allShowcases[showcases] = {
       pins: [pinName],
       processedLocation: { [location]: true },
       processedType: processedType,
+      lastDate: lastDate,
     };
   }
+
+  events.forEach((event) => {
+    event.lnglat = lnglat;
+    event.pinName = pinName;
+  });
 
   return {
     ...acc,
@@ -54,7 +68,7 @@ const allPins = pinNames.reduce((acc, pinName, i) => {
       location,
       processedType,
       type,
-      processedDate,
+      lastDate,
       lnglat,
       showcases,
       events,
@@ -93,4 +107,4 @@ Object.keys(allShowcases).forEach((key, i) => {
   allShowcases[key].pinIndex = i + 1;
 });
 
-export { allShowcases, allPins, allPlaces };
+export { allShowcases, allPins, allPlaces, longQuery, allEvents };

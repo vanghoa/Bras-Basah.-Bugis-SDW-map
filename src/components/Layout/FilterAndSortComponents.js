@@ -1,52 +1,53 @@
-import { useState, useContext, Fragment } from "react";
-import { allInOneMapNavigate } from "../../utils/utils";
+import { useState, useContext, Fragment, memo, useMemo } from "react";
+import { allInOneMapNavigate, filterCheck } from "../../utils/utils";
 import { Link } from "react-router-dom";
 
-export function Filter({ fn, obj, current }) {
+export function Filter({ fn, obj, current, children }) {
   const arr = Object.keys(obj);
   return (
-    <div>
-      {arr.map((v, i) => {
-        return (
-          <label key={i}>
-            <input
-              type="checkbox"
-              checked={current === v}
-              onChange={() => {
-                fn(current === v ? null : v);
-              }}
-            />
-            {obj[v].name}
-          </label>
-        );
-      })}
-    </div>
+    <li>
+      <h3>{children}</h3>
+      <div className="labellist">
+        {arr.map((v, i) => {
+          return (
+            <label key={i} className={`togglebtn ${current === v ? "checked" : ""}`}>
+              <input
+                type="checkbox"
+                checked={current === v}
+                onChange={() => {
+                  fn(v);
+                }}
+              />
+              {obj[v].name}
+            </label>
+          );
+        })}
+      </div>
+    </li>
   );
 }
 
 const fridaytimestamp = new Date("09/27/2024").setHours(0, 0, 0, 0);
 
-export function Event({ lnglat, pin, markerRef, directionHandler, filter, event }) {
+export function Event({ markerRef, directionHandler, filter, event }) {
   const { name, location, processedType, friday, lastDate } = event;
   const mainfilter = filterCheck(filter, processedType, location, null, [lastDate, null]);
   const fridayfilter = friday
     ? filterCheck(filter, friday.processedType, location, null, [null, fridaytimestamp])
     : "";
-  const props = useMemo(() => ({ event, lnglat, markerRef, pin, directionHandler }), []);
+  const props = useMemo(() => ({ event, markerRef, directionHandler }), []);
   return (
     <>
       <li className={`mainevent ${mainfilter} ${fridayfilter}`}>
         <h4>{name}</h4>
-        <div className="innercontent">
-          <div className={`${mainfilter} innerinfo`}>
-            <MainMemo props={props} />
-          </div>
-          {friday && (
-            <div className={`friday ${fridayfilter}`}>
-              <FridayMemo props={props} />
-            </div>
-          )}
+        <div className={`${mainfilter} innerinfo`}>
+          <MainMemo props={props} />
         </div>
+        {friday && (
+          <div className={`friday ${fridayfilter}`}>
+            <FridayMemo props={props} />
+          </div>
+        )}
       </li>
     </>
   );
@@ -63,8 +64,20 @@ const FormatType = memo(function FormatType({ formattedType }) {
   });
 });
 
-const MainMemo = memo(function ({ props: { event, lnglat, markerRef, pin, directionHandler } }) {
-  const { formattedDate, formattedType, formattedLocation, showcases, long, short } = event;
+const MainMemo = memo(function ({
+  props: { event, markerRef, directionHandler, pathname = "events" },
+}) {
+  const {
+    formattedDate,
+    formattedType,
+    formattedLocation,
+    showcases,
+    long,
+    short,
+    ggmap,
+    lnglat,
+    pinName,
+  } = event;
   return (
     <>
       <div className="small">
@@ -75,73 +88,61 @@ const MainMemo = memo(function ({ props: { event, lnglat, markerRef, pin, direct
         <p>{formattedLocation}</p>
       </div>
       <p className="short">
-        {short} <Link to={`events/${long}`}>...Read more</Link>
+        {short}{" "}
+        <Link className="readmore" to={`${pathname}/${long}`}>
+          ...Read more
+        </Link>
       </p>
-      <div className="button">
-        <button onClick={() => allInOneMapNavigate(lnglat, markerRef.current[pin], pin, showcases)}>
+      <div className="buttons">
+        <button
+          className="togglebtn"
+          onClick={() =>
+            allInOneMapNavigate(lnglat, markerRef.current[pinName], pinName, showcases)
+          }
+        >
           View on this map
         </button>
-        <button onClick={directionHandler}>go here</button>
+        <a href={ggmap} target="_blank" rel="noreferrer" className="togglebtn">
+          Google Map &nbsp;&#8599;&#xFE0E;
+        </a>
+        <button className="togglebtn geolocate" onClick={directionHandler}>
+          Directions
+        </button>
       </div>
     </>
   );
 });
 
-const FridayMemo = memo(function ({ props: { event, lnglat, markerRef, pin, directionHandler } }) {
-  const { formattedLocation, showcases, long, friday } = event;
+const FridayMemo = memo(function ({ props: { event, markerRef, directionHandler } }) {
+  const { formattedLocation, showcases, long, friday, ggmap, lnglat, pinName } = event;
   return (
     <>
+      <button className="fridaytag" onClick={() => window.filterHandler("fri")}>
+        Friday Late
+      </button>
       <div className="branch"></div>
       <h4>{friday.name}</h4>
       <div className="innerinfo">
-        <MainMemo props={{friday, lnglat, markerRef, pin, directionHandler}}/>
-        <div className="small">
-          <p>
-            <FormatType formattedType={friday.formattedType} />
-          </p>
-          <p className="date">{friday.formattedDate}</p>
-          <p>{formattedLocation}</p>
-        </div>
-        <p className="short">
-          <Link to={`friday/${long}`}>...Read more</Link>
-        </p>
-        <div className="button">
-          <button
-            onClick={() => allInOneMapNavigate(lnglat, markerRef.current[pin], pin, showcases)}
-          >
-            View on this map
-          </button>
-          <button onClick={directionHandler}>go here</button>
-        </div>
+        <MainMemo
+          props={{
+            event: {
+              long,
+              formattedLocation,
+              showcases,
+              ggmap,
+              short: "",
+              lnglat,
+              pinName,
+              ...friday,
+            },
+            markerRef,
+            directionHandler,
+            pathname: "friday",
+          }}
+        />
       </div>
     </>
   );
 });
 
-const InnerInfo = ({
-  formattedType,
-  formattedDate,
-  lnglat,
-  pin,
-  markerRef,
-  directionHandler,
-  formattedType,
-  formattedPlace,
-  className,
-  showcases,
-  long,
-}) {
-  return (
-    <li className={`indivevent ${className}`}>
-      <h4>{name}</h4>
-      <button onClick={() => allInOneMapNavigate(lnglat, markerRef.current[pin], pin, showcases)}>
-        flyto
-      </button>
-      <button onClick={directionHandler}>go here</button>
-      <Link to={`events/${long}`}>...Read more</Link>
-      <p>{formattedType}</p>
-      <p>{formattedDate}</p>
-      <p>{formattedPlace}</p>
-    </li>
-  );
-}
+export { FormatType };

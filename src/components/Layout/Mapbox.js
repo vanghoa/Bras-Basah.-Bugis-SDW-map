@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import data from "../../json/data.json";
 import FilterAndSortSection from "./FilterAndSortSection";
 import "mapbox-gl/dist/mapbox-gl.css";
-import SearchSVG from "../SearchSVG";
-import { LeftArrowSVG } from "../ArrowSVG";
+import { SearchSVG, RightBtn, GeolocateSVG } from "../SVG";
 import DragHandler from "./DragHandler";
-import { getRightPadding, sideMenuNavigate } from "../../utils/utils";
+import { getLeftPadding, sideMenuNavigate } from "../../utils/utils";
+import { Link } from "react-router-dom";
 
 const { allPins, middleLngLat, allPinKeys } = data;
 
@@ -31,6 +31,7 @@ const WrapperMapbox = () => {
 
   useEffect(() => {
     console.log("reload map");
+    window.markerRef = markerRef;
     mapboxgl.accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
     window.mapRef = mapRef.current = new mapboxgl.Map({
@@ -62,6 +63,7 @@ const WrapperMapbox = () => {
       geoelRef.current.style.visibility = "visible";
       geomarkerRef.current.setLngLat([longitude, latitude]).addTo(mapRef.current);
       currentPosRef.current = { lng: longitude, lat: latitude };
+      window.setAsideClass("havegeolocate");
     });
     mapRef.current.addControl(geolocateRef.current);
     geomarkerRef.current = new mapboxgl.Marker({
@@ -89,8 +91,32 @@ const WrapperMapbox = () => {
           currentPosRef={currentPosRef}
           drag={<DragHandler />}
           data={data}
-        />
-        <LocationCard data={data} markerRef={markerRef} />
+        >
+          <div className="intro">
+            <h1 className="fdisp">
+              PEOPLE OF <br></br>DESIGN<br></br>SHOWCASE<br></br>SERIES
+            </h1>
+            <p>
+              During Singapore Design Week 2024, ten showcases presented across the Bras Basah.Bugis
+              Design District will creatively examine the rituals of daily life through the lens of
+              design. Challenging the mundane, each showcase delves into a specific activity such as
+              Eat, Sleep, Shop, Read, Heal, Make, Plant, Commute, Display and Design. Through new
+              works and collaborative projects, visitors will discover imaginative design
+              possibilities shaped to offer fresh perspectives on the world around us, inspiring new
+              ways of thinking, seeing, and experiencing daily life.
+            </p>
+            <p>
+              The People of Design showcases are led by Hans Tan, together with a team of
+              designer-curators from Atelier Fang, Atelier HOKO, Forest and Whale, gideon-jamie,
+              J.A.B.O.C (Just A Band of Creatives), “brief.”, Studio Juju and Yishun Health.
+            </p>
+          </div>
+        </FilterAndSortSection>
+        <LocationCard data={data} markerRef={markerRef}>
+          <button className="geolocate" onClick={geolocateHandler}>
+            <GeolocateSVG />
+          </button>
+        </LocationCard>
       </nav>
       <div className="map-wrapper">
         <div ref={mapContainerRef} className="map-container"></div>
@@ -103,14 +129,11 @@ const WrapperMapbox = () => {
           }}
         ></div>
       </div>
-      <button className="geolocate" onClick={geolocateHandler}>
-        Geolocate
-      </button>
     </>
   );
 };
 
-function LocationCard({ data, markerRef }) {
+function LocationCard({ data, markerRef, children }) {
   console.log("location card");
   const [pin, setPin] = useState(false);
   const [open, setOpen] = useState(false);
@@ -127,51 +150,67 @@ function LocationCard({ data, markerRef }) {
     setOpen(open);
   };
   return (
-    <ul className={`locationcard ${open ? "open" : ""}`}>
+    <div className={`locationcard ${open ? "open" : ""}`}>
+      {children}
       {pin && (
         <>
-          <h3>
-            <span>{pinIndex}</span> {showcases}
+          <h3 className="showcasename smallshowcasename">
+            <span>{showcases}</span>
           </h3>
-          {events.map(({ name, formattedDate, type, location, processedType }, i) => {
-            return <li key={name + i}>{name}</li>;
+          {events.map(({ name, formattedDate, type, location, processedType, friday }, i) => {
+            return (
+              <Fragment key={`main${i}`}>
+                <h4>{name}</h4>
+                {friday && (
+                  <h4 className="friday">
+                    <div className="branch"></div>
+                    {friday.name}
+                  </h4>
+                )}
+              </Fragment>
+            );
           })}
-          <button onClick={() => sideMenuNavigate(showcases, markerRef.current[pin])}>
+          <button
+            className="togglebtn"
+            onClick={() => sideMenuNavigate(showcases, markerRef.current[pin])}
+          >
             see more
           </button>
         </>
       )}
-    </ul>
+    </div>
   );
 }
 
 function NavMenu({ geolocateRef }) {
   const [open, setOpen] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
-  const openHandler = (window.openNav = (open = true) => {
-    geolocateRef.current.beforeTrigger = () => {
-      geolocateRef.current.options.fitBoundsOptions.padding = {
-        right: open ? getRightPadding() : 0,
+  useEffect(() => {
+    window.openNav = (open = true) => {
+      geolocateRef.current.beforeTrigger = () => {
+        geolocateRef.current.options.fitBoundsOptions.padding = {
+          left: open ? getLeftPadding() : 0,
+        };
       };
+      setOpen(open);
+      open && window.setOpenCard(false);
     };
-    setOpen(open);
-    open && window.setOpenCard(false);
-  });
-  window.closeSearch = () => {
-    setOpenSearch(false);
-  };
+    window.closeSearch = () => {
+      setOpenSearch(false);
+    };
+    window.openSearch = () => setOpenSearch(true);
+  }, []);
   console.log("open nav");
   return (
     <div className={`navigation ${open ? "open" : ""} ${openSearch ? "openSearch" : ""}`}>
-      {open && (
-        <button onClick={() => setOpenSearch(!openSearch)}>
-          <SearchSVG />
-        </button>
-      )}
-      <h1>People of Design Showcase Series</h1>
-      <button onClick={() => (openSearch ? setOpenSearch(false) : openHandler(!open))}>
-        <LeftArrowSVG />
-      </button>
+      <button className={`leftbtn`} onClick={() => setOpenSearch(!openSearch)}></button>
+      <Link className={`about`} to={`about`}>
+        BB.B
+      </Link>
+      <button
+        className={`${open ? "open" : ""} rightbtn`}
+        onClick={() => (openSearch ? setOpenSearch(false) : window.openNav(!open))}
+      ></button>
     </div>
   );
 }
