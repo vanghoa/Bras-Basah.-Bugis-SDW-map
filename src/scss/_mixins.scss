@@ -16,3 +16,25 @@ $breakpoints: (
     @content;
   }
 }
+
+@keyframes animateWght {
+  from {
+    font-variation-settings: "wght" 300;
+  }
+  to {
+    font-variation-settings: "wght" var(--wght);
+  }
+}
+
+@mixin variable {
+  .name span {
+    font-variation-settings: "wght" var(--wght);
+  }
+}
+
+@mixin onetimevarible {
+  .name span {
+    transition: none;
+    animation: animateWght 0.8s 0.3s forwards;
+  }
+}

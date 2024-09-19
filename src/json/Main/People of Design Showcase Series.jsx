@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { sideMenuNavigate } from "../../utils/utils";
 import data from "../../json/data.json";
 import { Fragment } from "react";
+import ShowcaseName from "../../components/Layout/ShowcaseName";
 
 const { allShowcaseKeys } = data;
 
@@ -24,7 +25,9 @@ export default function PeopleofDesignShowcaseSeries() {
   const navigate = useNavigate();
   return (
     <>
-      <h1 className="fdisp">PEOPLE&nbsp;OF DESIGN SHOWCASE SERIES</h1>
+      <h1 className="fdisp">
+        <ShowcaseName name={"SHOWTITLE"} />
+      </h1>
       <div className="description long">
         <p>
           During Singapore Design Week 2024, ten showcases presented across the Bras Basah.Bugis

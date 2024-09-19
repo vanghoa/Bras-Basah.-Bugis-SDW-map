@@ -9,6 +9,7 @@ import { getLeftPadding, getTopPadding, sideMenuNavigate } from "../../utils/uti
 import { Link } from "react-router-dom";
 import { FormatType, FridayTag } from "./FilterAndSortComponents";
 import PeopleofDesignShowcaseSeries from "../../json/Main/People of Design Showcase Series";
+import ShowcaseName from "./ShowcaseName";
 
 const { allPins, middleLngLat, allPinKeys, LngLatBounds } = data;
 
@@ -25,6 +26,7 @@ const WrapperMapbox = ({ children }) => {
 
   const geolocateHandler = () => {
     if (geolocateRef.current) {
+      window.currentPin?.classList.remove("showfig");
       geolocateRef.current.beforeTrigger();
       geolocateRef.current.trigger();
       console.log("trigger geolocation");
@@ -32,6 +34,7 @@ const WrapperMapbox = ({ children }) => {
   };
 
   const recenterHandler = () => {
+    window.currentPin?.classList.remove("showfig");
     mapRef.current.fitBounds(LngLatBounds, {
       essential: true,
       bearing: 20,
@@ -49,7 +52,7 @@ const WrapperMapbox = ({ children }) => {
     window.markerRef = markerRef;
     mapboxgl.accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
-    window.mapRef = mapRef.current = new mapboxgl.Map({
+    mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       center: middleLngLat, // starting position [lng, lat]
       zoom: 16, // starting zoom
@@ -57,7 +60,8 @@ const WrapperMapbox = ({ children }) => {
       attributionControl: false,
       style: "mapbox://styles/baoanhbui/cm0bz3vvj00qu01phchsjccal",
     });
-    window.mapRef.on("dragstart", () => {
+    window.mapRef = mapRef;
+    mapRef.current.on("dragstart", () => {
       window.setOpenCard(false);
     });
     geolocateRef.current = new mapboxgl.GeolocateControl({
@@ -168,7 +172,7 @@ function LocationCard({ data, markerRef, children }) {
         <>
           <div className="title">
             <h3 className="showcasename">
-              <span>{showcases}</span>
+              <ShowcaseName name={showcases} />
             </h3>
             <p className="organizer">
               with <Link to={`about/${org}`}>{formattedOrg}</Link>

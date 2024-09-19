@@ -1,4 +1,5 @@
 import { allInOneMapNavigate, filterCheck } from "../../utils/utils";
+import Img from "../../img/Img";
 
 export default function Markers({ markerRef, filter, data }) {
   const { allPins, allPinKeys, allShowcases } = data;
@@ -15,6 +16,9 @@ export default function Markers({ markerRef, filter, data }) {
         onClick={() => allInOneMapNavigate(lnglat, markerRef.current[pin], pin, showcases)}
       >
         {allShowcases[showcases].pinIndex}
+        {Array.from({ length: 3 }, (v, i) => (
+          <Img key={i} className={`fig _${i}`} src={`${showcases}${i + 1}`} />
+        ))}
       </div>
     );
   });

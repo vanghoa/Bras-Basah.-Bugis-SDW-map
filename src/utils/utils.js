@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 function reCenter(lnglat) {
-  window.mapRef?.flyTo({
+  window.mapRef.current?.flyTo({
     center: lnglat,
     zoom: 17,
     essential: true,
@@ -45,9 +45,20 @@ export function scrollToEl(anchor, h3) {
   );
 }
 
+function removeshowfig() {}
+
 export function allInOneMapNavigate(lnglat, el, pin, showcases) {
   window.openNav(!window.responsive.xs);
   hightlightEl(el);
+  window.currentPin?.classList.remove("showfig");
+  el.classList.add("showfig");
+  window.currentPin = el;
+  window.mapRef.current.once("touchstart", (e) => {
+    el.classList.remove("showfig");
+  });
+  window.mapRef.current.once("mousedown", (e) => {
+    el.classList.remove("showfig");
+  });
   if (window.responsive.xs) {
     window.setPinCard(pin);
     window.setOpenCard(true);

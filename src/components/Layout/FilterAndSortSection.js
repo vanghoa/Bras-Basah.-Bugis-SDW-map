@@ -2,6 +2,7 @@ import { Filter, Event } from "./FilterAndSortComponents";
 import Markers from "./Markers";
 import { useState, useRef, Fragment, useMemo, useCallback, useEffect } from "react";
 import { filterCheck, scrollToEl } from "../../utils/utils";
+import ShowcaseName from "./ShowcaseName";
 
 export default function FilterAndSortSection({ markerRef, currentPosRef, drag, data, children }) {
   const { allPlaces, allTypes, allShowcaseKeys, allTimes } = data;
@@ -17,6 +18,7 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
     scrollToEl(showcaseRef.current);
   }, []);
   const directionHandler = useCallback(async ([lng, lat]) => {
+    window.currentPin?.classList.remove("showfig");
     const map = window.mapRef;
     if (!map || !currentPosRef.current) {
       return;
@@ -167,7 +169,7 @@ function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data, pin
             });
           }}
         ></div>
-        <span className="index">{pinIndex}</span> <span>{showcase}</span>
+        <span className="index">{pinIndex}</span> <ShowcaseName name={showcase} />
       </h3>
       <div className="eventlistwrapper">
         <div className="gridtogglewrapper">
