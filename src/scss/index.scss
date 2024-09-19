@@ -25,18 +25,34 @@
 .marker {
   transition: background-color 1s, color 1s !important;
   &.showfig .fig {
-    opacity: 1;
+    picture {
+      animation: showFig var(--du) var(--de) both steps(6, jump-none);
+    }
   }
   .fig {
+    --de: 0.3s;
+    --du: 0.8s;
+    --r1: -40deg;
+    --r2: 40deg;
+    --y1: 0px;
+    --y2: 0px;
+    --y3: 0px;
     pointer-events: none;
     position: absolute;
-    left: -40%;
-    top: 0;
-    height: 15rem;
-    width: 15rem;
-    z-index: -5;
-    opacity: 0;
-    transition: opacity 0.5s;
+    left: -90%;
+    top: -140%;
+    height: 18rem;
+    width: 18rem;
+    overflow: hidden;
+    picture {
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      display: block;
+      transform: translateY(100%);
+      width: 80%;
+      height: 80%;
+    }
     img,
     source {
       object-fit: contain;
@@ -44,13 +60,13 @@
       height: 100%;
     }
     &._1 {
-      right: -40%;
+      right: -90%;
       left: unset;
     }
     &._2 {
-      bottom: 80%;
+      bottom: 70%;
       top: unset;
-      left: -240%;
+      left: -350%;
     }
   }
 }
@@ -321,7 +337,7 @@ nav {
             }
             .eventlistwrapper {
               --ggap2: 2rem;
-              transition: grid-template-rows 0.5s;
+              transition: grid-template-rows 0.5s steps(14, jump-none);
               display: grid;
               grid-template-rows: 0fr;
               > div {
@@ -476,10 +492,13 @@ nav {
       width: fit-content;
       @include onetimevarible;
     }
-    .organizer {
+    .info {
       font-family: sans;
       font-size: 1rem;
-      max-width: 10rem;
+      max-width: 13rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
       a {
         text-decoration: underline;
       }
@@ -656,7 +675,7 @@ nav {
     --l: 0px;
     margin-left: var(--l);
     font-variation-settings: "wght" 300;
-    transition: font-variation-settings 0.5s;
+    transition: font-variation-settings 0.5s steps(6, jump-none);
     font-kerning: none;
   }
 }

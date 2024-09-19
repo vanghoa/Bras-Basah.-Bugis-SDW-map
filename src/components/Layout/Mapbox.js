@@ -158,9 +158,10 @@ function LocationCard({ data, markerRef, children }) {
   const [open, setOpen] = useState(false);
   const locationCardRef = useRef(null);
   const { allPins, allShowcases } = data;
-  let events, showcases, pinIndex, formattedOrg, org;
+  let events, showcases, pinIndex, formattedOrg, org, formattedLocation;
   if (pin) {
     ({ events, showcases, formattedOrg, org } = allPins[pin]);
+    ({ formattedLocation } = events[0]);
     ({ pinIndex } = allShowcases[showcases]);
   }
   useEffect(() => {
@@ -181,9 +182,11 @@ function LocationCard({ data, markerRef, children }) {
             <h3 className="showcasename">
               <ShowcaseName name={showcases} />
             </h3>
-            <p className="organizer">
-              with <Link to={`about/${org}`}>{formattedOrg}</Link>
-            </p>
+            <div className="info">
+              <p>
+                with <Link to={`about/${org}`}>{formattedOrg}</Link>
+              </p>
+            </div>
           </div>
           <ul>
             {events.map(({ name, formattedType }, i) => {

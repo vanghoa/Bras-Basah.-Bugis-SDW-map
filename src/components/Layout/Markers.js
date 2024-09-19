@@ -17,7 +17,20 @@ export default function Markers({ markerRef, filter, data }) {
       >
         {allShowcases[showcases].pinIndex}
         {Array.from({ length: 3 }, (v, i) => (
-          <Img key={i} className={`fig _${i}`} src={`${showcases}${i + 1}`} />
+          <div
+            key={i}
+            className={`fig _${i}`}
+            style={{
+              "--de": `${(Math.random() * 0.49 + 0.01).toFixed(2)}s`,
+              "--du": `${(Math.random() * 0.5 + 0.7).toFixed(2)}s`,
+              "--r1": `-${(Math.random() * 200 + 10).toFixed(2)}deg`,
+              "--r2": `${(Math.random() * 240 + 10).toFixed(2)}deg`,
+              "--y1": `${(Math.random() * 40 - 20).toFixed(2)}%`,
+              "--y2": `${(Math.random() * 40 - 20).toFixed(2)}%`,
+            }}
+          >
+            <Img src={`${showcases}${i + 1}`} />
+          </div>
         ))}
       </div>
     );

@@ -16,9 +16,20 @@ const ShowcaseName = memo(function ShowcaseName({ name }) {
   );
 });
 
-const randWght = () => Math.floor(Math.random() * 701) + 100;
+const randWght = () => Math.floor(Math.random() * 601) + 100;
 
 const ShowcaseNameList = {
+  COMMUTE: (
+    <>
+      <span style={{ "--wght": 100 }}>C</span>
+      <span style={{ "--wght": 200 }}>O</span>
+      <span style={{ "--wght": 300 }}>M</span>
+      <span style={{ "--wght": 400 }}>M</span>
+      <span style={{ "--wght": 200 }}>U</span>
+      <span style={{ "--wght": 300 }}>T</span>
+      <span style={{ "--wght": 100 }}>E</span>
+    </>
+  ),
   EAT: (
     <>
       <span style={{ "--wght": 200 }}>E</span>
