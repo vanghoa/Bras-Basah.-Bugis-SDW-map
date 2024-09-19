@@ -507,7 +507,6 @@ nav {
         flex-basis: 50%;
       }
       .organizer {
-        max-width: 10rem;
         a {
           text-decoration: underline;
           display: inline;
@@ -546,9 +545,19 @@ nav {
       font-size: 2.5rem;
       margin-bottom: 0;
     }
-    .h2date {
+    .district {
+      display: flex;
       margin-bottom: #{$ggap3};
-      font-size: 0.8rem;
+      gap: var(--ggap);
+      justify-content: space-between;
+      .fdisp {
+        max-width: 20rem;
+      }
+      .h2date {
+        font-size: 0.8rem;
+        width: max-content;
+        white-space: nowrap;
+      }
     }
   }
   .toHome {

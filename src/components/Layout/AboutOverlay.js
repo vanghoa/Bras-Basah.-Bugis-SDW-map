@@ -20,8 +20,12 @@ export function AboutOverlay() {
   }, []);
   return (
     <Overlay contentRef={contentRef}>
-      <h2 className="fdisp">BRAS BASAH.&#8203;BUGIS DESIGN DISTRICT</h2>
-      <p className="h2date">26 Sep – 06 Oct 2024</p>
+      <div className="district">
+        <h2 className="fdisp">BRAS BASAH.&#8203;BUGIS DESIGN DISTRICT</h2>
+        <p className="h2date">
+          26 Sep<br></br>– 06 Oct 2024
+        </p>
+      </div>
       <PeopleofDesignShowcaseSeries />
       <h4>BIOS</h4>
       <div className="about">
