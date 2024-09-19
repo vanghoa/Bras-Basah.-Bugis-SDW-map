@@ -5,7 +5,12 @@ import FilterAndSortSection from "./FilterAndSortSection";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { SearchSVG, RightBtn, GeolocateSVG, RecenterSVG } from "../SVG";
 import DragHandler from "./DragHandler";
-import { getLeftPadding, getTopPadding, sideMenuNavigate } from "../../utils/utils";
+import {
+  getBottomPadding,
+  getLeftPadding,
+  getTopPadding,
+  sideMenuNavigate,
+} from "../../utils/utils";
 import { Link } from "react-router-dom";
 import { FormatType, FridayTag } from "./FilterAndSortComponents";
 import PeopleofDesignShowcaseSeries from "../../json/Main/People of Design Showcase Series";
@@ -41,7 +46,9 @@ const WrapperMapbox = ({ children }) => {
       padding: {
         left: (window.navIsOpen ? getLeftPadding() : 0) + 40,
         top: getTopPadding() + 40,
-        bottom: 40,
+        bottom: window.locationCardRef.current.classList.contains("open")
+          ? getBottomPadding()
+          : 0 + 40,
         right: 40,
       },
     });
