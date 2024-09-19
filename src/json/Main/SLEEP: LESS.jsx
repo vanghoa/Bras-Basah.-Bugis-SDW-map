@@ -1,4 +1,6 @@
-export default function SLEEPLESS() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function SLEEPLESS({ children }) {
   return (
     <>
       <p>
@@ -25,6 +27,13 @@ export default function SLEEPLESS() {
         of our inner body clock, our creative soul and the calling of a job at once, privilege and
         curse?
       </p>
+      {children}
+      <div className="credits">
+        SLEEP is presented in partnership with Naumi Hotel Singapore, co-organised by Forest & Whale
+        in collaboration with students from the BA (Hons) Design for Social Futures programme at the
+        Lasalle College of the Arts, University of the Arts Singapore, and <OrgLink name={"Hans"} />
+        .
+      </div>
     </>
   );
 }

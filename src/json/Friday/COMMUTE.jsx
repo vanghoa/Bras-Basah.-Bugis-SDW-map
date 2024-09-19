@@ -1,4 +1,6 @@
-export default function COMMUTE() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function COMMUTE({ children }) {
   return (
     <>
       <p>
@@ -9,6 +11,11 @@ export default function COMMUTE() {
         walkthrough, followed by a 20-minute Q&A with the team, exploring design research across
         different levels of seniority.
       </p>
+      {children}
+      <div className="credits">
+        This event is presented in partnership with the Land Transport Authority and SBS Transit
+        Rail, co-organised by <OrgLink name={"brief"} /> and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

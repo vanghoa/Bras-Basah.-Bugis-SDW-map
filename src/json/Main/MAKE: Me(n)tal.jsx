@@ -1,4 +1,6 @@
-export default function MAKEMental() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function MAKEMental({ children }) {
   return (
     <>
       <p>
@@ -18,6 +20,12 @@ export default function MAKEMental() {
         responsible creation, the works also take a conscious approach to repurposing material
         offcuts, transforming waste into masterpieces.
       </p>
+      {children}
+      <div className="credits">
+        In partnership with Nanyang Academy of Fine Arts, University of the Arts Singapore and
+        Studiowongs, MAKE is presented at the NAFA Fashion Gallery, co-organised by{" "}
+        <OrgLink name={"JABOC"} /> and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

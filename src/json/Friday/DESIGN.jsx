@@ -1,4 +1,4 @@
-export default function DESIGN() {
+export default function DESIGN({ children }) {
   return (
     <>
       <p>
@@ -13,6 +13,8 @@ export default function DESIGN() {
         and gained valuable insights on how to leverage AI to enhance creativity across various
         fields.
       </p>
+      {children}
+      <div className="credits">AI generation sponsored by Hypersketch and STUCK Design</div>
     </>
   );
 }

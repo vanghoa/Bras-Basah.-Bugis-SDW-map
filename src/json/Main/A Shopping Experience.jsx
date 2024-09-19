@@ -1,4 +1,6 @@
-export default function AShoppingExperience() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function AShoppingExperience({ children }) {
   return (
     <>
       <p>
@@ -17,6 +19,11 @@ export default function AShoppingExperience() {
         goods or services, can a shop still function as a shop? Can it offer ‘shopping’ as, truly,
         an experience?
       </p>
+      {children}
+      <div className="credits">
+        SHOP is presented in partnership with Bugis+ and Bugis Street and is co-organised by{" "}
+        <OrgLink name={"gj"} /> and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

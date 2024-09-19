@@ -1,6 +1,7 @@
 import { formatDate, getLaterDate, displayDate } from "./functions.mjs";
 import { allTypes } from "./allTypes.mjs";
 import { allPlaces } from "./allPlaces.mjs";
+import { allShowcasesInfo, allOrganizers } from "./allShowcases.mjs";
 
 const longQuery = {};
 
@@ -242,6 +243,9 @@ for (const i in allEvents) {
   }
   // main event
   event.showcases = event.showcases.toUpperCase();
+  // organizers
+  event.formattedOrg = allOrganizers[allShowcasesInfo[event.showcases]].name;
+  event.org = allShowcasesInfo[event.showcases];
   // location
   event.location = event.location[0];
   event.formattedLocation = allPlaces[event.location].name;

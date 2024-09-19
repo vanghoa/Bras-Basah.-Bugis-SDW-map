@@ -1,8 +1,16 @@
 import * as fs from "fs";
-import { allPins, allShowcases, allPlaces, longQuery, allEvents } from "./allPins.mjs";
+import {
+  allPins,
+  allShowcases,
+  allPlaces,
+  longQuery,
+  allEvents,
+  LngLatBounds,
+} from "./allPins.mjs";
 import { middleLngLat } from "./allPlaces.mjs";
 import { allTypes } from "./allTypes.mjs";
 import { allTimes } from "./allTimes.mjs";
+import { allOrganizers } from "./allShowcases.mjs";
 
 hardCodedData(
   {
@@ -16,6 +24,8 @@ hardCodedData(
     allTypes,
     middleLngLat,
     allTimes,
+    allOrganizers,
+    LngLatBounds,
   },
   "data.json"
 );

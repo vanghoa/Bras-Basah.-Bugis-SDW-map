@@ -1,4 +1,6 @@
-export default function DISPLAY() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function DISPLAY({ children }) {
   return (
     <>
       <p>
@@ -30,6 +32,11 @@ export default function DISPLAY() {
         Showcase Series: DESIGN at the National Design Centre, HEAL at 42 Waterloo, and PLANT at the
         National Library.
       </p>
+      {children}
+      <div className="credits">
+        DISPLAY is presented at the National Library Building in partnership with the National
+        Library Board, co-organised by Studio Juju and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

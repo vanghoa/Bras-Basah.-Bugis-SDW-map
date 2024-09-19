@@ -1,4 +1,4 @@
-export default function READBOOK() {
+export default function READBOOK({ children }) {
   return (
     <>
       <p>
@@ -12,6 +12,7 @@ export default function READBOOK() {
         Bids are confidential and winners will be notified within 14 days. Proceeds will go to
         UNICEF.
       </p>
+      {children}
     </>
   );
 }

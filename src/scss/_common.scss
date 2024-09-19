@@ -5,17 +5,17 @@
   --reszbarw: 1rem;
   @include respond-to(sm) {
     --widthoffset: 100% !important;
-    --reszbarw: 0px;
+    --reszbarw: 3px;
   }
-  --barh: 0.8rem;
   --border: 2px solid black;
-  --borderpin: 4px solid black;
+  --borderpin: 3.2px solid black;
   --borderbtn: 3px solid black;
   --sstt: 3rem;
   --px: 1rem;
   --ppx: 1.5rem;
   --ggap: #{$ggap};
   --ggap2: #{$ggap2};
+  --navh: 4rem;
 }
 
 html,
@@ -53,6 +53,7 @@ a {
 }
 
 .leftbtn {
+  margin-left: 0.5rem;
   position: relative;
   &::after,
   &::before {
@@ -63,18 +64,22 @@ a {
   }
   &::before {
     border-radius: 10rem;
-    width: 3rem;
-    height: 3rem;
+    width: 1.8rem;
+    height: 1.8rem;
     top: 0.4rem;
-    left: 0.4rem;
   }
   &::after {
-    width: 3rem;
-    height: var(--barh);
-    top: 50%;
-    left: 50%;
-    transform: translateX(-1rem) rotate(45deg);
+    width: 2rem;
+    height: calc(var(--navh) / 6);
+    top: 1.3rem;
+    left: 0.1rem;
+    transform: rotate(45deg);
   }
+}
+
+.highlight {
+  background-color: black !important;
+  color: white;
 }
 
 .rightbtn {
@@ -86,14 +91,15 @@ a {
   align-items: center;
   gap: var(--gap);
   aspect-ratio: 1;
-  height: 4rem;
-  width: 4rem;
+  height: var(--navh);
+  width: var(--iconw);
+  margin-right: var(--barh);
   &::after,
   &::before {
     content: " ";
     display: block;
     background-color: black;
-    width: 3rem;
+    width: 100%;
     height: var(--barh);
     will-change: transform;
     transition: transform 0.5s;
@@ -112,7 +118,9 @@ a {
   font-family: disp;
   line-height: 0.75em;
   padding-top: 0.1em;
-  bottom: -0.1em;
+  font-size: 5rem;
+  font-weight: 300;
+  margin-bottom: #{$ggap2 * 2};
   position: relative;
 }
 
@@ -130,4 +138,30 @@ a {
   text-align: center;
   word-break: keep-all;
   white-space: nowrap;
+  .xbtn {
+    font-size: 1.4em;
+    display: none;
+    padding: 0 1.2rem 0 0.8rem;
+  }
+  &.checked {
+    .xbtn {
+      display: block;
+    }
+    padding-right: 0;
+  }
+}
+
+.fridaytag {
+  transform: rotate(20deg);
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: black;
+  border-radius: 10rem;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  line-height: 1.2em;
 }

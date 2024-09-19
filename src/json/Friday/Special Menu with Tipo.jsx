@@ -1,3 +1,3 @@
-export default function SpecialMenuwithTipo() {
-    return <></>;
+export default function SpecialMenuwithTipo({ children }) {
+  return <>{children}</>;
 }

@@ -15,10 +15,11 @@ export function Filter({ fn, obj, current, children }) {
                 type="checkbox"
                 checked={current === v}
                 onChange={() => {
-                  fn(v);
+                  fn(v === current ? null : v);
                 }}
               />
               {obj[v].name}
+              <div className="xbtn">&times;</div>
             </label>
           );
         })}
@@ -58,7 +59,7 @@ const FormatType = memo(function FormatType({ formattedType }) {
     return (
       <Fragment key={str + i}>
         {str}
-        {i + 1 == formattedType.length ? `.` : i + 1 == formattedType.length - 1 ? ` and ` : " , "}
+        {i + 1 == formattedType.length ? `` : i + 1 == formattedType.length - 1 ? ` and ` : " , "}
       </Fragment>
     );
   });
@@ -113,13 +114,25 @@ const MainMemo = memo(function ({
   );
 });
 
+export const FridayTag = () => (
+  <button
+    className="fridaytag"
+    onClick={() => {
+      window.openNav(true);
+      window.filterHandler("fri");
+    }}
+  >
+    <span>
+      Friday<br></br>Late
+    </span>
+  </button>
+);
+
 const FridayMemo = memo(function ({ props: { event, markerRef, directionHandler } }) {
   const { formattedLocation, showcases, long, friday, ggmap, lnglat, pinName } = event;
   return (
     <>
-      <button className="fridaytag" onClick={() => window.filterHandler("fri")}>
-        Friday Late
-      </button>
+      <FridayTag />
       <div className="branch"></div>
       <h4>{friday.name}</h4>
       <div className="innerinfo">

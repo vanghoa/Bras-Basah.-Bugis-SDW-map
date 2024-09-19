@@ -1,4 +1,4 @@
-export default function MAKEMental() {
+export default function MAKEMental({ children }) {
   return (
     <>
       <p>
@@ -8,6 +8,10 @@ export default function MAKEMental() {
         event is the perfect gateway into metal shaping, whether you are a craft enthusiast or an
         individual who is curious about the art of making.
       </p>
+      {children}
+      <div className="credits">
+        This event is proudly supported by Baremetal Co. (baremetalco.com).
+      </div>
     </>
   );
 }

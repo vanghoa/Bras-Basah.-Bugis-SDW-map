@@ -19,11 +19,11 @@
   align-items: center;
   font-weight: bold;
   font-size: 1.5rem;
-  transition: background-color 1s !important;
   font-family: sans;
-  &.highlight {
-    background-color: yellow;
-  }
+}
+
+.marker {
+  transition: background-color 1s, color 1s !important;
 }
 
 .map-wrapper {
@@ -38,6 +38,19 @@
     position: absolute;
     left: 0;
     top: 0;
+
+    .mapboxgl-ctrl-bottom-left {
+      bottom: unset;
+      top: calc(var(--navh) + 5px);
+      pointer-events: none;
+      opacity: 0.5;
+      .mapboxgl-ctrl-logo {
+        width: 50px;
+      }
+      * {
+        pointer-events: none;
+      }
+    }
   }
 }
 
@@ -53,37 +66,65 @@ nav {
   flex-direction: column;
   pointer-events: none;
   overflow: hidden;
+
+  .recenter {
+    position: absolute;
+    width: var(--iconw);
+    aspect-ratio: 1;
+    top: calc(var(--navh) + var(--barh));
+    right: var(--barh);
+    transform: scale(0.9);
+    pointer-events: auto;
+  }
   .navigation {
     flex-shrink: 0;
     pointer-events: auto;
     background-color: white;
     width: 100%;
-    height: 4rem;
+    height: var(--navh);
+    outline: var(--borderbtn);
+    --barh: calc(var(--navh) / 6);
+    --iconw: calc(var(--navh) * 0.6);
+    ~ * {
+      --barh: calc(var(--navh) / 6);
+      --iconw: calc(var(--navh) * 0.6);
+    }
     &.open {
+      --navh: 3rem;
       .about {
         transform: translateX(calc(50vw - 50%));
       }
       .leftbtn {
         transform: translateX(0);
       }
+      ~ * {
+        --navh: 3rem;
+      }
       + .filterandsortclass {
         transform: translateX(0);
+      }
+      ~ .locationcard {
+        .geolocate {
+          left: var(--widthoffset);
+        }
       }
     }
     &.openSearch + .filterandsortclass .searchlist {
       transform: translateY(0);
     }
     &.openSearch + .filterandsortclass .searchwrapper .background {
-      background-color: rgba(0, 0, 0, 0.246);
+      background-color: rgba(0, 0, 0, 0.5);
       pointer-events: auto;
+    }
+    > * {
     }
     .about {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0 0.8rem;
-      padding-top: 0.5rem;
-      font-size: 3rem;
+      padding-top: calc(var(--navh) * 0.15);
+      font-size: calc(var(--navh) * 0.7);
       font-family: disp;
       font-variation-settings: "wght" 300;
       width: fit-content;
@@ -93,7 +134,7 @@ nav {
       aspect-ratio: 1;
       position: absolute;
       top: 0px;
-      height: 4rem;
+      height: var(--navh);
     }
     .rightbtn {
       right: 0px;
@@ -125,7 +166,7 @@ nav {
       min-width: 20%;
       height: 100%;
       .draggable {
-        border-left: var(--borderbtn);
+        box-shadow: inset 3px 0px 0px 0px black;
         cursor: e-resize;
         position: absolute;
         width: fit-content;
@@ -202,13 +243,22 @@ nav {
         background-color: rgb(255, 255, 255);
         .intro {
           padding: 0 var(--px);
-          h1 {
-            font-size: 5rem;
-            font-weight: 300;
-            margin-bottom: 3rem;
+          .description {
+            font-size: 1.2em;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 3; /* Limit to 3 lines */
+            line-clamp: 3; /* For future support */
+            text-overflow: clip; /* Ensure no ellipsis */
+            > :nth-child(n + 2) {
+              display: none;
+            }
           }
-          p {
-            margin-bottom: 3rem;
+          .readmore {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: #{$ggap3};
           }
         }
         .showcaselist {
@@ -232,9 +282,6 @@ nav {
               color: white;
               padding-right: 0;
               border: none;
-              button {
-                padding: 0 1.2rem 0 0.8rem;
-              }
             }
           }
           .pinlist {
@@ -244,6 +291,7 @@ nav {
               margin-top: 0px !important;
             }
             .eventlistwrapper {
+              --ggap2: 2rem;
               transition: grid-template-rows 0.5s;
               display: grid;
               grid-template-rows: 0fr;
@@ -251,13 +299,9 @@ nav {
                 overflow: hidden;
               }
               .eventlist {
-                margin-top: var(--ggap);
-                transition: background-color 1s;
-                &.highlight {
-                  background-color: yellow;
-                }
+                transition: background-color 1s, color 1s;
                 .mainevent {
-                  margin-top: var(--ggap);
+                  margin-top: var(--ggap2);
                   padding: 0 var(--ppx);
                   h4 {
                     font-weight: bold;
@@ -281,21 +325,12 @@ nav {
                     }
                   }
                   .friday {
-                    margin-top: var(--ggap);
+                    margin-top: var(--ggap2);
                     position: relative;
                     .fridaytag {
                       float: right;
                       right: 0;
                       top: 0;
-                      width: 5rem;
-                      height: 5rem;
-                      background-color: black;
-                      border-radius: 10rem;
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      color: white;
-                      text-align: center;
                     }
                   }
                 }
@@ -306,7 +341,7 @@ nav {
               top: var(--ggap);
               background-color: black;
               width: calc(100% - var(--px) * 2);
-              height: 2px;
+              height: 3px;
               left: var(--px);
             }
             &.open {
@@ -352,6 +387,7 @@ nav {
     }
   }
   .locationcard {
+    border-radius: 1rem 1rem 0px 0px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -363,22 +399,61 @@ nav {
     pointer-events: auto;
     transform: translateY(100%);
     transition: transform 0.5s;
-    border-top: var(--borderbtn);
-    padding: var(--px);
+    outline: var(--borderbtn);
+    padding: var(--ppx) var(--px);
     > * {
       margin-top: var(--ggap);
     }
-    .geolocate {
-      position: absolute;
-      left: 0px;
-      bottom: 100%;
-      aspect-ratio: 1;
-      width: 3rem;
+    .togglebtn {
+      margin: var(--ggap) auto 0px;
+      width: 9rem;
+      height: 3rem;
     }
-    .smallshowcasename {
+    .geolocate,
+    .fridaytag {
+      position: absolute;
+    }
+    .geolocate {
+      bottom: calc(100% + 0.5rem);
+      left: var(--barh);
+      width: var(--iconw);
+      aspect-ratio: 1;
+    }
+    .fridaytag {
+      left: 0px;
+      bottom: calc(100% + 0.8rem);
+      width: 3rem;
+      width: 6rem;
+      height: 6rem;
+      right: var(--barh);
+      left: unset;
+      position: absolute;
+      font-size: 1.2rem;
+    }
+    .title {
+      margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: var(--ggap);
+    }
+    .showcasename {
       margin: 0;
       padding: 0;
       cursor: auto;
+      width: fit-content;
+    }
+    .organizer {
+      font-family: sans;
+      font-size: 1rem;
+      max-width: 10rem;
+      a {
+        text-decoration: underline;
+      }
+    }
+    h4 {
+      .type {
+        font-weight: normal;
+      }
     }
     .friday {
       position: relative;
@@ -395,6 +470,7 @@ nav {
 }
 
 .overlay {
+  pointer-events: auto;
   position: fixed;
   left: 0;
   top: 0;
@@ -405,20 +481,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem 2rem;
-  h2 {
-    font-size: inherit;
-    margin-bottom: #{$ggap2 * 2};
-  }
+  padding: var(--navh) 2rem 2rem;
   .about {
     display: flex;
     flex-direction: column;
     gap: var(--ggap2);
     a {
       text-decoration: underline;
-      &::after {
-        content: " \2197\FE0E";
-      }
     }
   }
   .content {
@@ -429,16 +498,57 @@ nav {
     height: 100%;
     width: 100%;
     overflow-y: auto;
+    position: relative;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--ggap);
+      > * {
+        flex-basis: 50%;
+      }
+      .organizer {
+        max-width: 10rem;
+        a {
+          text-decoration: underline;
+          display: inline;
+        }
+      }
+    }
+    .description {
+      margin-bottom: #{$ggap3};
+      > * {
+        margin-top: var(--ggap2);
+      }
+      a {
+        text-decoration: underline;
+        display: inline;
+      }
+    }
     .long {
       > * {
         margin-top: var(--ggap2);
       }
+      .credits {
+        opacity: 0.5;
+        a {
+          text-decoration: underline;
+          display: inline;
+        }
+      }
     }
     .buttons {
-      margin-top: var(--ggap);
+      margin-top: var(--ggap2);
     }
     h4 {
       margin: 0 0 var(--ggap2);
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+    .h2date {
+      margin-bottom: #{$ggap3};
+      font-size: 0.8rem;
     }
   }
   .toHome {
@@ -520,8 +630,9 @@ nav {
 }
 
 .readmore {
+  text-decoration: underline;
   white-space: nowrap;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .buttons {

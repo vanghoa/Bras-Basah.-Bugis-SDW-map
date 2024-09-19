@@ -9,6 +9,7 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
   const [asideClass, setAsideClass] = useState("");
   const showcaseRef = useRef(null);
   const searchsttRef = useRef(null);
+  const pinlistRef = useRef({});
   console.log("filter: ", filter);
   const filterHandler = useCallback((v) => {
     setFilter(v);
@@ -65,6 +66,7 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
     window.searchsttRef = searchsttRef;
     window.setAsideClass = setAsideClass;
     window.directionHandler = directionHandler;
+    window.pinlistRef = pinlistRef;
   }, []);
   //
   return (
@@ -96,9 +98,10 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
           <ul className={`showcaselist`} ref={showcaseRef}>
             <div className="searchstatus" ref={searchsttRef} onClick={() => window.openSearch()}>
               <span>Showing events:</span>
-              <div className="status togglebtn">
+              <div className="status togglebtn checked">
                 <span>{(allPlaces[filter] || allTypes[filter] || allTimes[filter])?.name}</span>
                 <button
+                  className="xbtn"
                   onClick={(e) => {
                     e.stopPropagation();
                     filterHandler(null);
@@ -117,6 +120,7 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
                   markerRef={markerRef}
                   filter={filter}
                   showcase={showcase}
+                  pinlistRef={pinlistRef}
                 />
               );
             })}
@@ -127,7 +131,7 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
   );
 }
 
-function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data }) {
+function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data, pinlistRef }) {
   const { allShowcases } = data;
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -138,6 +142,9 @@ function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data }) {
   const { pins, processedType, processedLocation, pinIndex, lastDate } = allShowcases[showcase];
   return (
     <li
+      ref={(ref) => {
+        pinlistRef.current[showcase] = ref;
+      }}
       className={`pinlist ${filterCheck(filter, processedType, undefined, processedLocation, [
         lastDate,
         null,

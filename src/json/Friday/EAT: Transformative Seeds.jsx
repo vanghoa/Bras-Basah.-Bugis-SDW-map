@@ -1,4 +1,4 @@
-export default function EATTransformativeSeeds() {
+export default function EATTransformativeSeeds({ children }) {
   return (
     <>
       <p>
@@ -28,6 +28,7 @@ export default function EATTransformativeSeeds() {
         Don't miss this opportunity to immerse yourself in innovative design and delicious
         experimentation!
       </p>
+      {children}
     </>
   );
 }

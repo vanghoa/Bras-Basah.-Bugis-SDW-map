@@ -1,4 +1,6 @@
-export default function HEALRepair() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function HEALRepair({ children }) {
   return (
     <>
       <p>
@@ -29,6 +31,13 @@ export default function HEALRepair() {
         (2022), which added further elements of cultural exchange and connected humans from across
         the globe.
       </p>
+      {children}
+      <div className="credits">
+        HEAL: Repair+ is presented at 42 Waterloo Street in partnership with the Arts Resource Hub,
+        co-organised by <OrgLink name={"Ys"} /> and <OrgLink name={"Hans"} />. The Arts Resource Hub
+        supports Arts Self-Employed Persons and freelance practitioners in Singapore to unlock new
+        opportunities and grow meaningful careers.
+      </div>
     </>
   );
 }

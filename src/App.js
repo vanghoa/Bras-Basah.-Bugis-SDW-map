@@ -28,8 +28,9 @@ function App() {
 function WrapperMain() {
   return (
     <WrapperLocation>
-      <WrapperMapbox />
-      <Outlet />
+      <WrapperMapbox>
+        <Outlet />
+      </WrapperMapbox>
     </WrapperLocation>
   );
 }

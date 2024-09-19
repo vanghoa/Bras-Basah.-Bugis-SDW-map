@@ -1,4 +1,6 @@
-export default function PLANT() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function PLANT({ children }) {
   return (
     <>
       <p>
@@ -18,6 +20,11 @@ export default function PLANT() {
         Engineering at the National University of Singapore, led by either Donn Koh or Hans Tan and
         Sheryl Teng.
       </p>
+      {children}
+      <div className="credits">
+        PLANT is presented at the National Library Building in partnership with the National Library
+        Board, organised by <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

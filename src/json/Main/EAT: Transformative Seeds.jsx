@@ -1,4 +1,6 @@
-export default function EATTransformativeSeeds() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function EATTransformativeSeeds({ children }) {
   return (
     <>
       <p>
@@ -24,6 +26,11 @@ export default function EATTransformativeSeeds() {
         lens, expands food usage beyond nourishment, creating everyday items with a touch of
         ingenuity.
       </p>
+      {children}
+      <div className="credits">
+        EAT is presented at the National Design Centre in partnership with Tipo Pasta Bar,
+        co-organised by <OrgLink name={"FANG"} /> and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

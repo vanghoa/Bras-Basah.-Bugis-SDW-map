@@ -1,4 +1,4 @@
-export default function AShoppingExperience() {
+export default function AShoppingExperience({ children }) {
   return (
     <>
       <p>
@@ -8,6 +8,7 @@ export default function AShoppingExperience() {
         shops is part of this shopping experience!
       </p>
       <p>* while stocks last</p>
+      {children}
     </>
   );
 }

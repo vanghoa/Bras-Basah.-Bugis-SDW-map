@@ -1,3 +1,5 @@
+import mapboxgl from "mapbox-gl";
+
 const allPlaces = {
   nlb: {
     lnglat: [1.297591742916379, 103.85430872353592],

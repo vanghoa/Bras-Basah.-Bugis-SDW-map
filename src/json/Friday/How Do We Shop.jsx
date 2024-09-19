@@ -1,4 +1,4 @@
-export default function HowDoWeShop() {
+export default function HowDoWeShop({ children }) {
   return (
     <>
       <p>
@@ -7,6 +7,7 @@ export default function HowDoWeShop() {
         talented “roadshow” emcee specially engaged for this night. Hearing Melvin’s “radio-like”
         voice echo throughout the mall while walking around is part of the shopping experience!
       </p>
+      {children}
     </>
   );
 }

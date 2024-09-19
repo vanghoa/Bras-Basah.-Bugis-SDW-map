@@ -1,10 +1,10 @@
 const allTypes = {
-  exh: "exhibition",
-  wks: "workshop",
-  tour: "tour",
-  exp: "experience",
-  pre: "talk/presentation",
-  oth: "other",
+  exh: "Exhibition",
+  wks: "Workshop",
+  tour: "Tour",
+  exp: "Experience",
+  pre: "Talk/Presentation",
+  oth: "Other",
 };
 
 for (const i in allTypes) {

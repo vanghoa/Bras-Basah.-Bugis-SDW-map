@@ -3,14 +3,16 @@ import mapboxgl from "mapbox-gl";
 import data from "../../json/data.json";
 import FilterAndSortSection from "./FilterAndSortSection";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { SearchSVG, RightBtn, GeolocateSVG } from "../SVG";
+import { SearchSVG, RightBtn, GeolocateSVG, RecenterSVG } from "../SVG";
 import DragHandler from "./DragHandler";
-import { getLeftPadding, sideMenuNavigate } from "../../utils/utils";
+import { getLeftPadding, getTopPadding, sideMenuNavigate } from "../../utils/utils";
 import { Link } from "react-router-dom";
+import { FormatType, FridayTag } from "./FilterAndSortComponents";
+import PeopleofDesignShowcaseSeries from "../../json/Main/People of Design Showcase Series";
 
-const { allPins, middleLngLat, allPinKeys } = data;
+const { allPins, middleLngLat, allPinKeys, LngLatBounds } = data;
 
-const WrapperMapbox = () => {
+const WrapperMapbox = ({ children }) => {
   const mapContainerRef = useRef();
   const mapRef = useRef();
   const markerRef = useRef([]);
@@ -29,6 +31,19 @@ const WrapperMapbox = () => {
     }
   };
 
+  const recenterHandler = () => {
+    mapRef.current.fitBounds(LngLatBounds, {
+      essential: true,
+      bearing: 20,
+      padding: {
+        left: (window.navIsOpen ? getLeftPadding() : 0) + 40,
+        top: getTopPadding() + 40,
+        bottom: 40,
+        right: 40,
+      },
+    });
+  };
+
   useEffect(() => {
     console.log("reload map");
     window.markerRef = markerRef;
@@ -39,6 +54,7 @@ const WrapperMapbox = () => {
       center: middleLngLat, // starting position [lng, lat]
       zoom: 16, // starting zoom
       bearing: 20,
+      attributionControl: false,
       style: "mapbox://styles/baoanhbui/cm0bz3vvj00qu01phchsjccal",
     });
     window.mapRef.on("dragstart", () => {
@@ -93,30 +109,22 @@ const WrapperMapbox = () => {
           data={data}
         >
           <div className="intro">
-            <h1 className="fdisp">
-              PEOPLE OF <br></br>DESIGN<br></br>SHOWCASE<br></br>SERIES
-            </h1>
-            <p>
-              During Singapore Design Week 2024, ten showcases presented across the Bras Basah.Bugis
-              Design District will creatively examine the rituals of daily life through the lens of
-              design. Challenging the mundane, each showcase delves into a specific activity such as
-              Eat, Sleep, Shop, Read, Heal, Make, Plant, Commute, Display and Design. Through new
-              works and collaborative projects, visitors will discover imaginative design
-              possibilities shaped to offer fresh perspectives on the world around us, inspiring new
-              ways of thinking, seeing, and experiencing daily life.
-            </p>
-            <p>
-              The People of Design showcases are led by Hans Tan, together with a team of
-              designer-curators from Atelier Fang, Atelier HOKO, Forest and Whale, gideon-jamie,
-              J.A.B.O.C (Just A Band of Creatives), “brief.”, Studio Juju and Yishun Health.
-            </p>
+            <PeopleofDesignShowcaseSeries />
+            <Link to={"about"} className="readmore">
+              ...Read more
+            </Link>
           </div>
         </FilterAndSortSection>
         <LocationCard data={data} markerRef={markerRef}>
           <button className="geolocate" onClick={geolocateHandler}>
             <GeolocateSVG />
           </button>
+          <FridayTag />
         </LocationCard>
+        {children}
+        <button className="recenter" onClick={recenterHandler}>
+          <RecenterSVG />
+        </button>
       </nav>
       <div className="map-wrapper">
         <div ref={mapContainerRef} className="map-container"></div>
@@ -137,39 +145,49 @@ function LocationCard({ data, markerRef, children }) {
   console.log("location card");
   const [pin, setPin] = useState(false);
   const [open, setOpen] = useState(false);
+  const locationCardRef = useRef(null);
   const { allPins, allShowcases } = data;
-  let events, showcases, pinIndex;
+  let events, showcases, pinIndex, formattedOrg, org;
   if (pin) {
-    ({ events, showcases } = allPins[pin]);
+    ({ events, showcases, formattedOrg, org } = allPins[pin]);
     ({ pinIndex } = allShowcases[showcases]);
   }
-  window.setPinCard = (pin) => {
-    setPin(pin);
-  };
-  window.setOpenCard = (open) => {
-    setOpen(open);
-  };
+  useEffect(() => {
+    window.setPinCard = (pin) => {
+      setPin(pin);
+    };
+    window.setOpenCard = (open) => {
+      setOpen(open);
+    };
+    window.locationCardRef = locationCardRef;
+  }, []);
   return (
-    <div className={`locationcard ${open ? "open" : ""}`}>
+    <div ref={locationCardRef} className={`locationcard ${open ? "open" : ""}`}>
       {children}
       {pin && (
         <>
-          <h3 className="showcasename smallshowcasename">
-            <span>{showcases}</span>
-          </h3>
-          {events.map(({ name, formattedDate, type, location, processedType, friday }, i) => {
-            return (
-              <Fragment key={`main${i}`}>
-                <h4>{name}</h4>
-                {friday && (
-                  <h4 className="friday">
-                    <div className="branch"></div>
-                    {friday.name}
+          <div className="title">
+            <h3 className="showcasename">
+              <span>{showcases}</span>
+            </h3>
+            <p className="organizer">
+              with <Link to={`about/${org}`}>{formattedOrg}</Link>
+            </p>
+          </div>
+          <ul>
+            {events.map(({ name, formattedType }, i) => {
+              return (
+                <li key={`main${i}`}>
+                  <h4>
+                    - {name}
+                    <span className="type">
+                      , <FormatType formattedType={formattedType} />
+                    </span>
                   </h4>
-                )}
-              </Fragment>
-            );
-          })}
+                </li>
+              );
+            })}
+          </ul>
           <button
             className="togglebtn"
             onClick={() => sideMenuNavigate(showcases, markerRef.current[pin])}
@@ -185,11 +203,14 @@ function LocationCard({ data, markerRef, children }) {
 function NavMenu({ geolocateRef }) {
   const [open, setOpen] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
+  const navRef = useRef(null);
   useEffect(() => {
     window.openNav = (open = true) => {
+      window.navIsOpen = open;
       geolocateRef.current.beforeTrigger = () => {
         geolocateRef.current.options.fitBoundsOptions.padding = {
           left: open ? getLeftPadding() : 0,
+          top: getTopPadding(),
         };
       };
       setOpen(open);
@@ -199,10 +220,14 @@ function NavMenu({ geolocateRef }) {
       setOpenSearch(false);
     };
     window.openSearch = () => setOpenSearch(true);
+    window.navRef = navRef;
   }, []);
   console.log("open nav");
   return (
-    <div className={`navigation ${open ? "open" : ""} ${openSearch ? "openSearch" : ""}`}>
+    <div
+      ref={navRef}
+      className={`navigation ${open ? "open" : ""} ${openSearch ? "openSearch" : ""}`}
+    >
       <button className={`leftbtn`} onClick={() => setOpenSearch(!openSearch)}></button>
       <Link className={`about`} to={`about`}>
         BB.B

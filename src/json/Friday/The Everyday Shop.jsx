@@ -1,4 +1,4 @@
-export default function TheEverydayShop() {
+export default function TheEverydayShop({ children }) {
   return (
     <>
       <p>
@@ -28,6 +28,7 @@ export default function TheEverydayShop() {
         puts equal effort into selling and not selling its goods and products? Is a product only
         successful when it can be sold? What do we actually buy when we shop?
       </p>
+      {children}
     </>
   );
 }

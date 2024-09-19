@@ -1,4 +1,4 @@
-export default function PLANT() {
+export default function PLANT({ children }) {
   return (
     <>
       <p>
@@ -18,6 +18,7 @@ export default function PLANT() {
         Engineering at the National University of Singapore, led by either Donn Koh or Hans Tan and
         Sheryl Teng.
       </p>
+      {children}
     </>
   );
 }

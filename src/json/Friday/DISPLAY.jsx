@@ -1,4 +1,4 @@
-export default function DISPLAY() {
+export default function DISPLAY({ children }) {
   return (
     <>
       <p>
@@ -17,6 +17,7 @@ export default function DISPLAY() {
         DESIGN at the National Design Centre, HEAL at 42 Waterloo, and PLANT at the National
         Library.
       </p>
+      {children}
     </>
   );
 }

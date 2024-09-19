@@ -1,4 +1,6 @@
-export default function DESIGN() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function DESIGN({ children }) {
   return (
     <>
       <p>
@@ -29,6 +31,10 @@ export default function DESIGN() {
         transformative ability highlights its power to bring people together and foster innovative
         thinking.
       </p>
+      {children}
+      <div className="credits">
+        DESIGN is presented at the National Design Centre, organised by <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

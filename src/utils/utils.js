@@ -1,12 +1,14 @@
 import { Fragment } from "react";
 
-export function reCenter(lnglat) {
+function reCenter(lnglat) {
   window.mapRef?.flyTo({
     center: lnglat,
     zoom: 17,
     essential: true,
     padding: {
       left: getLeftPadding(),
+      top: getTopPadding(),
+      bottom: getBottomPadding(),
     },
   });
 }
@@ -88,8 +90,12 @@ export function getLeftPadding() {
   return window.responsive.xs ? 0 : window.widthoffset;
 }
 
-export function setLeftPadding(num) {
-  window.mapRef.setPadding({ left: num ?? getLeftPadding() });
+export function getBottomPadding() {
+  return window.responsive.xs ? window.locationCardRef.current.clientHeight : 0;
+}
+
+export function getTopPadding() {
+  return window.navRef.current.clientHeight;
 }
 
 function isBeforeOrOnToday(input) {

@@ -1,4 +1,6 @@
-export default function READBOOK() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function READBOOK({ children }) {
   return (
     <>
       <p>
@@ -25,6 +27,11 @@ export default function READBOOK() {
         series “Science of the Secondary”, where the subject of “BOOK” is thoroughly interrogated
         through a sense-based process of inquiry.
       </p>
+      {children}
+      <div className="credits">
+        READ is presented at the National Library Building in partnership with the National Library
+        Board, co-organised by <OrgLink name={"HOKO"} /> and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

@@ -1,4 +1,6 @@
-export default function HowDoWeShop() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function HowDoWeShop({ children }) {
   return (
     <>
       <p>
@@ -14,6 +16,11 @@ export default function HowDoWeShop() {
         consumers would rediscover and be made aware of how we shop, especially in a country where
         shopping is described as a “national leisure activity” (The Straits Times).
       </p>
+      {children}
+      <div className="credits">
+        SHOP is presented in partnership with Bugis+ and Bugis Street and is co-organised by{" "}
+        <OrgLink name={"gj"} /> and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

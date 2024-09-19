@@ -1,4 +1,6 @@
-export default function SLEEPLESS() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function SLEEPLESS({ children }) {
   return (
     <>
       <p>
@@ -13,6 +15,12 @@ export default function SLEEPLESS() {
         After experiencing the VR installation, a brew bar offers a cup of caffeine-free tea as we
         contemplate the stories of the sleepless.
       </p>
+      {children}
+      <div className="credits">
+        Designed by <OrgLink name={"FW"} />, in collaboration with students from the BA (Hons)
+        Design for Social Futures programme at the Lasalle College of the Arts, University of Arts
+        Singapore.
+      </div>
     </>
   );
 }

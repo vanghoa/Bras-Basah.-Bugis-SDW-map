@@ -1,4 +1,6 @@
-export default function SLEEPDIVINGIN() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function SLEEPDIVINGIN({ children }) {
   return (
     <>
       <p>
@@ -14,6 +16,11 @@ export default function SLEEPDIVINGIN() {
         activities within the hotel room and its grounds, where disrupted circadian rhythms begin to
         reset with a holistic biopsychosocial approach.
       </p>
+      {children}
+      <div className="credits">
+        SLEEP is presented in partnership with Naumi Hotel Singapore, co-organised by{" "}
+        <OrgLink name={"FW"} /> and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }

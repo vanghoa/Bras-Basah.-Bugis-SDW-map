@@ -1,4 +1,4 @@
-export default function HEALRepair() {
+export default function HEALRepair({ children }) {
   return (
     <>
       <p>
@@ -11,6 +11,7 @@ export default function HEALRepair() {
         the approaches taken, the observations made, and the revelations and challenges encountered.
         See the repaired objects and linger to mingle and experience the healing power of design!
       </p>
+      {children}
     </>
   );
 }

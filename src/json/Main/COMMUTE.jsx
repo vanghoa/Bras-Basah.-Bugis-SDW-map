@@ -1,4 +1,6 @@
-export default function COMMUTE() {
+import OrgLink from "../../components/Layout/OrganizersLink";
+
+export default function COMMUTE({ children }) {
   return (
     <>
       <p>
@@ -9,12 +11,17 @@ export default function COMMUTE() {
         daily ride more engaging and relatable.
       </p>
       <p>
-        The installation features interactive displays, augmented reality (AR) animations, and both
-        in-station and online quizzes. Designed to enhance awareness and celebrate everyday
-        commuting quirks and behaviours, “My Riding Tribe” captures the essence of shared routines
+        The installation features in-station displays and both in-station and online quizzes.
+        Additionally, visitors can create and take home physical keepsakes that celebrate everyday
+        commuting quirks and behaviors. “My Riding Tribe” captures the essence of shared routines
         and turns them into fun and informative experiences. Visit Bencoolen Station to explore the
         personalities that represent the heartbeat of Singapore's MRT system.
       </p>
+      {children}
+      <div className="credits">
+        COMMUTE is presented in partnership with the Land Transport Authority and SBS Transit Rail,
+        co-organised by <OrgLink name={"brief"} /> and <OrgLink name={"Hans"} />.
+      </div>
     </>
   );
 }
