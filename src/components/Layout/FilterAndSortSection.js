@@ -1,7 +1,7 @@
 import { Filter, Event } from "./FilterAndSortComponents";
 import Markers from "./Markers";
 import { useState, useRef, Fragment, useMemo, useCallback, useEffect } from "react";
-import { filterCheck, scrollToEl } from "../../utils/utils";
+import { filterCheck, removeFig, scrollToEl } from "../../utils/utils";
 import ShowcaseName from "./ShowcaseName";
 
 export default function FilterAndSortSection({ markerRef, currentPosRef, drag, data, children }) {
@@ -18,7 +18,7 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
     scrollToEl(showcaseRef.current);
   }, []);
   const directionHandler = useCallback(async ([lng, lat]) => {
-    window.currentPin?.classList.remove("showfig");
+    removeFig();
     const map = window.mapRef;
     if (!map || !currentPosRef.current) {
       return;

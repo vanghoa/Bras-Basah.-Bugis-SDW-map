@@ -24,10 +24,14 @@
 
 .marker {
   transition: background-color 1s, color 1s !important;
-  &.showfig .fig {
-    picture {
+  &.showfig {
+    z-index: 100;
+    .fig picture {
       animation: showFig var(--du) var(--de) both steps(6, jump-none);
     }
+  }
+  &.hidefig .fig picture {
+    animation: showFigReverse var(--du) var(--de) both steps(6, jump-none) reverse;
   }
   .fig {
     --de: 0.3s;

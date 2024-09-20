@@ -6,10 +6,14 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { SearchSVG, RightBtn, GeolocateSVG, RecenterSVG } from "../SVG";
 import DragHandler from "./DragHandler";
 import {
+  closeAllOverlays,
   getBottomPadding,
   getLeftPadding,
   getTopPadding,
+  isTouchScreen,
+  removeFig,
   sideMenuNavigate,
+  throttle,
 } from "../../utils/utils";
 import { Link } from "react-router-dom";
 import { FormatType, FridayTag } from "./FilterAndSortComponents";
@@ -31,7 +35,7 @@ const WrapperMapbox = ({ children }) => {
 
   const geolocateHandler = () => {
     if (geolocateRef.current) {
-      window.currentPin?.classList.remove("showfig");
+      removeFig();
       geolocateRef.current.beforeTrigger();
       geolocateRef.current.trigger();
       console.log("trigger geolocation");
@@ -39,7 +43,7 @@ const WrapperMapbox = ({ children }) => {
   };
 
   const recenterHandler = () => {
-    window.currentPin?.classList.remove("showfig");
+    removeFig();
     mapRef.current.fitBounds(LngLatBounds, {
       essential: true,
       bearing: 20,
@@ -68,9 +72,9 @@ const WrapperMapbox = ({ children }) => {
       style: "mapbox://styles/baoanhbui/cm0bz3vvj00qu01phchsjccal",
     });
     window.mapRef = mapRef;
-    mapRef.current.on("dragstart", () => {
-      window.setOpenCard(false);
-    });
+    window.mapElRef = mapContainerRef;
+    mapRef.current.on("dragstart", closeAllOverlays);
+    !isTouchScreen() && mapRef.current.on("wheel", throttle(closeAllOverlays));
     geolocateRef.current = new mapboxgl.GeolocateControl({
       positionOptions: {
         enableHighAccuracy: true,

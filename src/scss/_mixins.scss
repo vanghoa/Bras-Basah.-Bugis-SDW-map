@@ -38,6 +38,18 @@ $breakpoints: (
   }
 }
 
+@keyframes showFigReverse {
+  0% {
+    transform: translateY(calc(100% + var(--y1))) rotate(var(--r1));
+  }
+  97% {
+    transform: translateY(calc(-20% + var(--y2))) rotate(var(--r2));
+  }
+  100% {
+    transform: translateY(var(--y3)) rotate(0);
+  }
+}
+
 @mixin variable {
   .name span {
     font-variation-settings: "wght" var(--wght);

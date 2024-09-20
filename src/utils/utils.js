@@ -45,20 +45,49 @@ export function scrollToEl(anchor, h3) {
   );
 }
 
-function removeshowfig() {}
+export function removeFig() {
+  const el = window.currentPin;
+  window.currentPin = null;
+  if (el) {
+    el.onanimationend = (event) => {
+      el.classList.remove("showfig", "hidefig");
+      el.onanimationend = null;
+    };
+    el.classList.add("hidefig");
+  }
+}
+
+export function throttle(fn, delay = 3000) {
+  let lastCall = 0;
+
+  return function (event) {
+    const now = Date.now();
+
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      fn(event);
+    }
+  };
+}
+
+export function isTouchScreen() {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+}
+
+export function closeAllOverlays() {
+  console.log("close");
+  window.setOpenCard(false);
+  removeFig();
+}
 
 export function allInOneMapNavigate(lnglat, el, pin, showcases) {
   window.openNav(!window.responsive.xs);
   hightlightEl(el);
-  window.currentPin?.classList.remove("showfig");
-  el.classList.add("showfig");
-  window.currentPin = el;
-  window.mapRef.current.once("touchstart", (e) => {
-    el.classList.remove("showfig");
-  });
-  window.mapRef.current.once("mousedown", (e) => {
-    el.classList.remove("showfig");
-  });
+  if (el !== window.currentPin) {
+    removeFig();
+    el.classList.add("showfig");
+    window.currentPin = el;
+  }
   if (window.responsive.xs) {
     window.setPinCard(pin);
     window.setOpenCard(true);
