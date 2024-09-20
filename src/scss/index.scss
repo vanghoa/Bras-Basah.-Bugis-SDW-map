@@ -134,7 +134,7 @@ nav {
     height: var(--navh);
     outline: var(--borderbtn);
     --barh: calc(var(--navh) / 6);
-    --iconw: calc(var(--navh) * 0.6);
+    --iconw: calc(var(--navh) * 0.9);
     .landing {
       position: absolute;
       left: 0;
@@ -149,12 +149,13 @@ nav {
         flex-grow: 2;
       }
       .figswrapper {
-        font-size: 4rem;
+        font-size: var(--navh);
         flex-basis: 100%;
         flex-shrink: 2;
         flex-grow: 0;
         pointer-events: none;
         .figs {
+          top: 0.2em;
           position: absolute;
           right: 0;
           width: 100%;
@@ -164,11 +165,12 @@ nav {
           flex-wrap: wrap;
           justify-content: center;
           overflow: hidden;
+          gap: 10em 0;
         }
         .fig {
           position: relative;
-          width: calc(var(--navh) * 0.6);
-          height: 100%;
+          width: calc(var(--navh) * 0.45);
+          height: 0.65em;
         }
         picture {
           position: relative;
@@ -195,6 +197,7 @@ nav {
       --iconw: calc(var(--navh) * 0.6);
     }
     &.open {
+      --iconw: calc(var(--navh) * 0.6);
       --navh: 3rem;
       .landing .figs {
         width: 0;
@@ -230,7 +233,7 @@ nav {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 0.8rem;
+      padding: 0 0.75rem;
       padding-top: calc(var(--navh) * 0.15);
       font-size: calc(var(--navh) * 0.7);
       font-family: disp;
@@ -446,7 +449,7 @@ nav {
               top: var(--ggap);
               background-color: black;
               width: calc(100% - var(--px) * 2);
-              height: 3px;
+              height: 2px;
               left: var(--px);
             }
             &.open {
