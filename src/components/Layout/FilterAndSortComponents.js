@@ -1,6 +1,7 @@
 import { useState, useContext, Fragment, memo, useMemo } from "react";
 import { allInOneMapNavigate, filterCheck } from "../../utils/utils";
 import { Link } from "react-router-dom";
+import Img from "../../img/Img";
 
 export function Filter({ fn, obj, current, children }) {
   const arr = Object.keys(obj);
@@ -155,6 +156,34 @@ const FridayMemo = memo(function ({ props: { event, markerRef, directionHandler 
         />
       </div>
     </>
+  );
+});
+
+export const Fig = ({ src }) => {
+  return (
+    <div
+      className={`fig`}
+      style={{
+        "--de": `${(Math.random() * 0.49 + 0.01).toFixed(2)}s`,
+        "--du": `${(Math.random() * 0.5 + 0.7).toFixed(2)}s`,
+        "--r1": `-${(Math.random() * 200 + 10).toFixed(2)}deg`,
+        "--r2": `${(Math.random() * 240 + 10).toFixed(2)}deg`,
+      }}
+    >
+      <div className="figcanvas">
+        <Img src={`${src}`} />
+      </div>
+    </div>
+  );
+};
+
+export const FigsMemo = memo(function ({ showcase }) {
+  return (
+    <div className="figs">
+      {Array.from({ length: 3 }, (v, i) => (
+        <Fig key={i} src={`${showcase}${i + 1}`} />
+      ))}
+    </div>
   );
 });
 

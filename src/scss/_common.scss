@@ -53,7 +53,8 @@ a {
 }
 
 .leftbtn {
-  margin-left: 0.5rem;
+  z-index: 2;
+  margin-left: 0.7rem;
   position: relative;
   &::after,
   &::before {
@@ -93,7 +94,9 @@ a {
   aspect-ratio: 1;
   height: var(--navh);
   width: var(--iconw);
-  margin-right: var(--barh);
+  margin-right: 0.8rem;
+  margin-left: 0.8rem;
+  right: 0;
   &::after,
   &::before {
     content: " ";

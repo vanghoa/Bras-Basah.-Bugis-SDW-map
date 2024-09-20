@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { Fragment, memo, useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import data from "../../json/data.json";
 import FilterAndSortSection from "./FilterAndSortSection";
@@ -16,9 +16,10 @@ import {
   throttle,
 } from "../../utils/utils";
 import { Link } from "react-router-dom";
-import { FormatType, FridayTag } from "./FilterAndSortComponents";
+import { Fig, FormatType, FridayTag } from "./FilterAndSortComponents";
 import PeopleofDesignShowcaseSeries from "../../json/Main/People of Design Showcase Series";
 import ShowcaseName from "./ShowcaseName";
+import Img, { allImg, allImgs } from "../../img/Img";
 
 const { allPins, middleLngLat, allPinKeys, LngLatBounds } = data;
 
@@ -247,15 +248,39 @@ function NavMenu({ geolocateRef }) {
       className={`navigation ${open ? "open" : ""} ${openSearch ? "openSearch" : ""}`}
     >
       <button className={`leftbtn`} onClick={() => setOpenSearch(!openSearch)}></button>
-      <Link className={`about`} to={`about`}>
-        BB.B
-      </Link>
-      <button
-        className={`${open ? "open" : ""} rightbtn`}
-        onClick={() => (openSearch ? setOpenSearch(false) : window.openNav(!open))}
-      ></button>
+      <div className="landing">
+        <NavMenuMemo />
+        <button
+          className={`${open ? "open" : ""} rightbtn`}
+          onClick={() => (openSearch ? setOpenSearch(false) : window.openNav(!open))}
+        ></button>
+      </div>
     </div>
   );
 }
+
+const NavMenuMemo = memo(function () {
+  const imgArr = Object.keys(allImgs)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 8);
+  return (
+    <>
+      <Link className={`about`} to={`about`}>
+        BB.B
+      </Link>
+      <div className="figswrapper">
+        <div className="figs">
+          {imgArr.map((src, i) => {
+            return (
+              <div className="fig" key={i}>
+                <Img src={`${src}`} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+});
 
 export default WrapperMapbox;

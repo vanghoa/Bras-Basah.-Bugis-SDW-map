@@ -1,8 +1,9 @@
-import { Filter, Event } from "./FilterAndSortComponents";
+import { Filter, Event, FigsMemo } from "./FilterAndSortComponents";
 import Markers from "./Markers";
 import { useState, useRef, Fragment, useMemo, useCallback, useEffect } from "react";
 import { filterCheck, removeFig, scrollToEl } from "../../utils/utils";
 import ShowcaseName from "./ShowcaseName";
+import Img from "../../img/Img";
 
 export default function FilterAndSortSection({ markerRef, currentPosRef, drag, data, children }) {
   const { allPlaces, allTypes, allShowcaseKeys, allTimes } = data;
@@ -135,17 +136,31 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
 
 function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data, pinlistRef }) {
   const { allShowcases } = data;
+  const local = useRef({ ref: null, count: 0 });
   const [open, setOpen] = useState(false);
   useEffect(() => {
     window.openAccordion
       ? (window.openAccordion[showcase] = setOpen)
       : (window.openAccordion = { [showcase]: setOpen });
   }, []);
+
+  useEffect(() => {
+    const cur = local.current;
+    if (cur.ref && !open && cur.count > 0) {
+      cur.ref.classList.add("hidefig");
+      cur.ref.onanimationend = (event) => {
+        cur.ref.classList.remove("hidefig");
+        cur.ref.onanimationend = null;
+      };
+    }
+    cur.count++;
+  }, [open]);
   const { pins, processedType, processedLocation, pinIndex, lastDate } = allShowcases[showcase];
   return (
     <li
       ref={(ref) => {
         pinlistRef.current[showcase] = ref;
+        local.current.ref = ref;
       }}
       className={`pinlist ${filterCheck(filter, processedType, undefined, processedLocation, [
         lastDate,
@@ -169,7 +184,9 @@ function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data, pin
             });
           }}
         ></div>
-        <span className="index">{pinIndex}</span> <ShowcaseName name={showcase} />
+        <span className="index">{pinIndex}</span>
+        <ShowcaseName name={showcase} />
+        <FigsMemo showcase={showcase} />
       </h3>
       <div className="eventlistwrapper">
         <div className="gridtogglewrapper">

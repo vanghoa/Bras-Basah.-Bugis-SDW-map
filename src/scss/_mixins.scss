@@ -62,3 +62,11 @@ $breakpoints: (
     animation: animateWght 0.8s 0.3s forwards steps(6, jump-none);
   }
 }
+
+@mixin figanim {
+  animation: showFig var(--du) var(--de) both steps(6, jump-none);
+}
+
+@mixin hidefiganim {
+  animation: showFigReverse var(--du) var(--de) both steps(6, jump-none) reverse;
+}

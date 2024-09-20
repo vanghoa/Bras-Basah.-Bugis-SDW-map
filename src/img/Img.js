@@ -61,7 +61,7 @@ import webpSLEEP1 from "./Figures-cutline_SLEEP-1.png?as=w";
 import webpSLEEP2 from "./Figures-cutline_SLEEP-2.png?as=w";
 import webpSLEEP3 from "./Figures-cutline_SLEEP-3.png?as=w";
 //
-const allImg = {
+export const allImgs = {
   COMMUTE1,
   COMMUTE2,
   COMMUTE3,
@@ -92,6 +92,10 @@ const allImg = {
   SLEEP1,
   SLEEP2,
   SLEEP3,
+};
+
+const allImg = {
+  ...allImgs,
   webpCOMMUTE1,
   webpCOMMUTE2,
   webpCOMMUTE3,
@@ -129,7 +133,7 @@ const Img = ({ src, alt = "image", className = "" }) => {
     <picture className={className}>
       <source srcSet={allImg[`webp${src}`]} type="image/webp" />
       <source srcSet={allImg[src]} type="image/jpeg" />
-      <img src={src} alt={alt} />
+      <img src={allImg[src]} alt={alt} />
     </picture>
   ) : (
     ""
