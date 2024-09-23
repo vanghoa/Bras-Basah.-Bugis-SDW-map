@@ -48,6 +48,17 @@ module.exports = {
                 },
               },
             },
+            {
+              preset: "ws",
+              implementation: ImageMinimizerPlugin.sharpGenerate,
+              options: {
+                encodeOptions: {
+                  webp: {
+                    quality: 70,
+                  },
+                },
+              },
+            },
           ],
         })
       );

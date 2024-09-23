@@ -1,7 +1,7 @@
 import { useState, useContext, Fragment, memo, useMemo } from "react";
 import { allInOneMapNavigate, filterCheck } from "../../utils/utils";
 import { Link } from "react-router-dom";
-import Img from "../../img/Img";
+import Img, { ImgShowcaseName } from "../../img/Img";
 
 export function Filter({ fn, obj, current, children }) {
   const arr = Object.keys(obj);
@@ -86,7 +86,7 @@ const MainMemo = memo(function ({
         <p>
           <FormatType formattedType={formattedType} />
         </p>
-        <p className="date">{formattedDate}</p>
+        <FormatDate>{formattedDate}</FormatDate>
         <p>{formattedLocation}</p>
       </div>
       <p className="short">
@@ -107,9 +107,9 @@ const MainMemo = memo(function ({
         <a href={ggmap} target="_blank" rel="noreferrer" className="togglebtn">
           Google Map &nbsp;&#8599;&#xFE0E;
         </a>
-        <button className="togglebtn geolocate" onClick={directionHandler}>
-          Directions
-        </button>
+        {/*<button className="togglebtn geolocate" onClick={directionHandler}>
+          Walking Directions
+        </button>*/}
       </div>
     </>
   );
@@ -171,7 +171,7 @@ export const Fig = ({ src }) => {
       }}
     >
       <div className="figcanvas">
-        <Img src={`${src}`} />
+        <ImgShowcaseName src={`${src}`} />
       </div>
     </div>
   );
@@ -180,11 +180,19 @@ export const Fig = ({ src }) => {
 export const FigsMemo = memo(function ({ showcase }) {
   return (
     <div className="figs">
-      {Array.from({ length: 3 }, (v, i) => (
+      {Array.from({ length: 7 }, (v, i) => (
         <Fig key={i} src={`${showcase}${i + 1}`} />
       ))}
     </div>
   );
 });
+
+export const FormatDate = ({ children }) => (
+  <div className="date">
+    {children.split("\n").map((str, i) => (
+      <p key={i}>{str}</p>
+    ))}
+  </div>
+);
 
 export { FormatType };

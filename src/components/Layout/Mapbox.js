@@ -40,6 +40,13 @@ const WrapperMapbox = ({ children }) => {
       geolocateRef.current.beforeTrigger();
       geolocateRef.current.trigger();
       console.log("trigger geolocation");
+      if (geoelRef.current?.classList.contains("showfig")) {
+        geoelRef.current.onanimationend = (event) => {
+          geoelRef.current.classList.remove("showfig", "hidefig");
+          geoelRef.current.onanimationend = null;
+        };
+        geoelRef.current.classList.add("hidefig");
+      }
     }
   };
 
@@ -62,6 +69,7 @@ const WrapperMapbox = ({ children }) => {
   useEffect(() => {
     console.log("reload map");
     window.markerRef = markerRef;
+    window.geoelRef = geoelRef;
     mapboxgl.accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
     mapRef.current = new mapboxgl.Map({
@@ -96,6 +104,9 @@ const WrapperMapbox = ({ children }) => {
       geomarkerRef.current.setLngLat([longitude, latitude]).addTo(mapRef.current);
       currentPosRef.current = { lng: longitude, lat: latitude };
       window.setAsideClass("havegeolocate");
+      mapRef.current.once("moveend", () => {
+        geoelRef.current.classList.add("showfig");
+      });
     });
     mapRef.current.addControl(geolocateRef.current);
     geomarkerRef.current = new mapboxgl.Marker({
@@ -146,12 +157,17 @@ const WrapperMapbox = ({ children }) => {
         <div ref={mapContainerRef} className="map-container"></div>
         <div
           ref={geoelRef}
-          className="marker"
+          className="geolocatemarker"
           style={{
-            background: "yellow",
             visibility: "hidden",
           }}
-        ></div>
+        >
+          <div className="fig">
+            <Img
+              src={Object.keys(allImgs)[Math.floor(Math.random() * Object.keys(allImgs).length)]}
+            />
+          </div>
+        </div>
       </div>
     </>
   );
@@ -248,6 +264,20 @@ function NavMenu({ geolocateRef }) {
       className={`navigation ${open ? "open" : ""} ${openSearch ? "openSearch" : ""}`}
     >
       <button className={`leftbtn`} onClick={() => setOpenSearch(!openSearch)}></button>
+      <div className="logoloadingwrapper">
+        <div className="logoloading">
+          <ShowcaseName className="row" name={`BRAS `} />
+          <span className="row">
+            <ShowcaseName name={`BASAH`} />
+            <span className="dot">.</span>
+          </span>
+          <ShowcaseName className="row" name={`BUGIS`} />
+        </div>
+        <div className="designdistrict">
+          <ShowcaseName className="des" name={`DESIGN `} />
+          <ShowcaseName className="dist" name={`DISTRICT`} />
+        </div>
+      </div>
       <div className="landing">
         <NavMenuMemo />
         <button

@@ -3,7 +3,7 @@ import { RightBtn } from "../SVG";
 import Main from "../../json/Main";
 import Friday from "../../json/Friday";
 import data from "../../json/data.json";
-import { FormatType } from "./FilterAndSortComponents";
+import { FormatDate, FormatType } from "./FilterAndSortComponents";
 import { allInOneMapNavigate } from "../../utils/utils";
 import { useNavigate } from "react-router-dom";
 const { allEvents, longQuery } = data;
@@ -46,6 +46,7 @@ const EventContent = ({ event, pathname, longObj }) => {
     showcases,
     formattedOrg,
     org,
+    regis = null,
   } = event;
   const LongComponent = longObj[pathname];
   return pathname in longObj ? (
@@ -60,8 +61,16 @@ const EventContent = ({ event, pathname, longObj }) => {
         <p>
           <FormatType formattedType={formattedType} />
         </p>
-        <p className="date">{formattedDate}</p>
+        <FormatDate>{formattedDate}</FormatDate>
         <p>{formattedLocation}</p>
+        {regis && (
+          <p>
+            Register here:{` `}
+            <a href={`https://${regis}`} target="_blank">
+              {regis}
+            </a>
+          </p>
+        )}
       </div>
       <div className="long">
         <LongComponent>
@@ -79,9 +88,6 @@ const EventContent = ({ event, pathname, longObj }) => {
             <a href={ggmap} target="_blank" rel="noreferrer" className="togglebtn">
               Google Map &nbsp;&#8599;&#xFE0E;
             </a>
-            <button className="togglebtn geolocate" onClick={window.directionHandler}>
-              Directions
-            </button>
           </div>
         </LongComponent>
       </div>

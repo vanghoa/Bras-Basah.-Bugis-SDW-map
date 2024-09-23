@@ -4,20 +4,26 @@ export default function AShoppingExperience({ children }) {
   return (
     <>
       <p>
-        SHOP explores the intricate dynamics between design and shopping, pushing our understanding
-        beyond familiar notions of this relationship through three experience segments. The first
-        segment, A Shopping Experience, is an exhibition located in an unoccupied unit within Bugis
-        Street, a street shopping location with a maze of nearly 400 shops that is rich in informal
-        activities around shopping: makeshift interiors and setups, touting, busy displays,
-        advertisements of all kinds, overflow of shop furniture and goods, eclectic wayfinding, and
-        so on. In this exhibition, we ask the question: what is a shop? What if elements that
-        usually constitute the shopping experience — its lighting, music, window displays, signages,
-        furniture, display structures, etc. — are brought to the foreground instead? In this
-        site-specific installation, we invite designers and creatives to observe and respond to the
-        abundant practices and improvisations found in the shops of Bugis Street, each producing a
-        work that contributes to a specific element of the shop’s design and experience. Free of any
-        goods or services, can a shop still function as a shop? Can it offer ‘shopping’ as, truly,
-        an experience?
+        SHOP is a set of three exhibitions exploring the dynamics between design and shopping. Given
+        how much of design already propels consumption, can we use it to slow it down, change
+        directions, or even reverse it?
+      </p>
+      <p>
+        The first exhibition, A Shopping Experience is one located in an empty store unit within
+        Bugis Street, a street shopping location with a maze of nearly 400 shops rich in informal
+        activities around shopping: ad hoc interiors, busy displays, advertisements of all kinds,
+        overflow of shop furniture and goods, eclectic wayfinding, and so on. Amidst hundreds of
+        highly varied shop units, we ask: what is a shop? What if elements that usually constitute
+        the shopping experience — its lighting, music, window displays, signages, furniture, display
+        structures, etc. — are brought to the foreground? In this site-specific shop installation, 7
+        local designers and artists were invited to observe and respond to the abundant practices
+        and improvisations found in Bugis Street, each producing a work that forms a specific
+        element of the shop’s design and experience. Like the cacophony of visuals and sounds one
+        experiences while walking through the array of shops, this single shop unit brings together
+        independently created works that either blend with or collide into each other, in ways that
+        reflect the makeshift ingenuity and spontaneous compositions overflowing throughout Bugis
+        Street. Still, unlike the other shop units, this is one free of any goods or services. Can
+        it still function as a shop? Or can it offer “shopping” as, truly, an experience?
       </p>
       {children}
       <div className="credits">

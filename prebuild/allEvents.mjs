@@ -108,9 +108,10 @@ Interactive Experiences and Tastings`,
       type: ["pre:Talk (free with registration)"],
       date_html: `27 Sep
 Panel discussion 1: 7.30 pm – 8pm
-Panel discussion 2: 9 pm – 9.30 pm
-`,
+Panel discussion 2: 9 pm – 9.30 pm`,
       extra_html: "ReRepair",
+      regis:
+        "eventbrite.com/e/sdw-2024-friday-late-bbb-people-of-design-showcase-series-tickets-1004281150957",
     },
   },
   {
@@ -129,6 +130,7 @@ Panel discussion 2: 9 pm – 9.30 pm
       type: ["tour:Tour (free with registration)"],
       date_html: `27 Sep, specific timeslots`,
       extra_html: "SLEEPDIVINGIN",
+      regis: "bbbsleepdivingin.eventbrite.com",
     },
   },
   {
@@ -147,6 +149,7 @@ Panel discussion 2: 9 pm – 9.30 pm
       type: ["exp:VR Experience (free with registration)"],
       date_html: `27 Sep, specific timeslots`,
       extra_html: "SLEEPLESS",
+      regis: "bbbsleepless.eventbrite.com",
     },
   },
   {
@@ -204,6 +207,8 @@ Panel discussion 2: 9 pm – 9.30 pm
       type: ["wks"],
       date_html: `27 Sep, 8 – 10 pm`,
       extra_html: "MAKEMental",
+      regis:
+        "eventbrite.com/e/sdw-2024-friday-late-bbb-people-of-design-showcase-series-tickets-1004281150957",
     },
   },
   {
@@ -222,9 +227,10 @@ Panel discussion 2: 9 pm – 9.30 pm
       type: ["wks"],
       date_html: `27 Sep 
 1st session: 7.30 pm – 8.15 pm
-2nd session: 8.30 pm – 9.15 pm
-`,
+2nd session: 8.30 pm – 9.15 pm`,
       extra_html: "DESIGN",
+      regis:
+        "eventbrite.com/e/sdw-2024-friday-late-bbb-people-of-design-showcase-series-tickets-1004281150957",
     },
   },
 ];

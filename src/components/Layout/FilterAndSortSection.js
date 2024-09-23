@@ -26,7 +26,7 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
     }
     console.log("once");
     const query = await fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/driving/${currentPosRef.current.lng},${currentPosRef.current.lat};${lng},${lat}?steps=true&geometries=geojson&access_token=${process.env.REACT_APP_ACCESS_TOKEN}`,
+      `https://api.mapbox.com/directions/v5/mapbox/walking/${currentPosRef.current.lng},${currentPosRef.current.lat};${lng},${lat}?steps=true&geometries=geojson&access_token=${process.env.REACT_APP_ACCESS_TOKEN}`,
       { method: "GET" }
     );
     const json = await query.json();
@@ -68,7 +68,7 @@ export default function FilterAndSortSection({ markerRef, currentPosRef, drag, d
     window.filterHandler = filterHandler;
     window.searchsttRef = searchsttRef;
     window.setAsideClass = setAsideClass;
-    window.directionHandler = directionHandler;
+    //window.directionHandler = directionHandler;
     window.pinlistRef = pinlistRef;
   }, []);
   //
@@ -138,6 +138,7 @@ function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data, pin
   const { allShowcases } = data;
   const local = useRef({ ref: null, count: 0 });
   const [open, setOpen] = useState(false);
+  const firstOpen = useRef(false);
   useEffect(() => {
     window.openAccordion
       ? (window.openAccordion[showcase] = setOpen)
@@ -145,6 +146,7 @@ function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data, pin
   }, []);
 
   useEffect(() => {
+    open == false && (firstOpen.current = true);
     const cur = local.current;
     if (cur.ref && !open && cur.count > 0) {
       cur.ref.classList.add("hidefig");
@@ -185,8 +187,8 @@ function ShowcaseItem({ showcase, filter, markerRef, directionHandler, data, pin
           }}
         ></div>
         <span className="index">{pinIndex}</span>
-        <ShowcaseName name={showcase} />
-        <FigsMemo showcase={showcase} />
+        <ShowcaseName isLow={false} name={showcase} />
+        {firstOpen.current && <FigsMemo showcase={showcase} />}
       </h3>
       <div className="eventlistwrapper">
         <div className="gridtogglewrapper">

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { sideMenuNavigate } from "../../utils/utils";
 import data from "../../json/data.json";
 import { Fragment } from "react";
@@ -21,12 +21,12 @@ const Link = ({ name, navigate }) => {
   );
 };
 
-export default function PeopleofDesignShowcaseSeries() {
+export default function PeopleofDesignShowcaseSeries({ isLow = false }) {
   const navigate = useNavigate();
   return (
     <>
       <h1 className="fdisp">
-        <ShowcaseName name={"SHOWTITLE"} />
+        <ShowcaseName isLow={isLow} name={"SHOWTITLE"} />
       </h1>
       <div className="description long">
         <p>
@@ -52,6 +52,43 @@ export default function PeopleofDesignShowcaseSeries() {
           designer-curators from Atelier Fang, Atelier HOKO, Forest & Whale, gideon-jamie, J.A.B.O.C
           (Just A Band of Creatives), brief , Studio Juju and Yishun Health.
         </p>
+        <p className="divider">———</p>
+        <p>
+          Join us on{" "}
+          <a
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/");
+              window.closeSearch();
+              window.openNav(true);
+              window.filterHandler("fri");
+            }}
+          >
+            Friday
+          </a>
+          , 27th September, at BBB Design District for Friday Late events during Singapore Design
+          Week with an exciting program line-up that invites you to explore the world of sleep
+          through VR, entice your palate with food design performances, contemplate imperfection at
+          a silent book auction, and engage with AI in interactive workshops to envision the future
+          of design. With intriguing finds extending all the way to Bugis Street, check out the full
+          list of programs highlighted below. As you explore the district's activities, be sure to
+          stop by the National Design Centre for food and drinks!
+        </p>
+        <p className="divider">———</p>
+        <h4>Acknowledgements</h4>
+        <div className="designcredits">
+          <p>
+            <b>Typefaces</b> <br></br> BB.B typeface by Ying Tong Tan, Standard by Bryce Wilner.
+          </p>
+          <p>
+            <b>Graphic design</b> <br></br> gideon-jamie, Ying Tong Tan, Bao Anh Bui
+          </p>
+          <p>
+            <b>Website design and development</b> <br></br> Bao Anh Bui
+          </p>
+        </div>
+        <p className="divider">———</p>
       </div>
     </>
   );

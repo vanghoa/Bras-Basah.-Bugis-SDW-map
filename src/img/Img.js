@@ -61,6 +61,7 @@ import webpSLEEP1 from "./Figures-cutline_SLEEP-1.png?as=w";
 import webpSLEEP2 from "./Figures-cutline_SLEEP-2.png?as=w";
 import webpSLEEP3 from "./Figures-cutline_SLEEP-3.png?as=w";
 //
+import allShowCaseNameImg from "./showcasename/Img";
 export const allImgs = {
   COMMUTE1,
   COMMUTE2,
@@ -134,6 +135,18 @@ const Img = ({ src, alt = "image", className = "" }) => {
       <source srcSet={allImg[`webp${src}`]} type="image/webp" />
       <source srcSet={allImg[src]} type="image/jpeg" />
       <img src={allImg[src]} alt={alt} />
+    </picture>
+  ) : (
+    ""
+  );
+};
+
+export const ImgShowcaseName = ({ src, alt = "image", className = "" }) => {
+  return src in allShowCaseNameImg ? (
+    <picture className={className}>
+      <source srcSet={allShowCaseNameImg[`webp${src}`]} type="image/webp" />
+      <source srcSet={allShowCaseNameImg[src]} type="image/jpeg" />
+      <img src={allShowCaseNameImg[src]} alt={alt} />
     </picture>
   ) : (
     ""

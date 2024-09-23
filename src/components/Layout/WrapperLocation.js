@@ -20,6 +20,29 @@ export default function WrapperLocation({ children }) {
       md: w <= 768,
       xs: w <= 640,
     };
+    const firstVisitKey = "firstVisit";
+    if (window.location.pathname === "/" && !localStorage.getItem(firstVisitKey)) {
+      setTimeout(() => {
+        const root = document.querySelector("#root");
+        const wrapper = document.querySelector(".logoloadingwrapper");
+        root.classList.add("start");
+        wrapper.ontransitionend = () => {
+          root.classList.remove("loading");
+          wrapper.ontransitionend = null;
+          setTimeout(() => {
+            wrapper.ontransitionend = () => {
+              root.classList.remove("start");
+              wrapper.ontransitionend = null;
+              localStorage.setItem(firstVisitKey, "false");
+            };
+          }, 500);
+        };
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        document.querySelector("#root").classList.remove("loading");
+      }, 10);
+    }
   }, []);
   return <>{children}</>;
 }

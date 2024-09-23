@@ -1,13 +1,13 @@
 import { memo } from "react";
 
-const ShowcaseName = memo(function ShowcaseName({ name }) {
+const ShowcaseName = memo(function ShowcaseName({ name, isLow = false, className = "" }) {
   return (
-    <span className="name">
+    <span className={`name ${className}`}>
       {name in ShowcaseNameList
         ? ShowcaseNameList[name]
         : name.split("").map((char, i) => {
             return (
-              <span key={i} style={{ "--wght": randWght() }}>
+              <span key={i} style={{ "--wght": isLow ? randWghtLow() : randWght() }}>
                 {char}
               </span>
             );
@@ -17,6 +17,7 @@ const ShowcaseName = memo(function ShowcaseName({ name }) {
 });
 
 const randWght = () => Math.floor(Math.random() * 601) + 100;
+const randWghtLow = () => Math.floor(Math.pow(Math.random(), 2) * 301) + 100;
 
 const ShowcaseNameList = {
   COMMUTE: (

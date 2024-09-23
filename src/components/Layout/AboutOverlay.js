@@ -3,6 +3,7 @@ import Overlay from "./Overlay";
 import PeopleofDesignShowcaseSeries from "../../json/Main/People of Design Showcase Series";
 import { useEffect, useRef } from "react";
 import { GeneralScrollToEl } from "../../utils/utils";
+import ShowcaseName from "./ShowcaseName";
 
 export function AboutOverlay() {
   const { name } = useParams();
@@ -21,13 +22,15 @@ export function AboutOverlay() {
   return (
     <Overlay contentRef={contentRef}>
       <div className="district">
-        <h2 className="fdisp">BRAS BASAH.&#8203;BUGIS DESIGN DISTRICT</h2>
+        <h2 className="fdisp">
+          <ShowcaseName isLow={true} name={`BRAS BASAH.\u200bBUGIS DESIGN DISTRICT`} />
+        </h2>
         <p className="h2date">
           26 Sep<br></br>– 06 Oct 2024
         </p>
       </div>
-      <PeopleofDesignShowcaseSeries />
-      <h4>BIOS</h4>
+      <PeopleofDesignShowcaseSeries isLow={true} />
+      <h4>Bios</h4>
       <div className="about">
         <p id="Hans">
           <b>Hans Tan</b> is a designer maker, curator, and educator based in Singapore, whose work
