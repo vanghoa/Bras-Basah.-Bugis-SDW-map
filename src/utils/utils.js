@@ -54,6 +54,7 @@ export function removeFig() {
       el.onanimationend = null;
     };
     el.classList.add("hidefig");
+    el.classList.remove("highlight");
   }
 }
 
@@ -82,10 +83,9 @@ export function closeAllOverlays() {
 
 export function allInOneMapNavigate(lnglat, el, pin, showcases) {
   window.openNav(!window.responsive.xs);
-  hightlightEl(el);
   if (el !== window.currentPin) {
     removeFig();
-    el.classList.add("showfig");
+    el.classList.add("showfig", "highlight");
     window.currentPin = el;
   }
   if (window.responsive.xs) {

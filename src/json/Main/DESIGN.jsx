@@ -15,14 +15,24 @@ export default function DESIGN({ children }) {
         emerging tech, care, sustainability, and culture. These tracks, currently in progress, are
         led by:
       </p>
-      <p>
-        Clement Zheng (Interactive Materials Lab): tackling “sustainability” by empowering kids and
-        their parents through interaction design. Tamsin Greulich-Smith (School of X): addressing
-        “care” by empowering communities through collective design. Donn Koh (Hypersketch): focusing
-        on “emerging tech” by empowering seniors through generative AI and speculative design. Hu
-        Fang (Atelier Fang): exploring “culture” by empowering non-culinary professionals through
-        food design.
-      </p>
+      <ul>
+        <li>
+          Clement Zheng (Interactive Materials Lab): tackling “sustainability” by empowering kids
+          and their parents through interaction design.
+        </li>
+        <li>
+          Tamsin Greulich-Smith (School of X): addressing “care” by empowering communities through
+          collective design.
+        </li>
+        <li>
+          Donn Koh (Hypersketch): focusing on “emerging tech” by empowering seniors through
+          generative AI and speculative design.
+        </li>
+        <li>
+          Hu Fang (Atelier Fang): exploring “culture” by empowering non-culinary professionals
+          through food design.
+        </li>
+      </ul>
       <p>
         Visitors will encounter a variety of solutions crafted by participants from a diverse range
         of demographics, showcasing a rich tapestry of creativity and ingenuity enabled through

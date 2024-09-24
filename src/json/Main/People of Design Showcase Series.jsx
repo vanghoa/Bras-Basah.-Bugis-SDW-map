@@ -79,7 +79,10 @@ export default function PeopleofDesignShowcaseSeries({ isLow = false }) {
         <h4>Acknowledgements</h4>
         <div className="designcredits">
           <p>
-            <b>Typefaces</b> <br></br> BB.B typeface by Ying Tong Tan, Standard by Bryce Wilner.
+            <b>Assistants to Curator</b> <br></br>Bei Ning, Emeline
+          </p>
+          <p>
+            <b>Typefaces</b> <br></br> BB.B typeface by Ying Tong Tan, Standard by Bryce Wilner
           </p>
           <p>
             <b>Graphic design</b> <br></br> gideon-jamie, Ying Tong Tan, Bao Anh Bui

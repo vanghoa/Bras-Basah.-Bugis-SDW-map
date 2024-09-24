@@ -1,6 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+const visitKey = "lastVisit";
 export default function WrapperLocation({ children }) {
-  console.log("rerender WrapperLocation");
+  console.log("rerender WrapperBody");
+  const oneDay = 60 * 60 * 1000;
+  const now = new Date().getTime();
+  const lastVisit = +localStorage.getItem(visitKey);
+  const loadAnimation = window.location.pathname === "/" && now - lastVisit > oneDay;
+  const body = useRef(null);
+
   useEffect(() => {
     window.today = new Date().setHours(0, 0, 0, 0);
     window.onresize = () => {
@@ -20,29 +27,26 @@ export default function WrapperLocation({ children }) {
       md: w <= 768,
       xs: w <= 640,
     };
-    const firstVisitKey = "firstVisit";
-    if (window.location.pathname === "/" && !localStorage.getItem(firstVisitKey)) {
+    loadAnimation &&
       setTimeout(() => {
-        const root = document.querySelector("#root");
         const wrapper = document.querySelector(".logoloadingwrapper");
-        root.classList.add("start");
+        body.current.classList.add("start");
         wrapper.ontransitionend = () => {
-          root.classList.remove("loading");
+          body.current.classList.remove("loading");
           wrapper.ontransitionend = null;
           setTimeout(() => {
             wrapper.ontransitionend = () => {
-              root.classList.remove("start");
+              body.current.classList.remove("start");
               wrapper.ontransitionend = null;
-              localStorage.setItem(firstVisitKey, "false");
+              localStorage.setItem(visitKey, now);
             };
           }, 500);
         };
       }, 2000);
-    } else {
-      setTimeout(() => {
-        document.querySelector("#root").classList.remove("loading");
-      }, 10);
-    }
   }, []);
-  return <>{children}</>;
+  return (
+    <div ref={body} id="body" className={`${loadAnimation ? "loading" : ""}`}>
+      {children}
+    </div>
+  );
 }

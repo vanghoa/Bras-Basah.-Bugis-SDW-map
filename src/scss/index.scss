@@ -122,10 +122,10 @@ nav {
 
   .recenter {
     position: absolute;
-    width: var(--iconw);
+    width: calc(var(--iconw) * 1.2);
     aspect-ratio: 1;
     top: calc(var(--navh) + var(--barh));
-    right: var(--barh);
+    right: calc(var(--barh) - 4px);
     transform: scale(0.9);
     pointer-events: auto;
   }
@@ -447,6 +447,7 @@ nav {
                       float: right;
                       right: 0;
                       top: 0;
+                      font-size: 0.8em;
                     }
                   }
                 }
@@ -544,19 +545,20 @@ nav {
     .geolocate {
       bottom: calc(100% + 0.5rem);
       left: var(--barh);
-      width: var(--iconw);
+      width: calc(1.2 * var(--iconw));
       aspect-ratio: 1;
     }
     .fridaytag {
       left: 0px;
       bottom: calc(100% + 0.8rem);
       width: 3rem;
-      width: 6rem;
-      height: 6rem;
+      width: 6.5rem;
+      height: 6.5rem;
       right: var(--barh);
       left: unset;
       position: absolute;
       font-size: 1.2rem;
+      border: 3px solid white;
     }
     .title {
       margin-top: 0;
@@ -662,6 +664,15 @@ nav {
       }
     }
     .long {
+      ul {
+        margin-left: var(--ppx);
+        margin-top: var(--ggap);
+        li {
+          display: list-item;
+          list-style-type: disc;
+          margin-top: var(--ggap);
+        }
+      }
       > * {
         margin: 0 auto;
         margin-top: var(--ggap2);
@@ -890,60 +901,58 @@ nav {
   }
 }
 
-#root.loading {
-  .rightbtn {
-    transform: translateX(200%);
-  }
-  .landing {
-    .figs {
-      width: 0;
+#body {
+  &.loading {
+    .rightbtn {
+      transform: translateX(200%);
     }
-  }
-  .navigation {
-    height: 100%;
-  }
-  .logoloadingwrapper {
-    transform: scale(1) translateY(calc(50svh - 50%));
-    .name,
-    .row {
-      max-width: 100%;
+    .landing {
+      .figs {
+        width: 0;
+      }
     }
-    .name {
-      span {
-        font-variation-settings: "wght" var(--wght);
+    .navigation {
+      height: 100%;
+    }
+    .logoloadingwrapper {
+      transform: scale(1) translateY(calc(50svh - 50%));
+      .name,
+      .row {
+        max-width: 100%;
+      }
+      .name {
+        span {
+          font-variation-settings: "wght" var(--wght);
+        }
       }
     }
   }
-}
-
-#root.loading,
-#root.start {
-  .logoloadingwrapper {
-    display: block;
-  }
-  .about {
-    visibility: hidden;
-  }
-}
-
-#root.start {
-  .navigation {
-    transition: height 1s;
-  }
-  .logoloadingwrapper {
-    .row {
-      max-width: 0.75em;
+  &.loading,
+  &.start {
+    .logoloadingwrapper {
+      display: block;
     }
-    .name {
-      max-width: 0.46em;
+    .about {
+      visibility: hidden;
     }
-    .name {
-      span {
-        font-variation-settings: "wght" 300;
+  }
+  &.start {
+    .navigation {
+      transition: height 1s;
+    }
+    .logoloadingwrapper {
+      .row {
+        max-width: 0.75em;
       }
-    }
-    .designdistrict .name {
-      max-width: 0px;
+      .name {
+        max-width: 0.46em;
+        span {
+          font-variation-settings: "wght" 300;
+        }
+      }
+      .designdistrict .name {
+        max-width: 0px;
+      }
     }
   }
 }
