@@ -4,7 +4,7 @@ const allPlaces = {
   nlb: {
     lnglat: [1.297591742916379, 103.85430872353592],
     color: "orange",
-    name: "National Library",
+    name: "National Library Building",
     url: "https://maps.app.goo.gl/1hsTkNEa74WUpsBE8?g_st=ic",
   },
   ndc: {
