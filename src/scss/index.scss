@@ -625,7 +625,7 @@ nav {
   .about {
     display: flex;
     flex-direction: column;
-    gap: #{$ggap3};
+    gap: #{$ggap2};
     a {
       text-decoration: underline;
     }
@@ -640,6 +640,46 @@ nav {
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
+    .partheld {
+      display: flex;
+    }
+    .logocredits h4 {
+      font-size: 0.8em;
+      &.supported {
+        margin-bottom: #{$ggap * 2.5};
+      }
+      &.held {
+        margin-bottom: #{$ggap * 2};
+      }
+    }
+    li {
+      &.part {
+        width: 38%;
+      }
+      &.held {
+        width: 62%;
+      }
+    }
+    .logo {
+      width: 100%;
+      display: block;
+      margin: 0 auto #{$ggap3};
+      padding: 0 var(--px);
+      &.supported {
+        width: 48%;
+      }
+      &.organised {
+        width: 100%;
+      }
+      img,
+      source {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .mb3 {
+      margin-bottom: #{$ggap2};
+    }
     .title {
       display: flex;
       justify-content: space-between;
@@ -655,7 +695,6 @@ nav {
       }
     }
     .description {
-      margin-bottom: var(--ggap2);
       > * {
         margin-top: var(--ggap2);
       }
@@ -675,7 +714,6 @@ nav {
       width: fit-content;
     }
     .designcredits {
-      margin-bottom: var(--ggap2);
       > * {
         margin-top: var(--ggap);
       }

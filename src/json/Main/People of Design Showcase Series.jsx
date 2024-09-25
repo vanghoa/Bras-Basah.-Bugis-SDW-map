@@ -28,7 +28,7 @@ export default function PeopleofDesignShowcaseSeries({ isLow = false }) {
       <h1 className="fdisp">
         <ShowcaseName isLow={isLow} name={"SHOWTITLE"} />
       </h1>
-      <div className="description long">
+      <div className="description long mb3">
         <p>
           During Singapore Design Week 2024, ten showcases presented across the Bras Basah.Bugis
           Design District will creatively examine the rituals of daily life through the lens of
@@ -75,7 +75,6 @@ export default function PeopleofDesignShowcaseSeries({ isLow = false }) {
           list of programs highlighted below. As you explore the district's activities, be sure to
           stop by the National Design Centre for food and drinks!
         </p>
-        <p className="divider">———</p>
       </div>
     </>
   );

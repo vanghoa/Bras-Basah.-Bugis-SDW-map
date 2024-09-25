@@ -4,6 +4,7 @@ import PeopleofDesignShowcaseSeries from "../../json/Main/People of Design Showc
 import { useEffect, useRef } from "react";
 import { GeneralScrollToEl } from "../../utils/utils";
 import ShowcaseName from "./ShowcaseName";
+import Img from "../../img/Img";
 
 export function AboutOverlay() {
   const { name } = useParams();
@@ -29,7 +30,7 @@ export function AboutOverlay() {
       </div>
       <PeopleofDesignShowcaseSeries isLow={true} />
       <h4>Bios</h4>
-      <div className="about">
+      <div className="about mb3">
         <p id="Hans">
           <b>Hans Tan</b> is a designer maker, curator, and educator based in Singapore, whose work
           explores creativity through "deformative inquiry," making use of utility as a pretext for
@@ -134,9 +135,8 @@ export function AboutOverlay() {
           )
         </p>
       </div>
-      <p className="divider">———</p>
       <h4>Acknowledgements</h4>
-      <div className="designcredits">
+      <div className="designcredits mb3">
         <p>
           <b>Assistants to Curator</b> <br></br>Bei Ning, Emeline
         </p>
@@ -149,6 +149,22 @@ export function AboutOverlay() {
         <p>
           <b>Website design and development</b> <br></br> Bao Anh Bui
         </p>
+      </div>
+      <div className="logocredits">
+        <h4 className="supported">Supported by</h4>
+        <Img className="logo supported" src="SUPPORTED" />
+        <h4 className="organised">Organised by</h4>
+        <Img className="logo organised" src="ORGANISED" />
+        <ul className="partheld">
+          <li className="part">
+            <h4 className="part">Part of</h4>
+            <Img className="logo part" src="PARTOF" />
+          </li>
+          <li className="held">
+            <h4 className="held">Held in</h4>
+            <Img className="logo held" src="HELDIN" />
+          </li>
+        </ul>
       </div>
     </Overlay>
   );

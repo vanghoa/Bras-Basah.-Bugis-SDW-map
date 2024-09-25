@@ -62,6 +62,16 @@ import webpSLEEP2 from "./Figures-cutline_SLEEP-2.png?as=w";
 import webpSLEEP3 from "./Figures-cutline_SLEEP-3.png?as=w";
 //
 import allShowCaseNameImg from "./showcasename/Img";
+//
+import SUPPORTED from "./LOGOS-Supported-by.png";
+import ORGANISED from "./LOGOS2-Organised-by.png";
+import PARTOF from "./LOGOS3-Part-of.png";
+import HELDIN from "./LOGOS4-Held-in.png";
+import webpSUPPORTED from "./LOGOS-Supported-by.png?as=w";
+import webpORGANISED from "./LOGOS2-Organised-by.png?as=w";
+import webpPARTOF from "./LOGOS3-Part-of.png?as=w";
+import webpHELDIN from "./LOGOS4-Held-in.png?as=w";
+
 export const allImgs = {
   COMMUTE1,
   COMMUTE2,
@@ -97,6 +107,14 @@ export const allImgs = {
 
 const allImg = {
   ...allImgs,
+  webpSUPPORTED,
+  webpORGANISED,
+  webpPARTOF,
+  webpHELDIN,
+  SUPPORTED,
+  ORGANISED,
+  PARTOF,
+  HELDIN,
   webpCOMMUTE1,
   webpCOMMUTE2,
   webpCOMMUTE3,
