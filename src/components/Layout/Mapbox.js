@@ -72,11 +72,20 @@ const WrapperMapbox = ({ children }) => {
 
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
-      center: middleLngLat, // starting position [lng, lat]
-      zoom: 16, // starting zoom
-      bearing: 20,
+      bounds: LngLatBounds,
+      //center: middleLngLat, // starting position [lng, lat]
+      //zoom: 16, // starting zoom
       attributionControl: false,
       style: "mapbox://styles/baoanhbui/cm0bz3vvj00qu01phchsjccal",
+      fitBoundsOptions: {
+        bearing: 20,
+        padding: {
+          left: 40,
+          top: 96,
+          bottom: 40,
+          right: 60,
+        },
+      },
     });
     window.mapRef = mapRef;
     window.mapElRef = mapContainerRef;
@@ -227,7 +236,7 @@ function LocationCard({ data, markerRef, children }) {
             className="togglebtn"
             onClick={() => sideMenuNavigate(showcases, markerRef.current[pin])}
           >
-            see more
+            See more
           </button>
         </>
       )}
