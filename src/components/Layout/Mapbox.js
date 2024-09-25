@@ -58,10 +58,8 @@ const WrapperMapbox = ({ children }) => {
       padding: {
         left: (window.navIsOpen ? getLeftPadding() : 0) + 40,
         top: getTopPadding() + 40,
-        bottom: window.locationCardRef.current.classList.contains("open")
-          ? getBottomPadding()
-          : 0 + 40,
-        right: 40,
+        bottom: 40,
+        right: 60,
       },
     });
   };
