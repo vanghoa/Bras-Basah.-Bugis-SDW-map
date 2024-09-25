@@ -136,6 +136,22 @@ export function AboutOverlay() {
           )
         </p>
       </div>
+      <p className="divider">———</p>
+      <h4>Acknowledgements</h4>
+      <div className="designcredits">
+        <p>
+          <b>Assistants to Curator</b> <br></br>Bei Ning, Emeline
+        </p>
+        <p>
+          <b>Typefaces</b> <br></br> BB.B typeface by Ying Tong Tan, Standard by Bryce Wilner
+        </p>
+        <p>
+          <b>Graphic design</b> <br></br> gideon-jamie, Ying Tong Tan, Bao Anh Bui
+        </p>
+        <p>
+          <b>Website design and development</b> <br></br> Bao Anh Bui
+        </p>
+      </div>
     </Overlay>
   );
 }

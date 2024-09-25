@@ -129,6 +129,25 @@ export const FridayTag = () => (
   </button>
 );
 
+export const FridayTagLocation = () => (
+  <button
+    className="fridaytag"
+    onClick={() => {
+      window.openNav(true);
+      window.filterHandler("fri");
+    }}
+  >
+    <div className="inner">
+      <span>
+        Friday<br></br>Late
+      </span>
+    </div>
+    <Img src={"COMMUTE1"} className="_1" />
+    <Img src={"HEAL1"} className="_2" />
+    <Img src={"DESIGN1"} className="_3" />
+  </button>
+);
+
 const FridayMemo = memo(function ({ props: { event, markerRef, directionHandler } }) {
   const { formattedLocation, showcases, long, friday, ggmap, lnglat, pinName } = event;
   return (

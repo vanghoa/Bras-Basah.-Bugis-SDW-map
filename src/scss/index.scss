@@ -663,6 +663,17 @@ nav {
         font-size: 4.4rem;
       }
     }
+
+    .divider {
+      margin: var(--ggap2) auto;
+      width: fit-content;
+    }
+    .designcredits {
+      margin-bottom: var(--ggap2);
+      > * {
+        margin-top: var(--ggap);
+      }
+    }
     .long {
       ul {
         margin-left: var(--ppx);
@@ -677,9 +688,6 @@ nav {
         margin: 0 auto;
         margin-top: var(--ggap2);
       }
-      .divider {
-        width: fit-content;
-      }
       .credits {
         opacity: 0.5;
         a {
@@ -687,9 +695,6 @@ nav {
           display: inline;
         }
       }
-    }
-    .designcredits > * {
-      margin-top: var(--ggap);
     }
     .buttons {
       margin-top: var(--ggap2);
@@ -887,7 +892,6 @@ nav {
 }
 
 .small {
-  font-style: italic;
   a {
     text-decoration: underline;
   }

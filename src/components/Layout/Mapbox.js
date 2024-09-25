@@ -16,7 +16,7 @@ import {
   throttle,
 } from "../../utils/utils";
 import { Link } from "react-router-dom";
-import { Fig, FormatType, FridayTag } from "./FilterAndSortComponents";
+import { Fig, FormatType, FridayTag, FridayTagLocation } from "./FilterAndSortComponents";
 import PeopleofDesignShowcaseSeries from "../../json/Main/People of Design Showcase Series";
 import ShowcaseName from "./ShowcaseName";
 import Img, { allImg, allImgs } from "../../img/Img";
@@ -36,7 +36,6 @@ const WrapperMapbox = ({ children }) => {
 
   const geolocateHandler = () => {
     if (geolocateRef.current) {
-      removeFig();
       geolocateRef.current.beforeTrigger();
       geolocateRef.current.trigger();
       console.log("trigger geolocation");
@@ -52,6 +51,7 @@ const WrapperMapbox = ({ children }) => {
 
   const recenterHandler = () => {
     removeFig();
+    window.setOpenCard(false);
     mapRef.current.fitBounds(LngLatBounds, {
       essential: true,
       bearing: 20,
@@ -98,6 +98,8 @@ const WrapperMapbox = ({ children }) => {
     geolocateRef.current.beforeTrigger = () => {};
     geolocateRef.current.on("geolocate", (pos) => {
       console.log("success");
+      removeFig();
+      window.setOpenCard(false);
       window.responsive.xs && window.openNav(false);
       const { latitude, longitude } = pos.coords;
       geoelRef.current.style.visibility = "visible";
@@ -299,7 +301,7 @@ const NavMenuMemo = memo(function () {
         BB.B
       </Link>
       <div className="figswrapper">
-        <div className="figs">
+        {/*<div className="figs">
           {imgArr.map((src, i) => {
             return (
               <div className="fig" key={i}>
@@ -307,7 +309,7 @@ const NavMenuMemo = memo(function () {
               </div>
             );
           })}
-        </div>
+        </div>*/}
       </div>
     </>
   );
