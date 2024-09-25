@@ -30,22 +30,25 @@ export default function WrapperLocation({ children }) {
     loadAnimation &&
       setTimeout(() => {
         const wrapper = document.querySelector(".logoloadingwrapper");
-        body.current.classList.add("start");
-        wrapper.ontransitionend = () => {
-          body.current.classList.remove("loading");
-          wrapper.ontransitionend = null;
-          setTimeout(() => {
-            wrapper.ontransitionend = () => {
-              body.current.classList.remove("start");
-              wrapper.ontransitionend = null;
-              localStorage.setItem(visitKey, now);
-            };
-          }, 500);
-        };
-      }, 2000);
+        body.current.classList.remove("await");
+        setTimeout(() => {
+          body.current.classList.add("start");
+          wrapper.ontransitionend = () => {
+            body.current.classList.remove("loading");
+            wrapper.ontransitionend = null;
+            setTimeout(() => {
+              wrapper.ontransitionend = () => {
+                body.current.classList.remove("start");
+                wrapper.ontransitionend = null;
+                localStorage.setItem(visitKey, now);
+              };
+            }, 500);
+          };
+        }, 2400);
+      }, 100);
   }, []);
   return (
-    <div ref={body} id="body" className={`${loadAnimation ? "loading" : ""}`}>
+    <div ref={body} id="body" className={`${loadAnimation ? "loading await" : ""}`}>
       {children}
     </div>
   );

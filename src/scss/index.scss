@@ -965,6 +965,11 @@ nav {
       }
     }
   }
+  &.await {
+    .logoloadingwrapper {
+      display: none;
+    }
+  }
 }
 
 .logoloadingwrapper {

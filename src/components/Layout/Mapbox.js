@@ -274,8 +274,8 @@ function NavMenu({ geolocateRef }) {
           <ShowcaseName className="row" name={`BUGIS`} />
         </div>
         <div className="designdistrict">
-          <ShowcaseName className="des" name={`DESIGN `} />
-          <ShowcaseName className="dist" name={`DISTRICT`} />
+          <ShowcaseName className="des" name={`\u200bDESIGN `} />
+          <ShowcaseName className="dist" name={`\u200bDISTRICT`} />
         </div>
       </div>
       <div className="landing">
