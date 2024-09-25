@@ -178,7 +178,47 @@ const FridayMemo = memo(function ({ props: { event, markerRef, directionHandler 
   );
 });
 
-export const Fig = ({ src }) => {
+const FigKerning = {
+  DESIGN1: 0.15,
+  DESIGN2: 0.05,
+  DESIGN3: 0.04,
+  PLANT1: -0.1,
+  PLANT2: 0.23,
+  PLANT4: -0.02,
+  PLANT5: 0.08,
+  PLANT6: 0.08,
+  PLANT7: 0.04,
+  SLEEP1: 0.1,
+  SLEEP2: 0.07,
+  MAKE1: 0.05,
+  MAKE3: 0.07,
+  DISPLAY2: 0.08,
+  DISPLAY5: 0.08,
+  DISPLAY6: 0.13,
+  EAT4: -0.05,
+  EAT3: 0.05,
+  READ7: 0.05,
+  SHOP3: 0.09,
+  SHOP4: 0.08,
+  SHOP6: -0.04,
+  SHOP7: 0.05,
+  COMMUTE3: 0.07,
+  HEAL2: 0.04,
+  HEAL3: 0.03,
+};
+
+const FigW = {
+  PLANT1: 1,
+};
+
+const FigB = {
+  PLANT7: -0.03,
+  COMMUTE7: -0.03,
+  MAKE7: -0.03,
+  READ1: -0.03,
+};
+
+const Fig = ({ src }) => {
   return (
     <div
       className={`fig`}
@@ -187,6 +227,9 @@ export const Fig = ({ src }) => {
         "--du": `${(Math.random() * 0.5 + 0.7).toFixed(2)}s`,
         "--r1": `-${(Math.random() * 200 + 10).toFixed(2)}deg`,
         "--r2": `${(Math.random() * 240 + 10).toFixed(2)}deg`,
+        ...(src in FigKerning ? { "--l": `${FigKerning[src]}em` } : {}),
+        ...(src in FigW ? { "--w": `${FigW[src]}em` } : {}),
+        ...(src in FigB ? { "--b": `${FigB[src]}em` } : {}),
       }}
     >
       <div className="figcanvas">

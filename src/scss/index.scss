@@ -502,6 +502,12 @@ nav {
         .showcasename {
           pointer-events: none;
           @extend .smallshowcasename;
+          span {
+            font-variation-settings: "wght" 300 !important;
+          }
+          .figs {
+            display: none;
+          }
         }
       }
     }
@@ -790,6 +796,7 @@ nav {
     position: relative;
     left: -0.05em;
     .fig {
+      margin-left: var(--l);
       position: relative;
       height: 0.8em;
       width: 0.5em;
@@ -802,7 +809,7 @@ nav {
       width: 2em;
       height: 2em;
       left: 50%;
-      bottom: 0;
+      bottom: 0.05em;
       transform: translateX(-50%);
       overflow: hidden;
     }
@@ -817,10 +824,10 @@ nav {
     }
     picture {
       height: 0.9em;
-      width: 0.7em;
+      width: var(--w);
       position: absolute;
       display: block;
-      bottom: 0;
+      bottom: var(--b);
       left: 0.7em;
       transform: translateY(100%);
     }
@@ -831,7 +838,6 @@ nav {
 .fdisp {
   --wght: 300;
   .name span {
-    --l: 0px;
     margin-left: var(--l);
     font-variation-settings: "wght" 300;
     transition: font-variation-settings 0.5s steps(6, jump-none);

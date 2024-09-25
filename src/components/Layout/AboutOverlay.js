@@ -22,9 +22,7 @@ export function AboutOverlay() {
   return (
     <Overlay contentRef={contentRef}>
       <div className="district">
-        <h2 className="fdisp">
-          <ShowcaseName isLow={true} name={`BRAS BASAH.\u200bBUGIS DESIGN DISTRICT`} />
-        </h2>
+        <h2 className="fdisp">{`BRAS BASAH.\u200bBUGIS DESIGN DISTRICT`}</h2>
         <p className="h2date">
           26 Sep<br></br>– 06 Oct 2024
         </p>
