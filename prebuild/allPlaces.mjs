@@ -41,7 +41,7 @@ const allPlaces = {
   naumi: {
     lnglat: [1.2959744942521976, 103.85515240231982],
     color: "green",
-    name: "Naumi Hotel",
+    name: "Naumi Hotel Singapore",
     url: "https://maps.app.goo.gl/PP61Az5NbXmp1Xby7?g_st=ic",
   },
   bclnMRT: {

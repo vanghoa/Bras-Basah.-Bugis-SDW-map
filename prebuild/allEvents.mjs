@@ -19,7 +19,7 @@ const allEvents = [
     friday: {
       name: "What’s Wrong with Well Worn?",
       type: ["oth:Auction (free admission)"],
-      date_html: `27 Sep, 6 pm – 9 pm`,
+      date_html: `27 Sep, 6 pm – 8.30 pm`,
     },
   },
   {
