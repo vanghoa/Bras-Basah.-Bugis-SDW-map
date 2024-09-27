@@ -54,7 +54,8 @@ const EventContent = ({ event, pathname, longObj }) => {
       <div className="title">
         <h4>{name}</h4>
         <p className="organizer">
-          with <Link to={`/about/${org}`}>{formattedOrg}</Link>
+          with{" "}
+          {org ? <Link to={`/about/${org}`}>{formattedOrg}</Link> : <span>{formattedOrg}</span>}
         </p>
       </div>
       <div className="small">

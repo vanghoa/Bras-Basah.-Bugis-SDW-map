@@ -229,6 +229,8 @@ Panel discussion 2: 9 pm – 9.30 pm`,
 1st session: 7.30 pm – 8.15 pm
 2nd session: 8.30 pm – 9.15 pm`,
       extra_html: "DESIGN",
+      formattedOrg: "Donn Koh (Hypersketch)",
+      org: null,
       regis:
         "eventbrite.com/e/sdw-2024-friday-late-bbb-people-of-design-showcase-series-tickets-1004281150957",
     },
